@@ -17,13 +17,7 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -71,25 +65,25 @@ function App(): JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+          <View style={styles.appTitleContainer}>
+            <Text style={styles.appTitle}>Mach Rewards</Text>
+          </View>
+          <Section title="Features">What's coming in future releases</Section>
+          <Section title="Reward Submissions">
+            Submit completion of tasks for approval and get points
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
+          <Section title="View Rewards and Milestones">
+            See the rewards that are available to get and the tasks that are
+            eligible to be completed
           </Section>
-          <Section title="Debug">
-            <DebugInstructions />
+          <Section title="Track Goals">
+            Check your progress towards your next rewards and milestones
           </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          <View style={styles.sectionContainer} />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -104,6 +98,16 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
+  },
+  appTitle: {
+    fontSize: 48,
+    fontWeight: '600',
+    textAlign: 'center',
+    color: '#ffffff',
+  },
+  appTitleContainer: {
+    padding: 48,
+    backgroundColor: '#6ccff6',
   },
   sectionDescription: {
     marginTop: 8,
