@@ -23,12 +23,12 @@ import {
   Button,
   TouchableHighlight,
 } from 'react-native';
-
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Svg, {Polygon} from 'react-native-svg';
 
-const Stack = createNativeStackNavigator();
+import Template from './Template.tsx';
 
+const Stack = createNativeStackNavigator();
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -74,7 +74,7 @@ function Test(): JSX.Element {
     );
 }
 
-function Temp() {
+function App() {
     const isDarkMode = useColorScheme() === 'dark';
 
     const backgroundStyle = {
@@ -84,6 +84,7 @@ function Temp() {
     return (
         <NavigationContainer>
             <Stack.Navigator initialRouteName="HomeScreen">
+                <Stack.Screen name = "Template" component={Template} />
                 <Stack.Screen name = "Test" component={Test} />
                 <Stack.Screen name = "HomeScreen" component={HomeScreen} />
 
@@ -136,7 +137,7 @@ function HomeScreen(): JSX.Element {
                     <Button
                         title="Button1"
                         color='#2b2b2b'
-                        onPress={() => navigation.navigate('Test')}
+                        onPress={() => navigation.navigate('Template')}
                     Button/>
                 </TouchableHighlight>
             </Text>
@@ -332,4 +333,4 @@ const Rectangle = () => {
     return <View style={styles.rectangle} />;
 }
 
-export default Temp;
+export default App;
