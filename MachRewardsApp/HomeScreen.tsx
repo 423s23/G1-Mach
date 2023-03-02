@@ -76,96 +76,31 @@ export default function HomeScreen(): JSX.Element {
                     }}>
 
                     <View style={styles.mainContainer}>
+                        <View style={styles.headingTitleContainer}>
+                            <Text style={styles.headingTitle}>Hello USERNAME,</Text>
+                            <Text style={styles.headingRank}>Mach Badass</Text>
+                            <View style={styles.twelvePointBurstContainer}>
+                                <TwelvePointBurst />
+                                <TwelvePointBurst />
+                                <TwelvePointBurst />
+                                <TwelvePointBurst />
+                                <TwelvePointBurst />
+                            </View>
+                            <View style={styles.headingLevelPointContainer}>
+                                <Text style={styles.headingLevel}>Level ###</Text>
+                                <Text style={styles.headingPoints}>#####/##### points</Text>
+                            </View>
+                            <View style={styles.rectangleContainer}>
+                                <Rectangle />
+                            </View>
+                        </View>
+                        <View style={styles.sectionContainer}>
 
-                              <View style={styles.headingTitleContainer}>
-                                <Text style={styles.headingTitle}>Hello USERNAME [RANK]</Text>
-                                <View style={styles.twelvePointBurstContainer}>
-                                    <TwelvePointBurst />
-                                    <TwelvePointBurst />
-                                    <TwelvePointBurst />
-                                    <TwelvePointBurst />
-                                    <TwelvePointBurst />
-                                </View>
-                                <View style={styles.rectangleContainer}>
-                                    <Rectangle />
-                                </View>
-                              </View>
+                        </View>
+                        <View style={styles.taskbarContainer}>
 
-                              <View style={styles.sectionContainer}>
-                                <Text style={styles.buttonText}>
-                                    <TouchableHighlight>
-                                        <Button
-                                            title="Button1"
-                                            color='#2b2b2b'
-                                            onPress={() => navigation.navigate('Template')}
-                                        Button/>
-                                    </TouchableHighlight>
-                                </Text>
-                              </View>
-                              <View style={styles.sectionContainer}>
-                                <Text style={styles.buttonText}>
-                                    <TouchableHighlight>
-                                        <Button
-                                            title="Button1"
-                                            color='#2b2b2b'
-                                        Button/>
-                                    </TouchableHighlight>
-                                </Text>
-                              </View>
-                              <View style={styles.sectionContainer}>
-                                <Text style={styles.buttonText}>
-                                    <TouchableHighlight>
-                                        <Button
-                                            title="Button1"
-                                            color='#2b2b2b'
-                                        Button/>
-                                    </TouchableHighlight>
-                                </Text>
-                              </View>
-
-                              <View style={styles.taskbarContainer}>
-                                <TouchableHighlight>
-                                    <Text style={styles.taskbarText}>
-                                        <Button
-                                            title="Button1"
-                                            color='#2b2b2b'
-                                        Button/>
-                                    </Text>
-                                </TouchableHighlight>
-                                <TouchableHighlight>
-                                    <Text style={styles.taskbarText}>
-                                       <Button
-                                            title="Button2"
-                                            color='#2b2b2b'
-                                       Button/>
-                                    </Text>
-                                </TouchableHighlight>
-                                <TouchableHighlight>
-                                    <Text style={styles.taskbarText}>
-                                        <Button
-                                            title="Button3"
-                                            color='#2b2b2b'
-                                        Button/>
-                                    </Text>
-                                </TouchableHighlight>
-                                <TouchableHighlight>
-                                    <Text style={styles.taskbarText}>
-                                        <Button
-                                            title="Button4"
-                                            color='#2b2b2b'
-                                        Button/>
-                                    </Text>
-                                </TouchableHighlight>
-                                <TouchableHighlight>
-                                    <Text style={styles.taskbarText}>
-                                        <Button
-                                            title="Button5"
-                                            color='#2b2b2b'
-                                        Button/>
-                                    </Text>
-                                </TouchableHighlight>
-                              </View>
-                              </View>
+                        </View>
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
@@ -175,27 +110,49 @@ export default function HomeScreen(): JSX.Element {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    justifyContent: 'flex-start',
     paddingTop: 0,
-    height: 850,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+    backgroundColor: '#000000',
   },
   headingTitleContainer: {
-    paddingTop: 8,
-    paddingBottom: 20,
-    paddingLeft: 6,
-    backgroundColor: '#6ccff6',
+    flex: 1,
+    paddingTop: '5%',
+    paddingBottom: '5%',
+    backgroundColor: '#000000',
   },
   headingTitle: {
     fontSize: 24,
-    paddingBottom: 12,
-    color: '#111111',
+    marginLeft: '10%',
+    color: '#6ccff6',
     fontWeight: 500,
   },
+  headingRank: {
+    padding: '2%',
+    fontSize: 32,
+    textAlign: 'center',
+    color: '#6ccff6',
+    fontWeight: 700,
+  },
+  headingLevelPointContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  headingLevel: {
+    fontSize: 18,
+    marginLeft: '10%',
+    textAlign: 'left',
+    color: '#6ccff6',
+    fontWeight: 300,
+
+  },
+  headingPoints: {
+    fontSize: 18,
+    marginRight: '10%',
+    textAlign: 'right',
+    color: '#6ccff6',
+    fontWeight: 300,
+  },
   sectionContainer: {
+    flex: 3,
     paddingTop: 35,
     paddingHorizontal: 20,
     //alignItems: 'center',
@@ -203,7 +160,7 @@ const styles = StyleSheet.create({
     //flex: 1,
     //flexDirection: 'column',
     //width: "100%",
-    //height: 0,
+    height: '50%',
     //Top: 0,
   },
   buttonText: {
@@ -219,9 +176,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     position: 'absolute',
     flexDirection: 'row',
-    width: "20%",
-    height: 70,
-    bottom: 0,
+    height: '20%',
   },
   taskbarText: {
     padding: 15,
@@ -233,24 +188,23 @@ const styles = StyleSheet.create({
 
   },
   twelvePointBurstContainer: {
-    paddingTop: 5,
-    paddingLeft: 15,
-    paddingRight: 20,
+    paddingVertical: '4%',
+    paddingHorizontal: '12%',
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
   twelvePointBurst: {},
   twelvePointBurstMain: {
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
     backgroundColor: "yellow",
     top: 0,
     right: 0,
   },
   twelvePointBurst30: {
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
     position: "absolute",
     backgroundColor: "yellow",
     top: 0,
@@ -258,8 +212,8 @@ const styles = StyleSheet.create({
     transform: [{ rotate: "30deg" }],
   },
   twelvePointBurst60: {
-    width: 50,
-    height: 50,
+    width: 40,
+    height: 40,
     position: "absolute",
     backgroundColor: "yellow",
     top: 0,
@@ -267,15 +221,20 @@ const styles = StyleSheet.create({
     transform: [{ rotate: "60deg" }],
   },
   rectangleContainer: {
-    marginTop: 25,
-    paddingHorizontal: 25,
+    marginTop: '2%',
+    paddingHorizontal: '10%',
+    //backgroundColor: '#ffffff',
+  },
+  rectangleBackground: {
+    //position: 'absolute',
+    width: '100%',
+    height: 18,
+    backgroundColor: "#ffffff",
   },
   rectangle: {
-    width: "100%",
-    height: 40,
-    backgroundColor: "lime",
-    borderColor: "black",
-    borderWidth: 4,
+    width: '35%',
+    height: 18,
+    backgroundColor: "#6ccff6",
   },
 });
 
@@ -290,5 +249,9 @@ const TwelvePointBurst = () => {
 }
 
 const Rectangle = () => {
-    return <View style={styles.rectangle} />;
+    return (
+        <View style={styles.rectangleBackground}>
+            <View style={styles.rectangle} />
+        </View>
+    );
 }
