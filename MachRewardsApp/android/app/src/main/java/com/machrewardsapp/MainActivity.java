@@ -1,5 +1,9 @@
 package com.machrewardsapp;
 
+/**
+ * Possibly needed for react navigation?
+ */
+//import android.os.bundle;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
@@ -32,4 +36,13 @@ public class MainActivity extends ReactActivity {
         DefaultNewArchitectureEntryPoint.getConcurrentReactEnabled() // concurrentRootEnabled
         );
   }
+
+  /**
+   * This is required for React Navigation maybe?
+   * @param savedInstanceState
+   */
+  /*@Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
+  }*/
 }

@@ -6,6 +6,11 @@
  */
 
 import React from 'react';
+import {
+    NavigationContainer,
+    useNavigation,
+} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -21,6 +26,9 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Svg, {Polygon} from 'react-native-svg';
+
+const Stack = createNativeStackNavigator();
+
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -52,8 +60,41 @@ function Section({children, title}: SectionProps): JSX.Element {
   );
 }
 
-function App(): JSX.Element {
+function Test(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
+
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Home Screen</Text>
+        </View>
+    );
+}
+
+function Temp() {
+    const isDarkMode = useColorScheme() === 'dark';
+
+    const backgroundStyle = {
+        backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    };
+
+    return (
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="HomeScreen">
+                <Stack.Screen name = "Test" component={Test} />
+                <Stack.Screen name = "HomeScreen" component={HomeScreen} />
+
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+}
+
+function HomeScreen(): JSX.Element {
+  const isDarkMode = useColorScheme() === 'dark';
+  const navigation = useNavigation();
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -95,6 +136,7 @@ function App(): JSX.Element {
                     <Button
                         title="Button1"
                         color='#2b2b2b'
+                        onPress={() => navigation.navigate('Test')}
                     Button/>
                 </TouchableHighlight>
             </Text>
@@ -290,4 +332,4 @@ const Rectangle = () => {
     return <View style={styles.rectangle} />;
 }
 
-export default App;
+export default Temp;
