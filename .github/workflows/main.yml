@@ -1,0 +1,25 @@
+name: React Native Continous Integration
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@master
+      - uses: c-hive/gha-yarn-cache@v1
+      - uses: mikeal/npx@master
+
+      - name: Install node modules
+        run: |
+          npx i
+      - name: Run test
+        run: |
+          npx test-ci
