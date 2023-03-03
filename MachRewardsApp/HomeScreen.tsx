@@ -21,7 +21,9 @@ import {
   TouchableHighlight,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import Svg, {Polygon} from 'react-native-svg';
+//import Svg, {Polygon} from 'react-native-svg';
+
+import Template from './Template.tsx';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -95,7 +97,33 @@ export default function HomeScreen(): JSX.Element {
                             </View>
                         </View>
                         <View style={styles.sectionContainer}>
-
+                            <View style={styles.buttonContainer}>
+                                <TouchableHighlight>
+                                    <Button
+                                        title="Submit Task Completion"
+                                        color='#2b2b2b'
+                                        onPress={() => navigation.navigate('Template')}
+                                    Button/>
+                                </TouchableHighlight>
+                            </View>
+                            <View style={styles.buttonContainer}>
+                                <TouchableHighlight>
+                                    <Button
+                                        title="Submit Task Completion"
+                                        color='#2b2b2b'
+                                        onPress={() => navigation.navigate('Template')}
+                                    Button/>
+                                </TouchableHighlight>
+                            </View>
+                            <View style={styles.buttonContainer}>
+                                <TouchableHighlight>
+                                    <Button
+                                        title="Submit Task Completion"
+                                        color='#2b2b2b'
+                                        onPress={() => navigation.navigate('Template')}
+                                    Button/>
+                                </TouchableHighlight>
+                            </View>
                         </View>
                         <View style={styles.taskbarContainer}>
 
@@ -123,7 +151,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     marginLeft: '10%',
     color: '#6ccff6',
-    fontWeight: 500,
+    fontWeight: 400,
   },
   headingRank: {
     padding: '2%',
@@ -153,23 +181,14 @@ const styles = StyleSheet.create({
   },
   sectionContainer: {
     flex: 3,
-    paddingTop: 35,
-    paddingHorizontal: 20,
-    //alignItems: 'center',
-    justifyContent: 'center',
-    //flex: 1,
-    //flexDirection: 'column',
-    //width: "100%",
-    height: '50%',
-    //Top: 0,
   },
-  buttonText: {
-    padding: 10,
-    backgroundColor: '#111111',
-    textAlign: 'center',
+  buttonContainer: {
+    flex: 1,
+    paddingVertical: '7%',
+    marginHorizontal: '10%',
+    backgroundColor: '#000000',
     fontSize: 15,
-    flexDirection: 'row',
-    justifyContent: "space-between",
+    width: '80%',
   },
   taskbarContainer: {
     alignItems: 'center',

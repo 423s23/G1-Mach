@@ -24,7 +24,7 @@ import {
   TouchableHighlight,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import Svg, {Polygon} from 'react-native-svg';
+//import Svg, {Polygon} from 'react-native-svg';
 
 import Template from './Template.tsx';
 import HomeScreen from './HomeScreen.tsx';
