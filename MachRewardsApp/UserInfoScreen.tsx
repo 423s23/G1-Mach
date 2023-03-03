@@ -1,5 +1,5 @@
 /**
- * Template for react native screens
+ * UserInfoScreen
  */
 
 import React from 'react';
@@ -53,7 +53,7 @@ function Section({children, title}: SectionProps): JSX.Element {
   );
 }
 
-export default function Template(): JSX.Element {
+export default function UserInfoScreen(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   const navigation = useNavigation();
 
@@ -76,7 +76,7 @@ export default function Template(): JSX.Element {
                     }}>
 
                     <View>
-                        <Text>Template</Text>
+                        <Text>UserInfoScreen</Text>
                     </View>
                 </View>
             </ScrollView>

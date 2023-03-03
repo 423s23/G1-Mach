@@ -1,5 +1,5 @@
 /**
- * Template for react native screens
+ * Main homepage for the app
  */
 
 import React from 'react';
