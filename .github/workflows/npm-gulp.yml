@@ -27,3 +27,7 @@ jobs:
         npm init
         npm install
         gulp
+        npm install @react-navigation/native
+        npm install react-native-screens
+        npm install react-native-safe-area-context
+        npm install react-navigation
