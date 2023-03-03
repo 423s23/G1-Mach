@@ -24,6 +24,14 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 //import Svg, {Polygon} from 'react-native-svg';
 
 import Template from './Template.tsx';
+import About from './AboutScreen.tsx';
+import AdminApproval from './AdminApprovalScreen.tsx';
+import Leaderboard from './LeaderboardScreen.tsx';
+import Login from './LoginScreen.tsx';
+import Rewards from './RewardsScreen.tsx';
+import Settings from './SettingsScreen.tsx';
+import UserInfo from './UserInfoScreen.tsx';
+import SubmitTask from './SubmitTaskScreen.tsx';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -102,25 +110,25 @@ export default function HomeScreen(): JSX.Element {
                                     <Button
                                         title="Submit Task Completion"
                                         color='#2b2b2b'
-                                        onPress={() => navigation.navigate('Template')}
+                                        onPress={() => navigation.navigate('SubmitTask')}
                                     Button/>
                                 </TouchableHighlight>
                             </View>
                             <View style={styles.buttonContainer}>
                                 <TouchableHighlight>
                                     <Button
-                                        title="Submit Task Completion"
+                                        title="Personal Progress"
                                         color='#2b2b2b'
-                                        onPress={() => navigation.navigate('Template')}
+                                        onPress={() => navigation.navigate('UserInfo')}
                                     Button/>
                                 </TouchableHighlight>
                             </View>
                             <View style={styles.buttonContainer}>
                                 <TouchableHighlight>
                                     <Button
-                                        title="Submit Task Completion"
+                                        title="Team Leaderboard"
                                         color='#2b2b2b'
-                                        onPress={() => navigation.navigate('Template')}
+                                        onPress={() => navigation.navigate('Leaderboard')}
                                     Button/>
                                 </TouchableHighlight>
                             </View>
@@ -131,7 +139,7 @@ export default function HomeScreen(): JSX.Element {
                                     <Button
                                         title="Home"
                                         color='#6ccff6'
-                                        onPress={() => navigation.navigate('Template')}
+                                        onPress={() => navigation.navigate('Home')}
                                     Button/>
                                 </TouchableHighlight>
                             </View>
@@ -140,7 +148,7 @@ export default function HomeScreen(): JSX.Element {
                                     <Button
                                         title="Reward"
                                         color='#6ccff6'
-                                        onPress={() => navigation.navigate('Template')}
+                                        onPress={() => navigation.navigate('Rewards')}
                                     Button/>
                                 </TouchableHighlight>
                             </View>

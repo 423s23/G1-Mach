@@ -27,7 +27,15 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 //import Svg, {Polygon} from 'react-native-svg';
 
 import Template from './Template.tsx';
-import HomeScreen from './HomeScreen.tsx';
+import Home from './HomeScreen.tsx';
+import About from './AboutScreen.tsx';
+import AdminApproval from './AdminApprovalScreen.tsx';
+import Leaderboard from './LeaderboardScreen.tsx';
+import Login from './LoginScreen.tsx';
+import Rewards from './RewardsScreen.tsx';
+import Settings from './SettingsScreen.tsx';
+import UserInfo from './UserInfoScreen.tsx';
+import SubmitTask from './SubmitTaskScreen.tsx';
 
 const Stack = createNativeStackNavigator();
 
@@ -70,9 +78,17 @@ function App() {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="HomeScreen">
+            <Stack.Navigator initialRouteName="Home">
                 <Stack.Screen name = "Template" component={Template} />
-                <Stack.Screen name = "HomeScreen" component={HomeScreen} />
+                <Stack.Screen name = "Home" component={Home} />
+                <Stack.Screen name = "About" component={About} />
+                <Stack.Screen name = "AdminApproval" component={AdminApproval} />
+                <Stack.Screen name = "Leaderboard" component={Leaderboard} />
+                <Stack.Screen name = "Login" component={Login} />
+                <Stack.Screen name = "Rewards" component={Rewards} />
+                <Stack.Screen name = "Settings" component={Settings} />
+                <Stack.Screen name = "UserInfo" component={UserInfo} />
+                <Stack.Screen name = "SubmitTask" component={SubmitTask} />
             </Stack.Navigator>
         </NavigationContainer>
     );
