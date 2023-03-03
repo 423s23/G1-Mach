@@ -126,7 +126,42 @@ export default function HomeScreen(): JSX.Element {
                             </View>
                         </View>
                         <View style={styles.taskbarContainer}>
-
+                            <View style={styles.taskbarButton}>
+                                <TouchableHighlight>
+                                    <Button
+                                        title="Home"
+                                        color='#6ccff6'
+                                        onPress={() => navigation.navigate('Template')}
+                                    Button/>
+                                </TouchableHighlight>
+                            </View>
+                            <View style={styles.taskbarButton}>
+                                <TouchableHighlight>
+                                    <Button
+                                        title="Reward"
+                                        color='#6ccff6'
+                                        onPress={() => navigation.navigate('Template')}
+                                    Button/>
+                                </TouchableHighlight>
+                            </View>
+                            <View style={styles.taskbarButton}>
+                                <TouchableHighlight>
+                                    <Button
+                                        title="Message"
+                                        color='#6ccff6'
+                                        onPress={() => navigation.navigate('Template')}
+                                    Button/>
+                                </TouchableHighlight>
+                            </View>
+                            <View style={styles.taskbarButton}>
+                                <TouchableHighlight>
+                                    <Button
+                                        title="Acc."
+                                        color='#6ccff6'
+                                        onPress={() => navigation.navigate('Template')}
+                                    Button/>
+                                </TouchableHighlight>
+                            </View>
                         </View>
                     </View>
                 </View>
@@ -137,14 +172,16 @@ export default function HomeScreen(): JSX.Element {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1,
+    height: 790,
     paddingTop: 0,
     backgroundColor: '#000000',
   },
+
+  // HEADING ------------------------------
   headingTitleContainer: {
     flex: 1,
     paddingTop: '5%',
-    paddingBottom: '5%',
+    paddingBottom: '15%',
     backgroundColor: '#000000',
   },
   headingTitle: {
@@ -179,6 +216,8 @@ const styles = StyleSheet.create({
     color: '#6ccff6',
     fontWeight: 300,
   },
+
+  // MAIN BUTTONS ------------------------
   sectionContainer: {
     flex: 3,
   },
@@ -187,25 +226,23 @@ const styles = StyleSheet.create({
     paddingVertical: '7%',
     marginHorizontal: '10%',
     backgroundColor: '#000000',
-    fontSize: 15,
     width: '80%',
   },
-  taskbarContainer: {
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    position: 'absolute',
-    flexDirection: 'row',
-    height: '20%',
-  },
-  taskbarText: {
-    padding: 15,
-    backgroundColor: '#111111',
-    textAlign: 'center',
-    fontSize: 15,
-  },
-  progressBar: {
 
+  // TASKBAR ---------------------------
+  taskbarContainer: {
+    marginHorizontal: '10%',
+    flexDirection: 'row',
   },
+  taskbarButton: {
+    backgroundColor: '#000000',
+    borderWidth: 1,
+    borderColor: '#000000',
+    fontSize: 15,
+    width: '25%',
+  },
+
+  // SHAPES ---------------------------
   twelvePointBurstContainer: {
     paddingVertical: '4%',
     paddingHorizontal: '12%',
@@ -242,10 +279,8 @@ const styles = StyleSheet.create({
   rectangleContainer: {
     marginTop: '2%',
     paddingHorizontal: '10%',
-    //backgroundColor: '#ffffff',
   },
   rectangleBackground: {
-    //position: 'absolute',
     width: '100%',
     height: 18,
     backgroundColor: "#ffffff",
