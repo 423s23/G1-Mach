@@ -14,7 +14,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - uses: actions/setup-node@master
-      - uses: c-hive/gha-yarn-cache@v1
       - uses: mikeal/npx@master
 
       - name: Install node modules
