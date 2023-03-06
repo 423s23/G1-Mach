@@ -7,6 +7,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './Screens/homeScreen';
 import SettingsScreen from "./Screens/settingsScreen";
 import TrackingScreen from "./Screens/trackingScreen";
+import LoginScreen from "./Screens/loginScreen";
+import styles from "./Screens/styles"
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -42,7 +44,7 @@ function HomeTabs(){
                         }
                     },
                     tabBarInactiveTintColor: 'gray',
-                    tabBarActiveTintColor: 'tomato',
+                    tabBarActiveTintColor: "#6ccff6",
                 })}
             >
                 <Tab.Screen name="Home" component={HomeScreen}/>
@@ -56,10 +58,12 @@ function HomeTabs(){
 export default function App() {
   return (
       <NavigationContainer>
-          <Stack.Navigator>
-              <Stack.Screen name="Home" component={HomeTabs} options={{statusBarHidden:true}}/>
+          <Stack.Navigator screenOptions={{
+              headerShown: false
+          }}>
+              <Stack.Screen name="HomeTabs" component={HomeTabs} />
               <Stack.Screen name="Profile" component={SettingsScreen} />
-              <Stack.Screen name="Settings" component={TrackingScreen} />
+              <Stack.Screen name="Login" component={LoginScreen} />
           </Stack.Navigator>
       </NavigationContainer>
   );
