@@ -74,6 +74,11 @@ const styles = StyleSheet.create({
     logo: {
         marginTop: 60,
         marginBottom: 60,
+    },
+    headerText: {
+        margin: 12,
+        fontSize: 32,
+        fontWeight: "600"
     }
 });
 

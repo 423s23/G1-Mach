@@ -8,7 +8,7 @@ import HomeScreen from './Screens/homeScreen';
 import SettingsScreen from "./Screens/settingsScreen";
 import TrackingScreen from "./Screens/trackingScreen";
 import LoginScreen from "./Screens/loginScreen";
-import styles from "./Screens/styles"
+import styles from "./Styles/styles"
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
