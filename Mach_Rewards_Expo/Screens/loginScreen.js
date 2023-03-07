@@ -1,6 +1,6 @@
 import * as React from "react";
 import {SafeAreaView, Text, TextInput, View, StyleSheet, Button, Pressable, Image} from "react-native";
-import styles from "./styles";
+import styles from "../Styles/styles";
 function LoginScreen({ navigation }){
     const [text, onChangeText] = React.useState('');
     const [number, onChangeNumber] = React.useState('');
@@ -8,7 +8,7 @@ function LoginScreen({ navigation }){
     return (
         <SafeAreaView style = {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
             <Image
-                source={require('./MachLogo.png')}
+                source={require('../assets/MachLogo.png')}
                 style = {styles.logo}
             />
             <TextInput
