@@ -8,6 +8,12 @@ import HomeScreen from './Screens/homeScreen';
 import SettingsScreen from "./Screens/settingsScreen";
 import TrackingScreen from "./Screens/trackingScreen";
 import LoginScreen from "./Screens/loginScreen";
+import AboutScreen from './Screens/aboutScreen';
+import AdminApprovalScreen from './Screens/adminApprovalScreen';
+import LeaderboardScreen from './Screens/leaderboardScreen';
+import RewardsScreen from './Screens/rewardsScreen';
+import SubmitTaskScreen from './Screens/submitTaskScreen';
+import UserInfoScreen from './Screens/userInfoScreen';
 import styles from "./Screens/styles"
 
 const Tab = createBottomTabNavigator();
@@ -41,6 +47,22 @@ function HomeTabs(){
                                     color={color}
                                 />
                             );
+                        } else if (route.name === 'UserInfo') {
+                            return (
+                                <Ionicons
+                                    name={focused ? 'ios-person' : 'ios-person-outline'}
+                                    size={size}
+                                    color={color}
+                                />
+                            );
+                        } else if (route.name === 'About') {
+                            return (
+                                <Ionicons
+                                    name={focused ? 'ios-scan' : 'ios-scan-outline'}
+                                    size={size}
+                                    color={color}
+                                />
+                            );
                         }
                     },
                     tabBarInactiveTintColor: 'gray',
@@ -49,6 +71,8 @@ function HomeTabs(){
             >
                 <Tab.Screen name="Home" component={HomeScreen}/>
                 <Tab.Screen name="Tracking" component={TrackingScreen}/>
+                <Tab.Screen name="UserInfo" component={UserInfoScreen} />
+                <Tab.Screen name="About" component={AboutScreen} />
                 <Tab.Screen name="Settings" component={SettingsScreen} />
             </Tab.Navigator>
     );
@@ -64,6 +88,8 @@ export default function App() {
               <Stack.Screen name="HomeTabs" component={HomeTabs} />
               <Stack.Screen name="Profile" component={SettingsScreen} />
               <Stack.Screen name="Login" component={LoginScreen} />
+              <Stack.Screen name="UserInfo" component={UserInfoScreen} />
+              <Stack.Screen name="About" component={AboutScreen} />
           </Stack.Navigator>
       </NavigationContainer>
   );
