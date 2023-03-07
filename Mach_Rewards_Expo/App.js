@@ -8,6 +8,12 @@ import HomeScreen from './Screens/homeScreen';
 import SettingsScreen from "./Screens/settingsScreen";
 import TrackingScreen from "./Screens/trackingScreen";
 import LoginScreen from "./Screens/loginScreen";
+import AboutScreen from './Screens/aboutScreen';
+import AdminApprovalScreen from './Screens/adminApprovalScreen';
+import LeaderboardScreen from './Screens/leaderboardScreen';
+import RewardsScreen from './Screens/rewardsScreen';
+import SubmitTaskScreen from './Screens/submitTaskScreen';
+import UserInfoScreen from './Screens/userInfoScreen';
 import styles from "./Styles/styles"
 
 const Tab = createBottomTabNavigator();
