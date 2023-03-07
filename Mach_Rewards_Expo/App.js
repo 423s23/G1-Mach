@@ -74,15 +74,17 @@ function HomeTabs(){
                 <Tab.Screen name="UserInfo" component={UserInfoScreen} />
                 <Tab.Screen name="About" component={AboutScreen} />
                 <Tab.Screen name="Settings" component={SettingsScreen} />
+                
             </Tab.Navigator>
     );
 }
 
-
+// FOR DEVELOPING: change the initialRoutName to the screen you are working on
+// BUT put it back to "Login" before pushing
 export default function App() {
   return (
       <NavigationContainer>
-          <Stack.Navigator screenOptions={{
+          <Stack.Navigator initialRouteName="Login" screenOptions={{
               headerShown: false
           }}>
               <Stack.Screen name="HomeTabs" component={HomeTabs} />
@@ -90,6 +92,11 @@ export default function App() {
               <Stack.Screen name="Login" component={LoginScreen} />
               <Stack.Screen name="UserInfo" component={UserInfoScreen} />
               <Stack.Screen name="About" component={AboutScreen} />
+              <Stack.Screen name="SubmitTask" component={SubmitTaskScreen} />
+              <Stack.Screen name="Tracking" component={TrackingScreen} />
+              <Stack.Screen name="Leaderboard" component={LeaderboardScreen} />
+              <Stack.Screen name="AdminApproval" component={AdminApprovalScreen} />
+              <Stack.Screen name="Rewards" component={RewardsScreen} />
           </Stack.Navigator>
       </NavigationContainer>
   );

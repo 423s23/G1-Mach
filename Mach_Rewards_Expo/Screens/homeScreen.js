@@ -62,10 +62,20 @@ function HomeScreen({ navigation }) {
                     <View style={homeScreenStyles.progressBarBackground}></View>
                     <View style={homeScreenStyles.progressBar}></View>
                 </View>
-                
-                <Pressable style={styles.loginButton} onPress={() => navigation.navigate("Login")}>
-                    <Text style={styles.buttonText}>Log In</Text>
-                </Pressable>
+                <View style={homeScreenStyles.mainButtonBox}>
+                    <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("SubmitTask")}>
+                        <Text style={homeScreenStyles.mainButtonText}>Submit Task Completion</Text>
+                    </Pressable>
+                    <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("Rewards")}>
+                        <Text style={homeScreenStyles.mainButtonText}>Rewards</Text>
+                    </Pressable>
+                    <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("Leaderboard")}>
+                        <Text style={homeScreenStyles.mainButtonText}>Team Leaderboard</Text>
+                    </Pressable>
+                    <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("AdminApproval")}>
+                        <Text style={homeScreenStyles.mainButtonText}>Admin Approval</Text>
+                    </Pressable>
+                </View>   
             </View>
         </ScrollView>
     );

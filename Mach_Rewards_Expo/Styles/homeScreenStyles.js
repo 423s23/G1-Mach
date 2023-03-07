@@ -76,6 +76,31 @@ const homeScreenStyles = StyleSheet.create({
         borderRadius: 5,
         marginRight: 200,
     },
+    mainButtonBox: {
+        width: '100%',
+        flex: 2,
+        flexDirection: 'column',
+        marginVertical: 10,
+        alignContent: 'center',
+        alignItems: 'center',
+    },
+    mainButton: {
+        marginVertical: 16,
+        margin: 8,
+        height: 60,
+        backgroundColor: "#6ccff6",
+        color: "black",
+        width: "80%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    mainButtonText: {
+        color: "#ffffff",
+        fontWeight: "600",
+        fontSize: 18,
+        alignSelf: "center",
+    },
     star:{
         margin:10
     },
