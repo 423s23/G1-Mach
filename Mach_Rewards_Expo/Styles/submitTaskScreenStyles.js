@@ -12,7 +12,7 @@ const submitTaskScreenStyles = StyleSheet.create({
         width: '100%',
         textAlign: 'center',
         fontSize: 30,
-        fontWeight: 500,
+        fontWeight: 700,
     },
     dropDownTask:{
         flex: 1,
@@ -42,11 +42,29 @@ const submitTaskScreenStyles = StyleSheet.create({
         fontSize: 22,
         fontWeight: 400,
     },
+    uploadImageBox:{
+        //flex: 3,
+        margin: 10,
+        backgroundColor: '#0000ff',
+        width: 150,
+        height: 150,
+        borderWidth: 1,
+        borderRadius: 10,
+        justifyContent: 'center'
+    },
     uploadImage:{
-
+        color: '#ffffff',
+        fontSize: 16,
+        fontWeight: 400,
+        textAlign: 'center',
     },
     submitButton:{
 
+    },
+    plus:{
+        color: '#ffffff',
+        justifyContent: 'center',
+        marginTop: 10,
     },
 });
 

@@ -135,9 +135,17 @@ function SubmitTaskScreen({ navigation }) {
                     value={text}
                     placeholder="Insert Link or Text..."
                 />
-                <Pressable style={submitTaskScreenStyles.uploadImage} onPress={() => navigation.navigate("SubmitTask")}>
-
-                </Pressable>
+                <View style={submitTaskScreenStyles.uploadImageBox}>
+                    <Pressable style={submitTaskScreenStyles.uploadImage} onPress={() => navigation.navigate("SubmitTask")}>
+                        <Ionicons
+                            name={'ios-add'}
+                            size={50}
+                            style={submitTaskScreenStyles.plus}
+                        />
+                        <Text style={submitTaskScreenStyles.uploadImage}>Upload Picture</Text>
+                    </Pressable>
+                </View>
+                
                 <Pressable style={submitTaskScreenStyles.submitButton} onPress={() => navigation.navigate("SubmitTask")}>
                     
                 </Pressable>
