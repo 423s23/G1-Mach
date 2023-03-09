@@ -10,60 +10,6 @@ import * as React from "react";
 import { TextInput } from "react-native-web";
 import homeScreenStyles from "../Styles/homeScreenStyles";
 
-/*
-const [open, setOpen] = useState(false);
-    const [value, setValue] = useState(null);
-    const [items, setItems] = useState([
-        {label: 'apple', value: 'apple'},
-        {label: 'pear', value: 'pear'},
-    ]);
-    const [loading, setLoading] = useState(false);
-    const { handleSubmit, control } = useForm();
-    const onSubmit = (data) => {
-        console.log(data, "data");
-    };
-
-<Controller
-                    name="submitTask"
-                    defaultValue=""
-                    control={control}
-                    render={({field: {onChange, value}}) => (
-                        <View style={submitTaskScreenStyles.dropDownTask}>
-                            <DropDownPicker
-                                
-                                open={open}
-                                value={value}
-                                items={items}
-                                setOpen={setOpen}
-                                setValue={setValue}
-                                setItems={setItems}
-                                placeholder="Select Task"
-                                placeholderStyle={submitTaskScreenStyles.insertText}
-                                loading={loading}
-                                activityIndicatorColor='#000000'
-                                searchable={true}
-                                searchPlaceholder="Search task here..."
-                                zIndex={1000}
-                                zIndexInverse={3000}
-                            />
-                        </View>
-                    )}
-                />
-*/
-
-/*
-const [selectedValue, setSelectedValue] = React.useState("java");
-
-<View style={submitTaskScreenStyles.dropDownTask}>
-                    <Picker
-                        selectedValue={selectedValue}
-                        style={submitTaskScreenStyles.selectTask}
-                    >
-
-                    </Picker>
-                </View>
-*/
-
 function SubmitTaskScreen({ navigation }) {
     const [text, onChangeText] = React.useState('');
     const [number, onChangeNumber] = React.useState('');
@@ -91,11 +37,10 @@ function SubmitTaskScreen({ navigation }) {
     const onSubmit = (data) => {
         console.log(data, "data");
     };
-    
 
     return (
         <ScrollView>
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#6ccff6' }}>
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
                 <View style={submitTaskScreenStyles.headerBox}>
                     <Text style={submitTaskScreenStyles.headerText}>Submit Task Completion</Text>
                 </View>
@@ -136,7 +81,7 @@ function SubmitTaskScreen({ navigation }) {
                     placeholder="Insert Link or Text..."
                 />
                 <View style={submitTaskScreenStyles.uploadImageBox}>
-                    <Pressable style={submitTaskScreenStyles.uploadImage} onPress={() => navigation.navigate("SubmitTask")}>
+                    <Pressable style={submitTaskScreenStyles.uploadImage} onPress={() => navigation.navigate("Home")}>
                         <Ionicons
                             name={'ios-add'}
                             size={50}
@@ -145,10 +90,11 @@ function SubmitTaskScreen({ navigation }) {
                         <Text style={submitTaskScreenStyles.uploadImage}>Upload Picture</Text>
                     </Pressable>
                 </View>
-                
-                <Pressable style={submitTaskScreenStyles.submitButton} onPress={() => navigation.navigate("SubmitTask")}>
-                    
-                </Pressable>
+                <View style={submitTaskScreenStyles.submitButtonBox}>
+                    <Pressable style={submitTaskScreenStyles.submitButton} onPress={() => navigation.navigate("Home")}>
+                        <Text style={submitTaskScreenStyles.submitButtonText}>Submit</Text>
+                    </Pressable>
+                </View>
             </View>
         </ScrollView>
     );
