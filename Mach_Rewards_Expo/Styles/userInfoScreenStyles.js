@@ -29,6 +29,24 @@ const userInfoScreenStyles = StyleSheet.create({
         fontWeight: 400,
         textAlign: "left",
     },
+    userText:{
+        width: '80%',
+        fontSize: 22,
+        color: '#000000',
+        fontWeight: 400,
+        textAlign: "center",
+        marginVertical: 10,
+    },
+
+    statsText:{
+        width: '80%',
+        fontSize: 22,
+        color: '#000000',
+        fontWeight: 400,
+        textAlign: "left",
+        marginVertical: 14,
+    },
+
     levelingBox:{
         flex: .1,
         width: '80%',
@@ -36,9 +54,9 @@ const userInfoScreenStyles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     levelText:{
-        fontSize: 24,
-        width: '50%',
-        color: '#6ccff6',
+        fontSize: 22,
+        width: '40%',
+        color: '#000000',
         fontWeight: 400,
         textAlign: 'left',
         paddingVertical: 5,
@@ -49,7 +67,7 @@ const userInfoScreenStyles = StyleSheet.create({
         color: '#6ccff6',
         fontWeight: 300,
         textAlign: 'right',
-        paddingVertical: 8,
+        paddingVertical: 20,
     },
     progressBox:{
         marginVertical: 20,
