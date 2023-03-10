@@ -7,7 +7,7 @@ import styles from "../Styles/styles";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
-import { TextInput } from "react-native-web";
+import { TextInput } from "react-native";
 import homeScreenStyles from "../Styles/homeScreenStyles";
 
 function SubmitTaskScreen({ navigation }) {
