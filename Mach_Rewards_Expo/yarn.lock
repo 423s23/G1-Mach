@@ -7727,7 +7727,9 @@ __metadata:
     expo-status-bar: ~1.4.4
     react: 18.2.0
     react-dom: 18.2.0
+    react-hook-form: ^7.43.5
     react-native: 0.71.3
+    react-native-dropdown-picker: ^5.4.5
     react-native-safe-area-context: 4.5.0
     react-native-screens: ~3.20.0
     react-native-web: ~0.18.10
@@ -10067,6 +10069,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-hook-form@npm:^7.43.5":
+  version: 7.43.5
+  resolution: "react-hook-form@npm:7.43.5"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: cfd757ac24bc81946d97183d061f38c8b602baaf9d019e87a905ce66f3a9f1d91d3a21002b921f8322e79b2afa9a4921b7c2d76e594fcf384e1b96889de2f2f5
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.12.0 || ^17.0.0 || ^18.0.0, react-is@npm:^18.0.0":
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
@@ -10097,6 +10108,16 @@ __metadata:
     jscodeshift: ^0.13.1
     nullthrows: ^1.1.1
   checksum: d3a40b557d4b3a0d51664070eb8388b0dde247a0518025ff5a815d3573c98ff16f616df8236e827ee16625f685169931db5c966dd144d860ad5aed437b65b28c
+  languageName: node
+  linkType: hard
+
+"react-native-dropdown-picker@npm:^5.4.5":
+  version: 5.4.5
+  resolution: "react-native-dropdown-picker@npm:5.4.5"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: bdf8c85ba856ca1050c05192ec7a7349eb8273294c1b12d27a2f0754dabedfe375ba0bc3fd64c5ca68e76ce4bb3d6228fe137db829565bbb955f8013f99c6bdd
   languageName: node
   linkType: hard
 
