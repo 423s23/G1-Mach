@@ -9,6 +9,39 @@ import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
 import homeScreenStyles from "../Styles/homeScreenStyles";
 
+/*
+<Controller
+                    name="tasks"
+                    defaultValue=""
+                    control={control}
+                    render={({field: {onChange, value}}) => (
+                        <View style={submitTaskScreenStyles.dropDownTask}>
+                            <DropDownPicker
+                                style={submitTaskScreenStyles.selectTask}
+                                open={open}
+                                value={value}
+                                items={tasks}
+                                setOpen={setOpen}
+                                setValue={setValue}
+                                setItems={setTasks}
+                                placeholder="Select Task"
+                                placeholderStyle={submitTaskScreenStyles.taskText}
+                                //loading={loading}
+                                //activityIndicatorColor='#000000'
+                                searchable={true}
+                                searchPlaceholder="Search task here..."
+                                onChangeItem={item => setState({
+                                    task: item.value
+                                })}
+                                onChangeValue={onChange}
+                                zIndex={1000}
+                                //zIndexInverse={3000}
+                            />
+                        </View>
+                    )}
+                />
+*/
+
 function SubmitTaskScreen({ navigation }) {
     const [text, onChangeText] = React.useState('');
     const [number, onChangeNumber] = React.useState('');
@@ -31,24 +64,20 @@ function SubmitTaskScreen({ navigation }) {
         {label: 'Create a UGC Video', value: 'ugcVideo'},
         {label: 'Custom Request', value: 'customRequest'},
     ]);
-    const [loading, setLoading] = React.useState(false);
+    //const [loading, setLoading] = React.useState(false);
     const {handleSubmit, control} = useForm();
-    const onSubmit = (data) => {
+    /*const onSubmit = (data) => {
         console.log(data, "data");
-    };
+    };*/
 
     return (
-        <ScrollView>
+        //<ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
                 <View style={submitTaskScreenStyles.headerBox}>
                     <Text style={submitTaskScreenStyles.headerText}>Submit Task Completion</Text>
                 </View>
-                <Controller
-                    name="tasks"
-                    defaultValue=""
-                    control={control}
-                    render={({field: {onChange, value}}) => (
-                        <View style={submitTaskScreenStyles.dropDownTask}>
+                
+                <View style={submitTaskScreenStyles.dropDownTask}>
                             <DropDownPicker
                                 style={submitTaskScreenStyles.selectTask}
                                 open={open}
@@ -59,20 +88,18 @@ function SubmitTaskScreen({ navigation }) {
                                 setItems={setTasks}
                                 placeholder="Select Task"
                                 placeholderStyle={submitTaskScreenStyles.taskText}
-                                loading={loading}
-                                activityIndicatorColor='#000000'
+                                //loading={loading}
+                                //activityIndicatorColor='#000000'
                                 searchable={true}
                                 searchPlaceholder="Search task here..."
-                                onChangeItem={item => setState({
-                                    task: item.value
-                                })}
-                                onChangeValue={onChange}
+                                //onChangeItem={item => setState({
+                                //    task: item.value
+                                //})}
+                                //onChangeValue={onChange}
                                 zIndex={1000}
-                                zIndexInverse={3000}
+                                //zIndexInverse={3000}
                             />
                         </View>
-                    )}
-                />
                 <TextInput
                     style={submitTaskScreenStyles.insertText}
                     onChangeText={onChangeText}
@@ -95,7 +122,7 @@ function SubmitTaskScreen({ navigation }) {
                     </Pressable>
                 </View>
             </View>
-        </ScrollView>
+        //</ScrollView>
     );
 }
 
