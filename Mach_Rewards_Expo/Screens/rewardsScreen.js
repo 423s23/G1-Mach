@@ -9,7 +9,7 @@ function RewardsScreen({ navigation }) {
        
         <ScrollView>
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text style={styles.stackedReward}> Hello 0</Text> 
+        <Text style={styles.stackedReward}> Hello </Text> 
         <Text style={styles.stackedReward}> Hello 1</Text> 
         <Text style={styles.stackedReward}> Hello 2 </Text> 
         <Text style={styles.stackedReward}> Hello 3 </Text> 
