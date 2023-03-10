@@ -1,5 +1,4 @@
 import {Image, Text, View, StyleSheet} from "react-native";
-import { DataTable } from 'react-native-paper';
 import leaderboardStyles from "../Styles/leaderboardStyle";
 import leaderboardStyle from "../Styles/leaderboardStyle";
 
