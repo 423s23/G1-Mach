@@ -74,6 +74,7 @@ function UserInfoScreen({ navigation }) {
                     <View style={userInfoScreenStyles.progressBarBackground}></View>
                     <View style={userInfoScreenStyles.progressBar}></View>
                 </View>
+                <Text style={userInfoScreenStyles.statsText}>Current Level:   {[Level]}</Text>
                 <Text style={userInfoScreenStyles.statsText}>Tasks Completed:   {[taskTotal]}</Text>
                 <Text style={userInfoScreenStyles.statsText}>Rewards Received:  {[taskTotal]}</Text>
             </View>
