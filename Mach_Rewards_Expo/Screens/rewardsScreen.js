@@ -15,6 +15,7 @@ function RewardsScreen({ navigation }) {
         <Text style={styles.stackedReward}> Hello 2 </Text> 
         <Text style={styles.stackedReward}> Hello 3 </Text> 
         <Text style={styles.stackedReward}> Hello 4 </Text> 
+        <Text style={styles.stackedReward}> Hello 5 </Text> 
             </View>
         </ScrollView>
     );
