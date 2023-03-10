@@ -1,4 +1,4 @@
-import {Button, Pressable, ScrollView, Text, View, StlyeSheet, Picker} from "react-native";
+import {Button, Pressable, ScrollView, Text, View, StyleSheet, Picker} from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DropDownPicker from "react-native-dropdown-picker";
