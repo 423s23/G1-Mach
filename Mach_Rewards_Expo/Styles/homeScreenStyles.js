@@ -68,7 +68,7 @@ const homeScreenStyles = StyleSheet.create({
     },
     progressBar:{
         position: 'absolute',
-        justifyContent: 'left',
+        //justifyContent: 'left',
         height: 20,
         width: '50%',
         backgroundColor: '#6ccff6',

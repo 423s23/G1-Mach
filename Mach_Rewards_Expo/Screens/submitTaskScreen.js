@@ -1,4 +1,4 @@
-import {Button, Pressable, ScrollView, Text, View, StyleSheet, Picker} from "react-native";
+import {Button, Pressable, ScrollView, Text, View, StyleSheet, Picker, TextInput} from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DropDownPicker from "react-native-dropdown-picker";
@@ -7,7 +7,6 @@ import styles from "../Styles/styles";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
-import { TextInput } from "react-native-web";
 import homeScreenStyles from "../Styles/homeScreenStyles";
 
 function SubmitTaskScreen({ navigation }) {

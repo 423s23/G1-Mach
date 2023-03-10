@@ -40,10 +40,9 @@ const submitTaskScreenStyles = StyleSheet.create({
         borderWidth: 1,
         paddingLeft: 10,
         fontSize: 22,
-        fontWeight: 400,
+        //fontWeight: 400,
     },
     uploadImageBox:{
-        //flex: 3,
         margin: 10,
         backgroundColor: '#6ccff6',
         width: 150,
