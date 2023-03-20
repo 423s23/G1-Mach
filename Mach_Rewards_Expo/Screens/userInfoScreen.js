@@ -14,6 +14,8 @@ function UserInfoScreen({ navigation }) {
     let CurrentPoints = 2300;
     let ProgressPoints = 3000;
     let Rank = 1;
+    let taskTotal = 10;
+    let registerYear = 2023;
     let Titles = [
         "Not Yet Verified",
         "Mach Badass",
@@ -24,7 +26,8 @@ function UserInfoScreen({ navigation }) {
     return (
         <ScrollView>
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 20}}>
-                <Text style={userInfoScreenStyles.nameText}>{[firstName]} {[lastName]}</Text>
+                <Text style={userInfoScreenStyles.nameText}>Your progress, {[firstName]}</Text>
+                <Text style={userInfoScreenStyles.userText}>Mach athlete since {[registerYear]}</Text>
                 <View style={userInfoScreenStyles.levelBox}>
                     <Text style={styles.headerText}>{Titles[Rank]}</Text>
                     <View style={userInfoScreenStyles.starBox}>
@@ -71,7 +74,8 @@ function UserInfoScreen({ navigation }) {
                     <View style={userInfoScreenStyles.progressBarBackground}></View>
                     <View style={userInfoScreenStyles.progressBar}></View>
                 </View>
-
+                <Text style={userInfoScreenStyles.statsText}>Tasks Completed:   {[taskTotal]}</Text>
+                <Text style={userInfoScreenStyles.statsText}>Rewards Received:  {[taskTotal]}</Text>
             </View>
         </ScrollView>
     );
