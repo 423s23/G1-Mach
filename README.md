@@ -3,7 +3,7 @@
 
 ## User Documentation
 
-### We are in development right now, meaning there isn't a fully functional build avalible to you on the app store right yet. With that said, we've massivly simplifed the process of trying out what has been created. All you need are your phone and computer, and there's no command line tools required!
+### We are in development right now, meaning there isn't a fully functional build available to you on the app store right yet. With that said, we've massivly simplifed the process of trying out what has been created. All you need are your phone and computer, and there's no command line tools required!
 
 To try out the pre-release
 - Download the Expo Go app on your phone - [Android](https://play.google.com/store/apps/details?id=host.exp.exponent) and [iOS](https://apps.apple.com/us/app/expo-go/id982107779)
