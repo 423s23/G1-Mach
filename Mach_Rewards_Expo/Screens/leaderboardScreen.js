@@ -4,109 +4,112 @@ import leaderboardStyles from "../Styles/leaderboardStyle";
 function LeaderboardScreen({ navigation }) {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <h2 style={leaderboardStyles.header}>LEADERBOARD</h2>
+                <Text style={leaderboardStyles.header}>LEADERBOARD</Text>
             <div style={leaderboardStyles.podium}>
                 <div style={leaderboardStyles.outerPerson}>
-                    <p style={leaderboardStyles.noMargin}>2</p>
+                    <Text style={leaderboardStyles.noMargin}>2</Text>
                     <Image
                         style={leaderboardStyles.personImg}
                         source={{uri: 'https://www.williamjordan.net/images/WillSki.jpg'}}
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
-                    <p>Bella</p>
-                    <p>2600</p>
+                    <Text>Bella</Text>
+                    <br/>
+                    <Text>2600</Text>
                 </div>
                 <div style={leaderboardStyles.person}>
-                    <p style={leaderboardStyles.one}>1</p>
+                    <Text style={leaderboardStyles.one}>1</Text>
                     <Image
                         style={leaderboardStyles.personImg}
                         source={{uri: 'https://www.williamjordan.net/images/WillSki.jpg'}}
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
-                    <p>Adam</p>
-                    <p>2600</p>
+                    <Text>Adam</Text>
+                    <br/>
+                    <Text>2600</Text>
                 </div>
                 <div style={leaderboardStyles.outerPerson}>
-                    <p style={leaderboardStyles.noMargin}>3</p>
+                    <Text style={leaderboardStyles.noMargin}>3</Text>
                     <Image
                         style={leaderboardStyles.personImg}
                         source={{uri: 'https://www.williamjordan.net/images/WillSki.jpg'}}
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
-                    <p>Courtney</p>
-                    <p>2600</p>
+                    <Text>Courtney</Text>
+                    <br/>
+                    <Text>2600</Text>
                 </div>
             </div>
             <hr style={leaderboardStyles.line}/>
 
             <div style={leaderboardStyles.tabs}>
                 <div style={leaderboardStyles.tab}>
-                    <p style={leaderboardStyles.tabText}>Top</p>
+                    <Text style={leaderboardStyles.tabText}>Top</Text>
                 </div>
                 <div style={leaderboardStyles.tab}>
-                    <p style={leaderboardStyles.tabText}>Local</p>
+                    <Text style={leaderboardStyles.tabText}>Local</Text>
                 </div>
                 <div style={leaderboardStyles.tab}>
-                    <p style={leaderboardStyles.tabText}>Your Tier</p>
+                    <Text style={leaderboardStyles.tabText}>Your Tier</Text>
                 </div>
             </div>
             <br/>
             <br/>
             <div style={leaderboardStyles.myTable}>
                 <div style={leaderboardStyles.myRow}>
-                    <text style={leaderboardStyles.rowText}>4</text>
-                    <text style={leaderboardStyles.rowText}>Dan</text>
-                    <text style={leaderboardStyles.rowText}>2600</text>
+                    <Text style={leaderboardStyles.rowText}>4</Text>
+                    <Text style={leaderboardStyles.rowText}>Dan</Text>
+                    <Text style={leaderboardStyles.rowText}>2600</Text>
                 </div>
                 <div style={leaderboardStyles.myRow}>
-                    <text style={leaderboardStyles.rowText}>5</text>
-                    <text style={leaderboardStyles.rowText}> Eli</text>
-                    <text style={leaderboardStyles.rowText}>2600</text>
+                    <Text style={leaderboardStyles.rowText}>5</Text>
+                    <Text style={leaderboardStyles.rowText}> Eli</Text>
+                    <Text style={leaderboardStyles.rowText}>2600</Text>
                 </div>
                 <div style={leaderboardStyles.myRow}>
-                    <text style={leaderboardStyles.rowText}>6</text>
-                    <text style={leaderboardStyles.rowText}>Frank</text>
-                    <text style={leaderboardStyles.rowText}>2600</text>
+                    <Text style={leaderboardStyles.rowText}>6</Text>
+                    <Text style={leaderboardStyles.rowText}>Frank</Text>
+                    <Text style={leaderboardStyles.rowText}>2600</Text>
                 </div>
                 <div style={leaderboardStyles.myRow}>
-                    <text style={leaderboardStyles.rowText}>7</text>
-                    <text style={leaderboardStyles.rowText}>Grace</text>
-                    <text style={leaderboardStyles.rowText}>2600</text>
+                    <Text style={leaderboardStyles.rowText}>7</Text>
+                    <Text style={leaderboardStyles.rowText}>Grace</Text>
+                    <Text style={leaderboardStyles.rowText}>2600</Text>
                 </div>
                 <div style={leaderboardStyles.myRow}>
-                    <text style={leaderboardStyles.rowText}>8</text>
-                    <text style={leaderboardStyles.rowText}>Hank</text>
-                    <text style={leaderboardStyles.rowText}>2600</text>
+                    <Text style={leaderboardStyles.rowText}>8</Text>
+                    <Text style={leaderboardStyles.rowText}>Hank</Text>
+                    <Text style={leaderboardStyles.rowText}>2600</Text>
                 </div>
                 <div style={leaderboardStyles.myRow}>
-                    <text style={leaderboardStyles.rowText}>9</text>
-                    <text style={leaderboardStyles.rowText}>Isaac</text>
-                    <text style={leaderboardStyles.rowText}>2600</text>
+                    <Text style={leaderboardStyles.rowText}>9</Text>
+                    <Text style={leaderboardStyles.rowText}>Isaac</Text>
+                    <Text style={leaderboardStyles.rowText}>2600</Text>
                 </div>
                 <div style={leaderboardStyles.myRow}>
-                    <text style={leaderboardStyles.rowText}>10</text>
-                    <text style={leaderboardStyles.rowText}>Julia</text>
-                    <text style={leaderboardStyles.rowText}>2600</text>
+                    <Text style={leaderboardStyles.rowText}>10</Text>
+                    <Text style={leaderboardStyles.rowText}>Julia</Text>
+                    <Text style={leaderboardStyles.rowText}>2600</Text>
                 </div>
                 <div style={leaderboardStyles.myRow}>
-                    <text style={leaderboardStyles.rowText}>. . .</text>
-                    <text style={leaderboardStyles.rowText}></text>
-                    <text style={leaderboardStyles.rowText}></text>
+                    <Text style={leaderboardStyles.rowText}>. . .</Text>
+                    <Text style={leaderboardStyles.rowText}></Text>
+                    <Text style={leaderboardStyles.rowText}></Text>
                 </div>
                 <div style={leaderboardStyles.myRow}>
-                    <text style={leaderboardStyles.rowText}>246</text>
-                    <text style={leaderboardStyles.rowText}>Kevin</text>
-                    <text style={leaderboardStyles.rowText}>205</text>
+                    <Text style={leaderboardStyles.rowText}>246</Text>
+                    <Text style={leaderboardStyles.rowText}>Kevin</Text>
+                    <Text style={leaderboardStyles.rowText}>205</Text>
                 </div>
                 <div style={leaderboardStyles.myRow}>
-                    <text style={leaderboardStyles.rowTextBold}>246</text>
-                    <text style={leaderboardStyles.rowTextBold}>Will</text>
-                    <text style={leaderboardStyles.rowTextBold}>200</text>
+                    <Text style={leaderboardStyles.rowTextBold}>246</Text>
+                    <Text style={leaderboardStyles.rowTextBold}>Will</Text>
+                    <Text style={leaderboardStyles.rowTextBold}>200</Text>
                 </div>
                 <div style={leaderboardStyles.myRow}>
-                    <text style={leaderboardStyles.rowText}>247</text>
-                    <text style={leaderboardStyles.rowText}>Leigh</text>
-                    <text style={leaderboardStyles.rowText}>190</text>
+                    <Text style={leaderboardStyles.rowText}>247</Text>
+                    <Text style={leaderboardStyles.rowText}>Leigh</Text>
+                    <Text style={leaderboardStyles.rowText}>190</Text>
                 </div>
             </div>
         </View>
