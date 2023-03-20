@@ -18,17 +18,17 @@ Reporting bugs lets us developers resolve your issue(s) directly or point you to
 ---
 ## Developer Documentation
 
-### To develop and run this app nativly on your machine, you will need the following:
+### To develop and run this app natively on your machine, you will need the following:
 - Develop
   - node.js, installed from your favorite package manager*
   - yarn, again from your package manager* of choice
   - (Optional) Android Studio, if you want to run the android version in an emulator
   - (Optional) xCode, if you want to run the iOS version in an emulator - this only works on mac
-###### *I would highly reccomend using the homebrew package manager on macOS and choclatey on Windows
+###### *Homebrew package manager for macOS and choclatey on Windows are highley recommended
 
 - Run
   - An Android or iOS device with the Expo Go app installed - [Android](https://play.google.com/store/apps/details?id=host.exp.exponent) and [iOS](https://apps.apple.com/us/app/expo-go/id982107779)
-  - (Optional) An android emulator created through the devices manager of Android Studio, if you want to run in an Android emulator
+  - (Optional) An Android emulator created through the devices manager of Android Studio, if you want to run in an Android emulator
   - (Optional) An iOS virtual device created in xCode settings, if you want to run in an iOS emulator
   
 ### Once you have these prerequisites, in your terminal:
@@ -44,11 +44,11 @@ If things have gone correctly, after everything has installed and built for the 
 ---
 ## About
 
-### Continous Integration
-Right now, continous integration is being activly worked on. Because jsx must be compiled before it can be run, and because our codebase compiles into a complete application for mobile devices, automated testing is difficult. We technically have a GitHub action set up to try and test and build our codebase, but it fails every time as it stands. We are working on setting this up the proper way, to have a BUILD branch that tries to build the code and publish the application files whenever we push to it, as well as updating the Expo Snack link automatically to one with the latest version. That is not complete at this time however.
+### Continuous Integration
+Right now, continuous integration is being activly worked on. Due to the fact that jsx must be compiled before it can be run, and because our codebase compiles into a complete application for mobile devices, automated testing is difficult. We technically have a GitHub action set up to try and test and build our codebase, but it fails every time as it stands. We are working on setting this up the proper way, to have a BUILD branch that tries to build the code and publish the application files whenever we push to it, as well as updating the Expo Snack link automatically to one with the latest version. That is not complete at this time however.
 
 ### Internal Structure
-While this is not being developed in a strictly object orient fashion, under the hood, the UI navigation schema consists of functions that return react-native components, and the navigation managers themselves are also react-native objects. Here is a simplifed diagram of how the UI works internally. This ignores all but the most essential components provided by the framework and libraries, and if you actually look at the code, you'd actually see functions that create and return these objects rather than classes that manage their state, but this should at least give your a rough idea of where everything is.
+While this is not being developed in a strictly object oriented fashion, under the hood, the UI navigation schema consists of functions that return react-native components, and the navigation managers themselves are also react-native objects. Here is a simplifed diagram of how the UI works internally. This ignores all but the most essential components provided by the framework and libraries, and if you actually look at the code, you'd actually see functions that create and return these objects rather than classes that manage their state, but this should at least give your a rough idea of where everything is.
 
 ---
 <img width="1093" alt="Screenshot 2023-03-10 at 10 44 55 PM" src="https://user-images.githubusercontent.com/123405355/224467474-a8bb09ce-e0ff-44a9-8ccf-92e1b220ab0a.png">
