@@ -21,16 +21,16 @@ function SettingsScreen({ navigation }) {
                 <Text style={settingsScreenStyles.nameText}>{[firstName]} {[lastName]}</Text>
             </View>
            <View style={settingsScreenStyles.mainButtonBox}>
-               <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("ContactInfo")}>
+               <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("Home")}>
                     <Text style={settingsScreenStyles.mainButtonText}>Contact Info</Text>
                </Pressable>
-               <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("Notifications")}>
+               <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("Home")}>
                     <Text style={settingsScreenStyles.mainButtonText}>Notifications</Text>
                </Pressable>
-               <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("Languages")}>
+               <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("Home")}>
                     <Text style={settingsScreenStyles.mainButtonText}>Languages</Text>
                </Pressable>
-               <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("AdminApproval")}>
+               <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("Home")}>
                     <Text style={settingsScreenStyles.mainButtonText}>Log Out</Text>
                </Pressable>
            </View>

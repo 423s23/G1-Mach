@@ -1,14 +1,9 @@
-import {Button, Pressable, ScrollView, Text, View, StyleSheet, Picker} from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {Button, Pressable, ScrollView, Text, View, StyleSheet, Picker, TextInput} from "react-native";
 import DropDownPicker from "react-native-dropdown-picker";
-import {useForm, Controller} from "react-hook-form";
 import styles from "../Styles/styles";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
-import { TextInput } from "react-native-web";
-import homeScreenStyles from "../Styles/homeScreenStyles";
 
 function SubmitTaskScreen({ navigation }) {
     const [text, onChangeText] = React.useState('');
@@ -32,53 +27,36 @@ function SubmitTaskScreen({ navigation }) {
         {label: 'Create a UGC Video', value: 'ugcVideo'},
         {label: 'Custom Request', value: 'customRequest'},
     ]);
-    const [loading, setLoading] = React.useState(false);
-    const {handleSubmit, control} = useForm();
-    const onSubmit = (data) => {
-        console.log(data, "data");
-    };
 
     return (
-        <ScrollView>
+        //<ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
                 <View style={submitTaskScreenStyles.headerBox}>
                     <Text style={submitTaskScreenStyles.headerText}>Submit Task Completion</Text>
                 </View>
-                <Controller
-                    name="tasks"
-                    defaultValue=""
-                    control={control}
-                    render={({field: {onChange, value}}) => (
-                        <View style={submitTaskScreenStyles.dropDownTask}>
-                            <DropDownPicker
-                                style={submitTaskScreenStyles.selectTask}
-                                open={open}
-                                value={value}
-                                items={tasks}
-                                setOpen={setOpen}
-                                setValue={setValue}
-                                setItems={setTasks}
-                                placeholder="Select Task"
-                                placeholderStyle={submitTaskScreenStyles.taskText}
-                                loading={loading}
-                                activityIndicatorColor='#000000'
-                                searchable={true}
-                                searchPlaceholder="Search task here..."
-                                onChangeItem={item => setState({
-                                    task: item.value
-                                })}
-                                onChangeValue={onChange}
-                                zIndex={1000}
-                                zIndexInverse={3000}
-                            />
-                        </View>
-                    )}
-                />
+                
+                <View style={submitTaskScreenStyles.dropDownTask}>
+                    <DropDownPicker
+                        style={submitTaskScreenStyles.selectTask}
+                        open={open}
+                        value={value}
+                        items={tasks}
+                        setOpen={setOpen}
+                        setValue={setValue}
+                        setItems={setTasks}
+                        placeholder="Select Task"
+                        placeholderStyle={submitTaskScreenStyles.taskText}
+                        searchable={true}
+                        searchPlaceholder="Search task here..."
+                        zIndex={1000}
+                    />
+                </View>
                 <TextInput
                     style={submitTaskScreenStyles.insertText}
                     onChangeText={onChangeText}
                     value={text}
                     placeholder="Insert Link or Text..."
+                    multiline={true}
                 />
                 <View style={submitTaskScreenStyles.uploadImageBox}>
                     <Pressable style={submitTaskScreenStyles.uploadImage} onPress={() => navigation.navigate("Home")}>
@@ -96,7 +74,7 @@ function SubmitTaskScreen({ navigation }) {
                     </Pressable>
                 </View>
             </View>
-        </ScrollView>
+        //</ScrollView>
     );
 }
 

@@ -37,7 +37,6 @@ const userInfoScreenStyles = StyleSheet.create({
         textAlign: "center",
         marginVertical: 10,
     },
-
     statsText:{
         width: '80%',
         fontSize: 22,
@@ -46,7 +45,6 @@ const userInfoScreenStyles = StyleSheet.create({
         textAlign: "left",
         marginVertical: 14,
     },
-
     levelingBox:{
         flex: .1,
         width: '80%',
@@ -86,7 +84,7 @@ const userInfoScreenStyles = StyleSheet.create({
     },
     progressBar:{
         position: 'absolute',
-        justifyContent: 'left',
+        //justifyContent: 'left',
         height: 15,
         width: '50%',
         backgroundColor: '#6ccff6',

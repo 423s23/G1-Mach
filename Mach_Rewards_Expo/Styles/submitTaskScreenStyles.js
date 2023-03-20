@@ -40,17 +40,20 @@ const submitTaskScreenStyles = StyleSheet.create({
         borderWidth: 1,
         paddingLeft: 10,
         fontSize: 22,
-        fontWeight: 400,
+        //fontWeight: 400,
+        zIndex: -5,
+        textAlignVertical: 'top',
     },
     uploadImageBox:{
-        //flex: 3,
+        flex: 1.4,
         margin: 10,
         backgroundColor: '#6ccff6',
         width: 150,
-        height: 150,
+        //height: 150,
         borderWidth: 1,
         borderRadius: 10,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     uploadImage:{
         color: '#000000',
@@ -86,7 +89,10 @@ const submitTaskScreenStyles = StyleSheet.create({
     plus:{
         color: '#000000',
         justifyContent: 'center',
+        alignItems: 'center',
         marginTop: 10,
+        marginLeft: 25,     //TEMPORARY fix; item needs to be centered
+        marginBottom: 10,
     },
 });
 
