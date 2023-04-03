@@ -11,6 +11,7 @@ function SettingsScreen({ navigation }) {
         let firstName = "Dylan";
         let lastName = "lastName";
     return (
+    <ScrollView>
        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
             <View style={settingsScreenStyles.profilePicBox}>
                 <Ionicons
@@ -35,6 +36,7 @@ function SettingsScreen({ navigation }) {
                </Pressable>
            </View>
         </View>
+       </ScrollView>
     );
 }
 
