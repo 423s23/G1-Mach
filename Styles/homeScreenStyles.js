@@ -102,7 +102,7 @@ const homeScreenStyles = StyleSheet.create({
         alignSelf: "center",
     },
     star:{
-        margin:10
+        margin: 10
     },
 });
 
