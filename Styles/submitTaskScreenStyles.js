@@ -127,6 +127,28 @@ const submitTaskScreenStyles = StyleSheet.create({
     backArrow:{
         color: '#000000',
     },
+    infoBox:{
+        marginVertical: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        //flex: 1,
+        width: '90%',
+    },
+    infoHeader:{
+        width: '100%',
+        textAlign: 'left',
+        fontSize: 22,
+        fontWeight: 600,
+        color: '#6ccff6'
+    },
+    infoText:{
+        width: '100%',
+        marginLeft: 15,
+        textAlign: 'left',
+        fontSize: 16,
+        fontWeight: 500,
+        color: '#000000'
+    },
 });
 
 export default submitTaskScreenStyles;
