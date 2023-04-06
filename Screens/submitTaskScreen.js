@@ -31,6 +31,26 @@ function SubmitTaskScreen({ navigation }) {
     return (
         //<ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
+                <View style={submitTaskScreenStyles.backButtonBox}>
+                    <Pressable style={submitTaskScreenStyles.backButton} onPress={() => navigation.navigate("Home")}>
+                        <Ionicons
+                            name={'ios-arrow-back-circle-outline'}
+                            size={40}
+                            style={submitTaskScreenStyles.backArrow}
+                        />
+                    </Pressable>
+                </View>
+                
+                <View style={submitTaskScreenStyles.helpButtonBox}>
+                    <Pressable style={submitTaskScreenStyles.helpButton} onPress={() => navigation.navigate("Home")}>
+                        <Ionicons
+                            name={'ios-help-circle-outline'}
+                            size={40}
+                            style={submitTaskScreenStyles.helpCicle}
+                        />
+                    </Pressable>
+                </View>
+                
                 <View style={submitTaskScreenStyles.headerBox}>
                     <Text style={submitTaskScreenStyles.headerText}>Submit Task Completion</Text>
                 </View>
