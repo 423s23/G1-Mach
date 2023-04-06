@@ -128,7 +128,7 @@ const submitTaskScreenStyles = StyleSheet.create({
         color: '#000000',
     },
     infoBox:{
-        marginVertical: 10,
+        marginVertical: 5,
         justifyContent: 'center',
         alignItems: 'center',
         //flex: 1,
