@@ -42,7 +42,7 @@ function SubmitTaskScreen({ navigation }) {
                 </View>
                 
                 <View style={submitTaskScreenStyles.helpButtonBox}>
-                    <Pressable style={submitTaskScreenStyles.helpButton} onPress={() => navigation.navigate("Home")}>
+                    <Pressable style={submitTaskScreenStyles.helpButton} onPress={() => navigation.navigate("SubmitTaskHelp")}>
                         <Ionicons
                             name={'ios-help-circle-outline'}
                             size={40}
