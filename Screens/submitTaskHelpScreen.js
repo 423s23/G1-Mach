@@ -60,7 +60,7 @@ function SubmitTaskHelpScreen({ navigation }) {
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>Race in Mach Kit (5 points)</Text>
-                    <Text style={submitTaskScreenStyles.infoText}>Everytime you race in your kit you recieve 5 points. Be sure to include when and where you raced</Text>
+                    <Text style={submitTaskScreenStyles.infoText}>Everytime you race in your kit you receive 5 points. Be sure to include when and where you raced</Text>
                 </View>
 
                 <View style={submitTaskScreenStyles.infoBox}>
