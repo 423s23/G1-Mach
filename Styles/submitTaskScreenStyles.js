@@ -2,7 +2,7 @@ import {StyleSheet} from "react-native";
 
 const submitTaskScreenStyles = StyleSheet.create({
     headerBox:{
-        marginVertical: 25,
+        marginVertical: 20,
         justifyContent: 'center',
         alignItems: 'center',
         flex: 1,
@@ -93,6 +93,61 @@ const submitTaskScreenStyles = StyleSheet.create({
         marginTop: 10,
         marginLeft: 25,     //TEMPORARY fix; item needs to be centered
         marginBottom: 10,
+    },
+    helpButtonBox:{
+        position: 'absolute',
+        right: 0,
+        top: 0,
+        marginTop: 5,
+        marginRight: 5,
+        backgroundColor: '#ffffff',
+        borderWidth: 1,
+        borderRadius: 10,
+        borderColor: '#ffffff',
+    },
+    helpButton:{
+    },
+    helpCircle:{
+        color: '#000000',
+    },
+    backButtonBox:{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        marginTop: 5,
+        marginLeft: 5,
+        backgroundColor: '#ffffff',
+        borderWidth: 1,
+        borderRadius: 10,
+        borderColor: '#ffffff',
+    },
+    backButton:{
+
+    },
+    backArrow:{
+        color: '#000000',
+    },
+    infoBox:{
+        marginVertical: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        //flex: 1,
+        width: '90%',
+    },
+    infoHeader:{
+        width: '100%',
+        textAlign: 'left',
+        fontSize: 22,
+        fontWeight: 600,
+        color: '#6ccff6'
+    },
+    infoText:{
+        width: '100%',
+        marginLeft: 15,
+        textAlign: 'left',
+        fontSize: 16,
+        fontWeight: 500,
+        color: '#000000'
     },
 });
 
