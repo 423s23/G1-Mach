@@ -15,6 +15,9 @@ import RewardsScreen from './Screens/rewardsScreen';
 import SubmitTaskScreen from './Screens/submitTaskScreen';
 import UserInfoScreen from './Screens/userInfoScreen';
 import ContactInfoScreen from './Screens/contactInfoScreen';
+import NotificationsScreen from './Screens/notificationsScreen';
+import LanguagesScreen from './Screens/languagesScreen';
+import LogOutScreen from './Screens/logOutScreen';
 import styles from "./Styles/styles"
 
 const Tab = createBottomTabNavigator();
@@ -99,6 +102,9 @@ export default function App() {
               <Stack.Screen name="AdminApproval" component={AdminApprovalScreen} />
               <Stack.Screen name="Rewards" component={RewardsScreen} />
               <Stack.Screen name="ContactInfo" component={ContactInfoScreen} />
+              <Stack.Screen name="Notifications" component={NotificationsScreen} />
+              <Stack.Screen name="LogOut" component={LogOutScreen} />
+              <Stack.Screen name="Languages" component={LanguagesScreen} />
 
           </Stack.Navigator>
       </NavigationContainer>
