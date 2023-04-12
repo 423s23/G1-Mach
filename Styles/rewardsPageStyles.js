@@ -1,14 +1,27 @@
 import {StyleSheet} from "react-native";
 
 const rewardsPageStyles = StyleSheet.create({
+    backButtonBox:{
+            position: 'absolute',
+            left: 15,
+            top: 45,
+
+        },
+        backArrow:{
+            color: '#000000',
+        },
     headerBlock:{
-        marginBottom: 100,
-        height: 100,
+        height: 90,
         backgroundColor: "#6ccff6",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
         width: "100%",
+    },
+    headerContent:{
+        position: "absolute",
+        bottom: 5,
+        width: "100%",
+        textAlign: "center",
+        fontSize: 30,
+        fontWeight: "bold",
     },
     rewardItem:{
         margin: 0,
@@ -21,8 +34,6 @@ const rewardsPageStyles = StyleSheet.create({
         marginLeft: "40%",
         marginBottom: 10,
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
     },
     tierTitle:{
         marginBottom: 5,
@@ -32,17 +43,13 @@ const rewardsPageStyles = StyleSheet.create({
         fontSize: 20,
         width: "100%",
         display: "flex",
-        alignItems: "center",
-        justifyContent: "right",
-        textAlign: "right"
+        textAlign: "right",
     },
     divider:{
         marginBottom: 10,
         height: 5,
         backgroundColor: "black",
         display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
         width: "100%"
     },
 });
