@@ -22,20 +22,54 @@ function RewardsScreen({ navigation }) {
                     </View>
         <ScrollView>
             <View style={{flex: 1, alignItems: 'center'}}>
-                <Text style={styles.tierTitle}> First Tier</Text>
+                <Text style={styles.tierTitle}> Mach Badass</Text>
                 <Text style={styles.divider}></Text> 
-                <Text style={styles.rewardItem}> Reward 1</Text> 
-                <Text style={styles.rewardItem}> Reward 2</Text> 
-                <Text style={styles.rewardItem}> Reward 3</Text> 
-                <Text style={styles.rewardItem}> Reward 4</Text> 
-                <Text style={styles.rewardItem}> Reward 5</Text>
-                <Text style={styles.tierTitle}> Second Tier</Text>
+                <Text style={styles.rewardItemClaimed}> Water Bottle</Text> 
+                <Text style={styles.rewardItemClaimed}> Stickers</Text> 
+                <Text style={styles.rewardItemClaimed}> Tattoo</Text> 
+                <Text style={styles.rewardItemClaimed}> Socks</Text> 
+                <Text style={styles.rewardItemUnclaimed}> Hat</Text>
+                <Text style={styles.rewardItemUnclaimed}> Coffee Mug</Text> 
+                <Text style={styles.rewardItemLocked}> Beanie</Text> 
+                <Text style={styles.rewardItemLocked}> T-Shirt</Text> 
+                <Text style={styles.rewardItemLocked}> Hoodie</Text> 
+                <Text style={styles.tierTitle}> Mach Star</Text>
                 <Text style={styles.divider}></Text> 
-                <Text style={styles.rewardItem}> Reward 1</Text> 
-                <Text style={styles.rewardItem}> Reward 2</Text> 
-                <Text style={styles.rewardItem}> Reward 3</Text> 
-                <Text style={styles.rewardItem}> Reward 4</Text> 
-                <Text style={styles.rewardItem}> Reward 5</Text> 
+                <Text style={styles.rewardItemLocked}> Transition Towel</Text> 
+                <Text style={styles.rewardItemLocked}> Mach Gloves</Text> 
+                <Text style={styles.rewardItemLocked}> Base Layer</Text> 
+                <Text style={styles.rewardItemLocked}> Gilet</Text> 
+                <Text style={styles.rewardItemLocked}> Cycling Jacket</Text> 
+                <Text style={styles.rewardItemLocked}> Running Shoes</Text> 
+                <Text style={styles.rewardItemLocked}> Tri-Shorts</Text> 
+                <Text style={styles.rewardItemLocked}> Tri-Jersey</Text> 
+                <Text style={styles.rewardItemLocked}> Swimwear</Text> 
+                <Text style={styles.tierTitle}> Mach Icon</Text>
+                <Text style={styles.divider}></Text> 
+                <Text style={styles.rewardItemLocked}> $150 Store Credit</Text> 
+                <Text style={styles.rewardItemLocked}> Mystery Reward</Text> 
+                <Text style={styles.rewardItemLocked}> 2024 Team Shirt</Text> 
+                <Text style={styles.rewardItemLocked}> 2024 Team Tri-Suit</Text> 
+                <Text style={styles.rewardItemLocked}> 2024 Cycling Bibs</Text> 
+                <Text style={styles.rewardItemLocked}> Tri-Suit</Text> 
+                <Text style={styles.rewardItemLocked}> Cycling Kit</Text> 
+                <Text style={styles.tierTitle}> Mach Hero</Text>
+                <Text style={styles.divider}></Text> 
+                <Text style={styles.rewardItemLocked}> Team Tri-Bag</Text> 
+                <Text style={styles.rewardItemLocked}> Custom Race Week Shirt</Text> 
+                <Text style={styles.rewardItemLocked}> Custom Tri-Suit</Text>
+                <Text style={styles.rewardItemLocked}> Reward 3</Text> 
+                <Text style={styles.rewardItemLocked}> USAT Membership</Text> 
+                <Text style={styles.rewardItemLocked}> 3 Race Entries</Text> 
+                <Text style={styles.rewardItemLocked}> Round Trip Race</Text> 
+                <Text style={styles.tierTitle}> Mach Legend</Text>
+                <Text style={styles.divider}></Text> 
+                <Text style={styles.rewardItemLocked}> Trip to Train</Text> 
+                <Text style={styles.rewardItemLocked}> Mystery Reward</Text> 
+                <Text style={styles.rewardItemLocked}> Day in the Life</Text> 
+                <Text style={styles.rewardItemLocked}> World Championships</Text> 
+                <Text style={styles.rewardItemLocked}> Free Team Bundle FOR LIFE</Text> 
+                <Text style={styles.footer}></Text>
         </View>
         </ScrollView>
       </View>
