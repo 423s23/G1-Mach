@@ -16,6 +16,7 @@
     "@react-navigation/native-stack": "^6.9.12",
     "expo": "~48.0.5",
     "expo-status-bar": "~1.4.4",
+    "firebase": "^9.19.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.5",
@@ -28,5 +29,8 @@
   "devDependencies": {
     "@babel/core": "^7.20.0"
   },
-  "private": true
+  "private": true,
+  "repository": "https://github.com/423s23/G1-Mach.git",
+  "author": "SeaTurtle22 <joey@grayturtle.co>",
+  "license": "MIT"
 }
