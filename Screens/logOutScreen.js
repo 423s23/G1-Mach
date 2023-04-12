@@ -8,6 +8,7 @@ import {Ionicons} from "@expo/vector-icons";
 
 function LogOutScreen({ navigation }) {
     return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
      <View style={settingsScreenStyles.backButtonBox}>
                         <Pressable style={settingsScreenStyles.backButton} onPress={() => navigation.navigate("Settings")}>
                             <Ionicons
@@ -17,9 +18,7 @@ function LogOutScreen({ navigation }) {
                             />
                         </Pressable>
                     </View>
-       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text style={settingsScreenStyles.nameText}>Log Out</Text>
-
+<Text style={settingsScreenStyles.nameText}>Log Out</Text>
         </View>
     );
 }

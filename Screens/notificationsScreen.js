@@ -12,6 +12,7 @@ function NotificationsScreen({ navigation }) {
         let lastName = "lastName"
 
     return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
      <View style={settingsScreenStyles.backButtonBox}>
                         <Pressable style={settingsScreenStyles.backButton} onPress={() => navigation.navigate("Home")}>
                             <Ionicons
@@ -21,8 +22,7 @@ function NotificationsScreen({ navigation }) {
                             />
                         </Pressable>
                     </View>
-       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text style={settingsScreenStyles.nameText}>Notifications</Text>
+<Text style={settingsScreenStyles.nameText}>Notifications</Text>
 
         </View>
     );
