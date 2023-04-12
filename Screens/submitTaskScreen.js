@@ -4,6 +4,7 @@ import styles from "../Styles/styles";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
+import commonStyles from "../Styles/commonStyles";
 
 function SubmitTaskScreen({ navigation }) {
     const [text, onChangeText] = React.useState('');
@@ -31,13 +32,9 @@ function SubmitTaskScreen({ navigation }) {
     return (
         //<ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
-                <View style={submitTaskScreenStyles.backButtonBox}>
-                    <Pressable style={submitTaskScreenStyles.backButton} onPress={() => navigation.navigate("Home")}>
-                        <Ionicons
-                            name={'ios-arrow-back-circle-outline'}
-                            size={40}
-                            style={submitTaskScreenStyles.backArrow}
-                        />
+                <View style={commonStyles.backBox}>
+                    <Pressable onPress={() => navigation.navigate("Home")}>
+                        <Text style={commonStyles.back}>{'❮'}</Text>
                     </Pressable>
                 </View>
                 

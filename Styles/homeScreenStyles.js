@@ -93,7 +93,8 @@ const homeScreenStyles = StyleSheet.create({
         width: "80%",
         display: "flex",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        borderRadius: "2vw",
     },
     mainButtonText: {
         color: "#ffffff",

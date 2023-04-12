@@ -10,6 +10,7 @@ const approvalStyles = StyleSheet.create({
     },
     buttons: {
         display: "flex",
+
         // justifyContent: "space-between",
     },
     redButton: {
