@@ -40,7 +40,6 @@ const submitTaskScreenStyles = StyleSheet.create({
         borderWidth: 1,
         paddingLeft: 10,
         fontSize: 22,
-        //fontWeight: 400,
         zIndex: -5,
         textAlignVertical: 'top',
     },

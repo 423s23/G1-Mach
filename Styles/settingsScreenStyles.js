@@ -16,7 +16,7 @@ const settingsScreenStyles = StyleSheet.create({
         alignItems: 'center',
     },
     profilePic:{
-        padding:50,
+        padding: 50,
     },
     listBox: {
     width: '100%',
@@ -25,6 +25,7 @@ const settingsScreenStyles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     },
+
     mainButtonBox: {
         width: '100%',
         flex: 2,
@@ -32,7 +33,9 @@ const settingsScreenStyles = StyleSheet.create({
         marginVertical: 10,
         alignContent: 'center',
         alignItems: 'center',
+        marginTop: 40,
     },
+
     mainButtonText: {
         color: "#ffffff",
         fontWeight: "600",
@@ -51,6 +54,23 @@ const settingsScreenStyles = StyleSheet.create({
         display: "flex",
         justifyContent: "center"
     },
+    backButtonBox:{
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            marginTop: 5,
+            marginLeft: 5,
+            backgroundColor: '#ffffff',
+            borderWidth: 1,
+            borderRadius: 10,
+            borderColor: '#ffffff',
+        },
+        backButton:{
+
+        },
+        backArrow:{
+            color: '#000000',
+        },
 });
 
 export default settingsScreenStyles;
