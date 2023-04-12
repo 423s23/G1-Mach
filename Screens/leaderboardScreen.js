@@ -1,10 +1,19 @@
-import {Image, Text, View, StyleSheet} from "react-native";
+import {Image, Text, View, StyleSheet, Pressable} from "react-native";
 import leaderboardStyles from "../Styles/leaderboardStyle";
+import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles";
+import {Ionicons} from "@expo/vector-icons";
+import * as React from "react";
+import commonStyles from "../Styles/commonStyles";
 
 function LeaderboardScreen({ navigation }) {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text style={leaderboardStyles.header}>LEADERBOARD</Text>
+            <View style={commonStyles.backBox}>
+                <Pressable onPress={() => navigation.navigate("Home")}>
+                    <Text style={commonStyles.back}>{'❮'}</Text>
+                </Pressable>
+            </View>
+            <Text style={leaderboardStyles.header}>LEADERBOARD</Text>
             <div style={leaderboardStyles.podium}>
                 <div style={leaderboardStyles.outerPerson}>
                     <Text style={leaderboardStyles.noMargin}>2</Text>
