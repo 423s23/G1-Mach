@@ -12,6 +12,7 @@ function LanguagesScreen({ navigation }) {
         let language = "English"
 
     return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
      <View style={settingsScreenStyles.backButtonBox}>
                         <Pressable style={settingsScreenStyles.backButton} onPress={() => navigation.navigate("Home")}>
                             <Ionicons
@@ -20,9 +21,8 @@ function LanguagesScreen({ navigation }) {
                                 style={submitTaskScreenStyles.backArrow}
                             />
                         </Pressable>
+<Text style={settingsScreenStyles.nameText}>Language: English</Text>
                     </View>
-       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text style={settingsScreenStyles.nameText}>Language: English</Text>
 
         </View>
     );
