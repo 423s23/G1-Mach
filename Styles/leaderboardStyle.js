@@ -21,7 +21,7 @@ const leaderboardStyles = StyleSheet.create({
     personImg: {
         width: '100%',
         aspectRatio: 1,
-        borderRadius: '50%',
+        //borderRadius: '50%',
     },
     outerPerson: {
         marginLeft: '7%',
