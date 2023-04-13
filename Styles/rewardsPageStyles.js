@@ -23,10 +23,10 @@ const rewardsPageStyles = StyleSheet.create({
         fontSize: 30,
         fontWeight: "bold",
     },
-    rewardItemLocked:{
+    pressableRewardClaimed:{
         margin: 0,
         height: 40,
-        backgroundColor: "#808080",
+        backgroundColor: "#6ccff6",
         color: "black",
         fontStyle: "italic",
         fontSize: 20,
@@ -35,7 +35,7 @@ const rewardsPageStyles = StyleSheet.create({
         marginBottom: 10,
         display: "flex",
     },
-    rewardItemUnclaimed:{
+    pressableRewardUnclaimed:{
         margin: 0,
         height: 40,
         backgroundColor: "#90EE90",
@@ -47,10 +47,10 @@ const rewardsPageStyles = StyleSheet.create({
         marginBottom: 10,
         display: "flex",
     },
-    rewardItemClaimed:{
+    pressableRewardLocked:{
         margin: 0,
         height: 40,
-        backgroundColor: "#6ccff6",
+        backgroundColor: "#808080",
         color: "black",
         fontStyle: "italic",
         fontSize: 20,
@@ -81,6 +81,47 @@ const rewardsPageStyles = StyleSheet.create({
         backgroundColor: "#6ccff6",
         width: "100%",
     },
+    centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 22,
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+  },
+  buttonOpen: {
+    backgroundColor: '#F194FF',
+  },
+  buttonClose: {
+    backgroundColor: '#2196F3',
+  },
+  textStyle: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: 'center',
+  },
 });
 
 export default rewardsPageStyles;
