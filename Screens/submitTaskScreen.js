@@ -6,7 +6,7 @@ import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
 import {initializeApp} from "firebase/app";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
-import {doc, getDoc, setDoc, addDoc, collection, getFirestore} from "firebase/firestore";
+import {doc, getDoc, setDoc, addDoc, collection, Timestamp, getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
@@ -80,6 +80,7 @@ function SubmitTaskScreen({ navigation }) {
         const ticketRef = await addDoc(collection(db, "tickets"), {
             comment: com,
             name: type,
+            time: Timestamp.now(),
             state: "pending",
             uid: id,
         });
