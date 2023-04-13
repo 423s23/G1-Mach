@@ -40,13 +40,22 @@ signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
         const errorMessage = error.message;
     });
 
+function getProgressPercent() {
+    let previousPoints = userData.previousPoints;
+    let currentPoints = userData.currentPoints;
+    let progressPoints = userData.progressPoints;
+    let progressPercentInt = (((currentPoints - previousPoints) / (progressPoints - previousPoints)) * 100);
+    var progressPercent = progressPercentInt.toString() + "%";
+    return progressPercent
+}
+
 function HomeScreen({ navigation }) {
     const starSize = 30;
-    let Name = "";
-    let Level = 13;
-    let CurrentPoints = 2300;
-    let ProgressPoints = 3000;
-    let Rank = 1;
+    let Name = userData.firstName + " " + userData.lastName;
+    let Level = userData.level;
+    let CurrentPoints = userData.currentPoints;
+    let ProgressPoints = userData.progressPoints;
+    let Rank = userData.rank;
     let Titles = [
         "Not Yet Verified",
         "Mach Badass",
@@ -54,6 +63,7 @@ function HomeScreen({ navigation }) {
         "Mach Icon",
         "Mach Hero",
         "Mach Legend"]
+    
     return (
         <ScrollView>
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 20}}>
@@ -94,7 +104,7 @@ function HomeScreen({ navigation }) {
                 </View>
                 <View style={homeScreenStyles.progressBox}>
                     <View style={homeScreenStyles.progressBarBackground}></View>
-                    <View style={homeScreenStyles.progressBar}></View>
+                    <View style={{position: 'absolute', height: 20, width: getProgressPercent(), backgroundColor: '#6ccff6', borderColor: '#000000', borderWidth: 2, borderRadius: 5,}}></View>
                 </View>
                 <View style={homeScreenStyles.mainButtonBox}>
                     <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("SubmitTask")}>

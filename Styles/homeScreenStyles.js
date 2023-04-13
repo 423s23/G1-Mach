@@ -66,15 +66,14 @@ const homeScreenStyles = StyleSheet.create({
         borderWidth: 2,
         borderRadius: 5,
     },
-    progressBar:{
-        position: 'absolute',
-        //justifyContent: 'left',
-        height: 20,
-        width: '50%',
-        backgroundColor: '#6ccff6',
-        borderColor: '#000000',
-        borderWidth: 2,
-        borderRadius: 5,
+    progressBar:{               // This styling has been added directly into homeScreen.js to control the width
+        //position: 'absolute',
+        //height: 20,
+        //width: '50%',
+        //backgroundColor: '#6ccff6',
+        //borderColor: '#000000',
+        //borderWidth: 2,
+        //borderRadius: 5,
     },
     mainButtonBox: {
         width: '100%',
