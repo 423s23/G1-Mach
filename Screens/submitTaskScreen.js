@@ -77,15 +77,17 @@ function SubmitTaskScreen({ navigation }) {
         const docSnap = await getDoc(docRef);
         let id = docSnap.id;
 
-        const ticketRef = await addDoc(collection(db, "tickets"), {
-            comment: com,
-            name: type,
-            time: Timestamp.now(),
-            state: "pending",
-            uid: id,
-        });
-        console.log("DOCUMENT ID: ", ticketRef.id);
-
+        if (com != '' && type != '') {
+            const ticketRef = await addDoc(collection(db, "tickets"), {
+                comment: com,
+                name: type,
+                time: Timestamp.now(),
+                state: "pending",
+                uid: id,
+            });
+            console.log("DOCUMENT ID: ", ticketRef.id);
+        }
+        
         navigation.navigate("Home");
     }
 
