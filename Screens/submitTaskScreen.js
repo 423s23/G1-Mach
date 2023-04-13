@@ -4,7 +4,44 @@ import styles from "../Styles/styles";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
-//import commonStyles from "../Styles/commonStyles";
+import {initializeApp} from "firebase/app";
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
+import {doc, getDoc, setDoc, addDoc, collection, getFirestore} from "firebase/firestore";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
+    authDomain: "machrewardsapp.firebaseapp.com",
+    databaseURL: "https://machrewardsapp-default-rtdb.firebaseio.com",
+    projectId: "machrewardsapp",
+    storageBucket: "machrewardsapp.appspot.com",
+    messagingSenderId: "311919315732",
+    appId: "1:311919315732:web:2004d4f538ef63f33b9001",
+    measurementId: "G-WVTXPNPTNR"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+let userCred = null;
+let userData = null;
+signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
+    .then(async (userCredential) => {
+        // Signed in
+        userCred = userCredential.user;
+        const docRef = doc(db, "users", userCred.uid);
+        console.log(docRef);
+        const docSnap = await getDoc(docRef);
+        console.log(docSnap);
+        userData = docSnap.data();
+        console.log(userData);
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+    });
+
+
+
+
 
 function SubmitTaskScreen({ navigation }) {
     const [text, onChangeText] = React.useState('');
@@ -29,6 +66,28 @@ function SubmitTaskScreen({ navigation }) {
         {label: 'Custom Request', value: 'customRequest'},
     ]);
 
+    ticket = {
+        comment: '',
+        type: '',
+    };
+
+    async function createNewTicket(com, type) {
+        const docRef = doc(db, "users", userCred.uid);
+        console.log(docRef);
+        const docSnap = await getDoc(docRef);
+        let id = docSnap.id;
+
+        const ticketRef = await addDoc(collection(db, "tickets"), {
+            comment: com,
+            name: type,
+            state: "pending",
+            uid: id,
+        });
+        console.log("DOCUMENT ID: ", ticketRef.id);
+
+        navigation.navigate("Home");
+    }
+
     return (
         //<ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
@@ -43,7 +102,7 @@ function SubmitTaskScreen({ navigation }) {
                         <Ionicons
                             name={'ios-help-circle-outline'}
                             size={40}
-                            style={submitTaskScreenStyles.helpCicle}
+                            style={submitTaskScreenStyles.helpCircle}
                         />
                     </Pressable>
                 </View>
@@ -61,6 +120,7 @@ function SubmitTaskScreen({ navigation }) {
                         setOpen={setOpen}
                         setValue={setValue}
                         setItems={setTasks}
+                        onChangeValue={(value) => this.type = value}
                         placeholder="Select Task"
                         placeholderStyle={submitTaskScreenStyles.taskText}
                         searchable={true}
@@ -70,14 +130,14 @@ function SubmitTaskScreen({ navigation }) {
                 </View>
                 <TextInput
                     style={submitTaskScreenStyles.insertText}
-                    onChangeText={onChangeText}
-                    value={text}
+                    onChangeText={(text) => this.comment = text}
+                    value={this.comment}
                     placeholder="Insert Link or Text..."
                     multiline={true}
                 />
                 
                 <View style={submitTaskScreenStyles.submitButtonBox}>
-                    <Pressable style={submitTaskScreenStyles.submitButton} onPress={() => navigation.navigate("Home")}>
+                    <Pressable style={submitTaskScreenStyles.submitButton} onPress={() => createNewTicket(this.comment, this.type)}>
                         <Text style={submitTaskScreenStyles.submitButtonText}>Submit</Text>
                     </Pressable>
                 </View>

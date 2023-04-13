@@ -64,7 +64,8 @@ const submitTaskScreenStyles = StyleSheet.create({
         bottom: 0,
         width: '100%',
         flex: 1,
-        marginVertical: 35,
+        marginVertical: 40,
+        //marginBottom: 100,      //TODO Delete this line of code
         alignContent: 'center',
         alignItems: 'center',
     },
