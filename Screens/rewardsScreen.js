@@ -1,4 +1,4 @@
-import {AppRegistry, Image, Button, Pressable, ScrollView, Text, View, StyleSheet} from "react-native";
+import {AppRegistry, Image, Button, Pressable, ScrollView, Text, View, StyleSheet, Alert, Modal} from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import styles from "../Styles/rewardsPageStyles";
 import {Ionicons} from "@expo/vector-icons";
@@ -24,51 +24,123 @@ function RewardsScreen({ navigation }) {
             <View style={{flex: 1, alignItems: 'center'}}>
                 <Text style={styles.tierTitle}> Mach Badass</Text>
                 <Text style={styles.divider}></Text> 
-                <Text style={styles.rewardItemClaimed}> Water Bottle</Text> 
-                <Text style={styles.rewardItemClaimed}> Stickers</Text> 
-                <Text style={styles.rewardItemClaimed}> Tattoo</Text> 
-                <Text style={styles.rewardItemClaimed}> Socks</Text> 
-                <Text style={styles.rewardItemUnclaimed}> Hat</Text>
-                <Text style={styles.rewardItemUnclaimed}> Coffee Mug</Text> 
-                <Text style={styles.rewardItemLocked}> Beanie</Text> 
-                <Text style={styles.rewardItemLocked}> T-Shirt</Text> 
-                <Text style={styles.rewardItemLocked}> Hoodie</Text> 
+                <Text style={styles.rewardItemClaimed}> Water Bottle</Text>
+                <Pressable style={styles.pressableRewardClaimed}>
+                <Text>Stickers</Text> 
+                </Pressable>
+<Pressable style={styles.pressableRewardClaimed}>
+                <Text> Tattoo</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardClaimed}>
+                <Text> Socks</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardClaimed}>
+                <Text> Hat</Text>
+</Pressable>
+<Pressable style={styles.pressableRewardUnclaimed}>
+                <Text> Coffee Mug</Text>
+</Pressable>
+<Pressable style={styles.pressableRewardUnclaimed}>
+                <Text> Beanie</Text>
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> T-Shirt</Text>
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Hoodie</Text>
+</Pressable>
                 <Text style={styles.tierTitle}> Mach Star</Text>
                 <Text style={styles.divider}></Text> 
-                <Text style={styles.rewardItemLocked}> Transition Towel</Text> 
-                <Text style={styles.rewardItemLocked}> Mach Gloves</Text> 
-                <Text style={styles.rewardItemLocked}> Base Layer</Text> 
-                <Text style={styles.rewardItemLocked}> Gilet</Text> 
-                <Text style={styles.rewardItemLocked}> Cycling Jacket</Text> 
-                <Text style={styles.rewardItemLocked}> Running Shoes</Text> 
-                <Text style={styles.rewardItemLocked}> Tri-Shorts</Text> 
-                <Text style={styles.rewardItemLocked}> Tri-Jersey</Text> 
-                <Text style={styles.rewardItemLocked}> Swimwear</Text> 
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Transition Towel</Text>
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Mach Gloves</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Base Layer</Text>
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Gilet</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Cycling Jacket</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Running Shoes</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Tri-Shorts</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Tri-Jersey</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Swimwear</Text> 
+</Pressable>
                 <Text style={styles.tierTitle}> Mach Icon</Text>
                 <Text style={styles.divider}></Text> 
-                <Text style={styles.rewardItemLocked}> $150 Store Credit</Text> 
-                <Text style={styles.rewardItemLocked}> Mystery Reward</Text> 
-                <Text style={styles.rewardItemLocked}> 2024 Team Shirt</Text> 
-                <Text style={styles.rewardItemLocked}> 2024 Team Tri-Suit</Text> 
-                <Text style={styles.rewardItemLocked}> 2024 Cycling Bibs</Text> 
-                <Text style={styles.rewardItemLocked}> Tri-Suit</Text> 
-                <Text style={styles.rewardItemLocked}> Cycling Kit</Text> 
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> $150 Store Credit</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Mystery Reward</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> 2024 Team Shirt</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> 2024 Team Tri-Suit</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> 2024 Cycling Bibs</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Tri-Suit</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Cycling Kit</Text> 
+</Pressable>
                 <Text style={styles.tierTitle}> Mach Hero</Text>
                 <Text style={styles.divider}></Text> 
-                <Text style={styles.rewardItemLocked}> Team Tri-Bag</Text> 
-                <Text style={styles.rewardItemLocked}> Custom Race Week Shirt</Text> 
-                <Text style={styles.rewardItemLocked}> Custom Tri-Suit</Text>
-                <Text style={styles.rewardItemLocked}> Reward 3</Text> 
-                <Text style={styles.rewardItemLocked}> USAT Membership</Text> 
-                <Text style={styles.rewardItemLocked}> 3 Race Entries</Text> 
-                <Text style={styles.rewardItemLocked}> Round Trip Race</Text> 
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Team Tri-Bag</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Custom Race Week Shirt</Text>
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Custom Tri-Suit</Text>
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Reward 3</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> USAT Membership</Text>
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> 3 Race Entries</Text>
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Round Trip Race</Text> 
+</Pressable>
                 <Text style={styles.tierTitle}> Mach Legend</Text>
                 <Text style={styles.divider}></Text> 
-                <Text style={styles.rewardItemLocked}> Trip to Train</Text> 
-                <Text style={styles.rewardItemLocked}> Mystery Reward</Text> 
-                <Text style={styles.rewardItemLocked}> Day in the Life</Text> 
-                <Text style={styles.rewardItemLocked}> World Championships</Text> 
-                <Text style={styles.rewardItemLocked}> Free Team Bundle FOR LIFE</Text> 
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Trip to Train</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Mystery Reward</Text>
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Day in the Life</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> World Championships</Text> 
+</Pressable>
+<Pressable style={styles.pressableRewardLocked}>
+                <Text> Free Team Bundle FOR LIFE</Text> 
+</Pressable>
                 <Text style={styles.footer}></Text>
         </View>
         </ScrollView>
