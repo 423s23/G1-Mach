@@ -4,6 +4,7 @@ import {Button, Pressable, ScrollView, StyleSheet} from "react-native";
 import {Text, View} from "react-native";
 //import styles from "../Styles/styles";
 import settingsScreenStyles from "../Styles/settingsScreenStyles";
+import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles";
 import {Ionicons} from "@expo/vector-icons";
 
 function LanguagesScreen({ navigation }) {
@@ -14,7 +15,7 @@ function LanguagesScreen({ navigation }) {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
      <View style={settingsScreenStyles.backButtonBox}>
-                        <Pressable style={settingsScreenStyles.backButton} onPress={() => navigation.navigate("Home")}>
+                        <Pressable style={settingsScreenStyles.backButton} onPress={() => navigation.navigate("Settings")}>
                             <Ionicons
                                 name={'ios-arrow-back-circle-outline'}
                                 size={40}

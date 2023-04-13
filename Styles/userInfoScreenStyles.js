@@ -25,7 +25,7 @@ const userInfoScreenStyles = StyleSheet.create({
     },
     nameText:{
         width: '80%',
-        fontSize: '1.75em',
+        //fontSize: '1.75em',
         color: '#6ccff6',
         fontWeight: 400,
         textAlign: "left",

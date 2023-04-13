@@ -5,7 +5,7 @@ function AboutScreen({ navigation }) {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Text style={aboutStyles.header}>TEAM VISION</Text>
-                <br/>
+                
                 <Text style={aboutStyles.p}>
                     At Mach Apparel we acknowledge your excitement and commitment to your athletic pursuits. We want to help
                     make your athletic endeavors fun and memorable! We have partnered with companies that we believe and

@@ -17,7 +17,7 @@ function ContactInfoScreen({ navigation }) {
     return (
 <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <View style={settingsScreenStyles.backButtonBox}>
-                        <Pressable style={settingsScreenStyles.backButton} onPress={() => navigation.navigate("Home")}>
+                        <Pressable style={settingsScreenStyles.backButton} onPress={() => navigation.navigate("Settings")}>
                             <Ionicons
                                 name={'ios-arrow-back-circle-outline'}
                                 size={40}
