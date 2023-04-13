@@ -52,7 +52,7 @@ const homeScreenStyles = StyleSheet.create({
         paddingVertical: 8,
     },
     progressBox:{
-        marginVertical: 20,
+        marginBottom: 20,
         flex: .2,
         width: '80%',
         flexDirection: 'row',
@@ -94,7 +94,7 @@ const homeScreenStyles = StyleSheet.create({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        //borderRadius: "2vw",
+        borderRadius: 10,
     },
     mainButtonText: {
         color: "#ffffff",

@@ -2,10 +2,10 @@ import {StyleSheet} from "react-native";
 
 const submitTaskScreenStyles = StyleSheet.create({
     headerBox:{
-        marginVertical: 20,
+        marginVertical: 30,
         justifyContent: 'center',
         alignItems: 'center',
-        flex: 1,
+        flex: .5,
         width: '80%',
     },
     headerText:{
@@ -15,7 +15,7 @@ const submitTaskScreenStyles = StyleSheet.create({
         fontWeight: 700,
     },
     dropDownTask:{
-        flex: 1,
+        flex: .5,
         width: '80%',
         textAlign: 'center',
     },
@@ -32,7 +32,7 @@ const submitTaskScreenStyles = StyleSheet.create({
         fontWeight: 400,
     },
     insertText:{
-        height: 250,
+        height: 450,
         width: '80%',
         marginTop: 40,
         marginBottom: 30,
@@ -97,7 +97,7 @@ const submitTaskScreenStyles = StyleSheet.create({
         position: 'absolute',
         right: 0,
         top: 0,
-        marginTop: 5,
+        marginTop: 15,
         marginRight: 5,
         backgroundColor: '#ffffff',
         borderWidth: 1,
@@ -113,14 +113,16 @@ const submitTaskScreenStyles = StyleSheet.create({
         position: 'absolute',
         left: 0,
         top: 0,
-        marginTop: 5,
-        marginLeft: 5,
+        marginTop: 15,
+        marginLeft: 10,
         backgroundColor: '#ffffff',
         borderWidth: 1,
         borderRadius: 10,
         borderColor: '#ffffff',
     },
     backButton:{
+        color: '#6ccff6',
+        fontSize: 25,
 
     },
     backArrow:{

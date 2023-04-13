@@ -4,7 +4,7 @@ import styles from "../Styles/styles";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
-import commonStyles from "../Styles/commonStyles";
+//import commonStyles from "../Styles/commonStyles";
 
 function SubmitTaskScreen({ navigation }) {
     const [text, onChangeText] = React.useState('');
@@ -32,9 +32,9 @@ function SubmitTaskScreen({ navigation }) {
     return (
         //<ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
-                <View style={commonStyles.backBox}>
+                <View style={submitTaskScreenStyles.backButtonBox}>
                     <Pressable onPress={() => navigation.navigate("Home")}>
-                        <Text style={commonStyles.back}>{'❮'}</Text>
+                        <Text style={submitTaskScreenStyles.backButton}>{'❮'}</Text>
                     </Pressable>
                 </View>
                 
@@ -75,16 +75,7 @@ function SubmitTaskScreen({ navigation }) {
                     placeholder="Insert Link or Text..."
                     multiline={true}
                 />
-                <View style={submitTaskScreenStyles.uploadImageBox}>
-                    <Pressable style={submitTaskScreenStyles.uploadImage} onPress={() => navigation.navigate("Home")}>
-                        <Ionicons
-                            name={'ios-add'}
-                            size={50}
-                            style={submitTaskScreenStyles.plus}
-                        />
-                        <Text style={submitTaskScreenStyles.uploadImage}>Upload Picture</Text>
-                    </Pressable>
-                </View>
+                
                 <View style={submitTaskScreenStyles.submitButtonBox}>
                     <Pressable style={submitTaskScreenStyles.submitButton} onPress={() => navigation.navigate("Home")}>
                         <Text style={submitTaskScreenStyles.submitButtonText}>Submit</Text>

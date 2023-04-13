@@ -9,13 +9,9 @@ function SubmitTaskHelpScreen({ navigation }) {
     return (
         <ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
-                <View style={submitTaskScreenStyles.backButtonBox}>
-                    <Pressable style={submitTaskScreenStyles.backButton} onPress={() => navigation.navigate("SubmitTask")}>
-                        <Ionicons
-                            name={'ios-arrow-back-circle-outline'}
-                            size={40}
-                            style={submitTaskScreenStyles.backArrow}
-                        />
+            <View style={submitTaskScreenStyles.backButtonBox}>
+                    <Pressable onPress={() => navigation.navigate("SubmitTask")}>
+                        <Text style={submitTaskScreenStyles.backButton}>{'❮'}</Text>
                     </Pressable>
                 </View>
 
