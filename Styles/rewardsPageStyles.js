@@ -3,7 +3,7 @@ import {StyleSheet} from "react-native";
 const rewardsPageStyles = StyleSheet.create({
     backButtonBox:{
             position: 'absolute',
-            left: 15,
+            left: 10,
             top: 35,
 
         },
@@ -30,10 +30,29 @@ const rewardsPageStyles = StyleSheet.create({
         color: "black",
         fontStyle: "italic",
         fontSize: 20,
-        width: "80%",
-        marginLeft: "20%",
         marginBottom: 10,
         display: "flex",
+    },
+    pointVal:{
+        fontSize: 18,
+        marginTop: 8,
+        marginLeft: 10,
+        position: "absolute",
+        fontStyle: "italic",
+    },
+    pointValTwo:{
+        fontSize: 18,
+        marginTop: 7,
+        marginLeft: 5,
+        position: "absolute",
+        fontStyle: "italic",
+    },
+    pointValThree:{
+        fontSize: 16,
+        marginTop: 9,
+        marginLeft: 2,
+        position: "absolute",
+        fontStyle: "italic",
     },
     pressableRewardUnclaimed:{
         margin: 0,
@@ -41,7 +60,7 @@ const rewardsPageStyles = StyleSheet.create({
         backgroundColor: "#90EE90",
         color: "black",
         fontStyle: "italic",
-        fontSize: 20,
+        fontSize: 30,
         width: "80%",
         marginLeft: "20%",
         marginBottom: 10,
@@ -110,10 +129,7 @@ const rewardsPageStyles = StyleSheet.create({
   button:{
       margin: 0,
         height: 40,
-        backgroundColor: "#6ccff6",
         color: "black",
-        fontStyle: "italic",
-        fontSize: 20,
         width: "80%",
         marginLeft: "20%",
         marginBottom: 10,
@@ -128,7 +144,10 @@ const rewardsPageStyles = StyleSheet.create({
   textStyle: {
     color: 'black',
     fontWeight: 'bold',
+    fontSize: 25,
+    fontStyle: "italic",
     textAlign: 'left',
+    marginLeft: 10,
   },
   modalText: {
     marginBottom: 15,

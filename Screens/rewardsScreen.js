@@ -60,6 +60,8 @@ function RewardsScreen({ navigation }) {
             <View style={{flex: 1, alignItems: 'center'}}>
                 <Text style={styles.tierTitle}> Mach Badass</Text>
                 <Text style={styles.divider}></Text> 
+<View style={{flexDirection: 'row'}}>
+<Text style={styles.pointVal}>100pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -84,7 +86,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleWater(true)}>
         <Text style={styles.textStyle}>Water Bottle</Text>
       </Pressable>
-                
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointVal}>100pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -109,6 +113,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleSticker(true)}>
         <Text style={styles.textStyle}>Stickers</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointVal}>100pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -133,6 +140,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleTattoo(true)}>
         <Text style={styles.textStyle}>Tattoo</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointVal}>500pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -157,6 +167,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleSock(true)}>
         <Text style={styles.textStyle}>Socks</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointVal}>700pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -181,6 +194,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleHat(true)}>
         <Text style={styles.textStyle}>Hat</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointVal}>900pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -205,6 +221,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleCoffee(true)}>
         <Text style={styles.textStyle}>Coffee Mug</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>1100pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -229,6 +248,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleBeanie(true)}>
         <Text style={styles.textStyle}>Beanie</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>1300pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -253,6 +275,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleShirt(true)}>
         <Text style={styles.textStyle}>T-Shirt</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>1500pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -277,6 +302,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleHoodie(true)}>
         <Text style={styles.textStyle}>Hoodie</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>1750pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -301,8 +329,11 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleTowel(true)}>
         <Text style={styles.textStyle}>Transition Towel</Text>
       </Pressable>
+</View>
                 <Text style={styles.tierTitle}> Mach Star</Text>
                 <Text style={styles.divider}></Text> 
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>2000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -327,6 +358,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleGloves(true)}>
         <Text style={styles.textStyle}>Mach Gloves</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>2250pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -351,6 +385,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleBase(true)}>
         <Text style={styles.textStyle}>Base Layer</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>2500pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -375,6 +412,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleGilet(true)}>
         <Text style={styles.textStyle}>Gilet</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>2750pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -399,6 +439,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleJacket(true)}>
         <Text style={styles.textStyle}>Cycling Jacket</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>3000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -423,6 +466,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleShoes(true)}>
         <Text style={styles.textStyle}>Running Shoes</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>3250pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -447,6 +493,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleShorts(true)}>
         <Text style={styles.textStyle}>Tri-Shorts</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>3500pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -471,6 +520,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleJersey(true)}>
         <Text style={styles.textStyle}>Tri-Jersey</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>4000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -495,8 +547,11 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleSwimwear(true)}>
         <Text style={styles.textStyle}>Swimwear</Text>
       </Pressable>
+</View>
                 <Text style={styles.tierTitle}> Mach Icon</Text>
                 <Text style={styles.divider}></Text>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>4500pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -521,6 +576,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleCreditOne(true)}>
         <Text style={styles.textStyle}>$150 Store Credit</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>5000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -545,6 +603,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleMystery(true)}>
         <Text style={styles.textStyle}>Mystery Reward</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>5500pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -569,6 +630,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleTeamShirt(true)}>
         <Text style={styles.textStyle}>2024 Team Shirt</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>6000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -593,6 +657,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleTeamSuit(true)}>
         <Text style={styles.textStyle}>Team Tri-Suit</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>6500pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -617,6 +684,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleNYBibs(true)}>
         <Text style={styles.textStyle}>2024 Cycling Bibs</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>7000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -641,6 +711,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleSuit(true)}>
         <Text style={styles.textStyle}>Tri-Suit</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValTwo}>7500pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -665,8 +738,11 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleKit(true)}>
         <Text style={styles.textStyle}>Cycling Kit</Text>
       </Pressable>
+</View>
                 <Text style={styles.tierTitle}> Mach Hero</Text>
-                <Text style={styles.divider}></Text> 
+                <Text style={styles.divider}></Text>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValThree}>10000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -691,6 +767,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleTriBag(true)}>
         <Text style={styles.textStyle}>Team Tri-Bag</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValThree}>15000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -715,6 +794,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleCRWShirt(true)}>
         <Text style={styles.textStyle}>Custom Race Week Shirt</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValThree}>17500pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -739,6 +821,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleCTSuit(true)}>
         <Text style={styles.textStyle}>Custom Tri Suit</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValThree}>20000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -763,6 +848,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleUSAT(true)}>
         <Text style={styles.textStyle}>USAT Membership</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValThree}>22500pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -787,6 +875,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleRaceEntry(true)}>
         <Text style={styles.textStyle}>3 Race Entries</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValThree}>25000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -811,8 +902,11 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleRTRace(true)}>
         <Text style={styles.textStyle}>Round Trip Race</Text>
       </Pressable>
+</View>
                 <Text style={styles.tierTitle}> Mach Legend</Text>
                 <Text style={styles.divider}></Text> 
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValThree}>30000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -837,6 +931,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisiblePros(true)}>
         <Text style={styles.textStyle}>Training with the Pros</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValThree}>35000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -861,6 +958,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleMystery(true)}>
         <Text style={styles.textStyle}>Mystery Reward</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValThree}>40000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -885,6 +985,9 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleDITL(true)}>
         <Text style={styles.textStyle}>Day in the Life</Text>
       </Pressable>
+</View>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValThree}>45000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -909,8 +1012,11 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleWC(true)}>
         <Text style={styles.textStyle}>World Championship</Text>
       </Pressable>
+</View>
 <Text style={styles.tierTitle}> Mach PINNACLE</Text>
-                <Text style={styles.divider}></Text> 
+                <Text style={styles.divider}></Text>
+<View style={{flexDirection: 'row'}}>
+    <Text style={styles.pointValThree}>50000pts</Text>
 <Modal
         animationType="slide"
         transparent={true}
@@ -935,6 +1041,7 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleLife(true)}>
         <Text style={styles.textStyle}>Free Team Bundle FOR LIFE</Text>
       </Pressable>
+</View>
                 <Text style={styles.footer}></Text>
         </View>
         </ScrollView>
