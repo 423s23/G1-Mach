@@ -4,6 +4,32 @@ import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
 import commonStyles from "../Styles/commonStyles";
+import {initializeApp} from "firebase/app";
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
+import {doc, getDoc, getFirestore, collection, getDocs} from "firebase/firestore";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
+    authDomain: "machrewardsapp.firebaseapp.com",
+    databaseURL: "https://machrewardsapp-default-rtdb.firebaseio.com",
+    projectId: "machrewardsapp",
+    storageBucket: "machrewardsapp.appspot.com",
+    messagingSenderId: "311919315732",
+    appId: "1:311919315732:web:2004d4f538ef63f33b9001",
+    measurementId: "G-WVTXPNPTNR"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
+    .then(async () => {
+        //get all users
+        const querySnapshot = await getDocs(collection(db, "users"));
+        querySnapshot.forEach((doc) => {
+            console.log(doc.data());
+        });
+    });
 
 function LeaderboardScreen({ navigation }) {
     return (
