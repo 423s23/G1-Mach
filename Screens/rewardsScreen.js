@@ -2,8 +2,11 @@ import {AppRegistry, Image, Button, Pressable, ScrollView, Text, View, StyleShee
 import { NavigationContainer } from '@react-navigation/native';
 import styles from "../Styles/rewardsPageStyles";
 import {Ionicons} from "@expo/vector-icons";
+import React, {useState} from 'react';
 
 function RewardsScreen({ navigation }) {
+    
+    const [modalVisible, setModalVisible] = useState(false);
     
     return (
        
@@ -25,9 +28,34 @@ function RewardsScreen({ navigation }) {
                 <Text style={styles.tierTitle}> Mach Badass</Text>
                 <Text style={styles.divider}></Text> 
                 <Text style={styles.rewardItemClaimed}> Water Bottle</Text>
-                <Pressable style={styles.pressableRewardClaimed}>
+                
+<Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          Alert.alert('Modal has been closed.');
+          setModalVisible(!modalVisible);
+        }}>
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>Hello World!</Text>
+            <Pressable
+              style={[styles.backButton, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}>
+              <Text style={styles.textStyle}>Hide Pop-up</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+      <Pressable
+        style={[styles.button, styles.buttonOpen]}
+        onPress={() => setModalVisible(true)}>
+        <Text style={styles.textStyle}>Stickers</Text>
+      </Pressable>
+<Pressable style={styles.pressableRewardClaimed}>
                 <Text>Stickers</Text> 
-                </Pressable>
+</Pressable>
 <Pressable style={styles.pressableRewardClaimed}>
                 <Text> Tattoo</Text> 
 </Pressable>
