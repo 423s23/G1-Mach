@@ -4,7 +4,7 @@ const rewardsPageStyles = StyleSheet.create({
     backButtonBox:{
             position: 'absolute',
             left: 15,
-            top: 45,
+            top: 35,
 
         },
         backArrow:{
