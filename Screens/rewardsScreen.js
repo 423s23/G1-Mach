@@ -84,6 +84,7 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleWater(true)}>
         <Text style={styles.textStyle}>Water Bottle</Text>
       </Pressable>
+//<Text style={styles.pointVal> </Text>
                 
 <Modal
         animationType="slide"
@@ -167,7 +168,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a MACH Branded Hat</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleHat(!modalVisibleHat)}>
@@ -191,7 +192,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a MACH Branded Coffee Cup</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleCoffee(!modalVisibleCoffee)}>
@@ -215,7 +216,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a MACH Beanie</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleBeanie(!modalVisibleBeanie)}>
@@ -239,7 +240,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a MACH T-Shirt</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleShirt(!modalVisibleShirt)}>
@@ -263,7 +264,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a MACH Hoodie</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleHoodie(!modalVisibleHoodie)}>
@@ -287,7 +288,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a Team MACH Transition Towel</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleTowel(!modalVisibleTowel)}>
@@ -313,7 +314,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a set of MACH Gloves</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleGloves(!modalVisibleGloves)}>
@@ -337,7 +338,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a MACH Base Layer</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleBase(!modalVisibleBase)}>
@@ -361,7 +362,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a MACH Gilet</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleGilet(!modalVisibleGilet)}>
@@ -385,7 +386,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a MACH Cycling Jacket</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleJacket(!modalVisibleJacket)}>
@@ -409,7 +410,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a pair of MACH Running Shoes</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleShoes(!modalVisibleShoes)}>
@@ -433,7 +434,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a pair of MACH Triathalon Shorts</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleShorts(!modalVisibleShorts)}>
@@ -457,7 +458,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a MACH Triathalon Jersey</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleJersey(!modalVisibleJersey)}>
@@ -481,7 +482,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a set of MACH Swimwear</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleSwimwear(!modalVisibleSwimwear)}>
@@ -507,7 +508,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve $150 In Store Credit for anything and everything MACH Apparel</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleCreditOne(!modalVisibleCreditOne)}>
@@ -531,7 +532,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>A Mystery Package sent to you directly from MACH HQ</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleMystery(!modalVisibleMystery)}>
@@ -555,7 +556,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a NEW 2024 MACH Team Shirt</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleTeamShirt(!modalVisibleTeamShirt)}>
@@ -579,7 +580,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a Team MACH Triathalon Suit</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleTeamSuit(!modalVisibleTeamSuit)}>
@@ -603,7 +604,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a NEW set of 2024 Cycling Bibs</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleNYBibs(!modalVisibleNYBibs)}>
@@ -627,7 +628,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a Triathalon Suit</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleSuit(!modalVisibleSuit)}>
@@ -651,7 +652,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a full Cycling Kit from MACH Apparel</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleKit(!modalVisibleKit)}>
@@ -677,7 +678,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a TEAM MACH Triathalon Bag</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleTriBag(!modalVisibleTriBag)}>
@@ -701,7 +702,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a Custom Made Race Week Shirt just for you straight from MACH Apparel</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleCRWShirt(!modalVisibleCRWShirt)}>
@@ -725,7 +726,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Recieve a FULL CUSTOM Triathalong straight from MACH Apparel</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleCTSuit(!modalVisibleCTSuit)}>
@@ -749,7 +750,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>MACH will provide a full USAT Membership</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleUSAT(!modalVisibleUSAT)}>
@@ -773,7 +774,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>MACH will sponsor you for 3 full Race Entries</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleRaceEntry(!modalVisibleRaceEntry)}>
@@ -797,7 +798,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>MACH will pay for ONE ROUND TRIP to any NORTH AMERICAN RACE </Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleRTRace(!modalVisibleRTRace)}>
@@ -823,7 +824,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Win a trip to train with PROFESSIONAL TRIATHELETES!</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisiblePros(!modalVisiblePros)}>
@@ -847,7 +848,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>A Mystery Reward straight from MACH HQ</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleMystery(!modalVisibleMystery)}>
@@ -871,7 +872,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>MACH will send a videographer to you to film a full Day in the Life segment all about you!</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleDITL(!modalVisibleDITL)}>
@@ -895,7 +896,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>Win a trip to Kona, Hawaii for the World Championships</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleWC(!modalVisibleWC)}>
@@ -909,6 +910,8 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleWC(true)}>
         <Text style={styles.textStyle}>World Championship</Text>
       </Pressable>
+<Text style={styles.tierTitle}> Mach PINNACLE</Text>
+                <Text style={styles.divider}></Text> 
 <Modal
         animationType="slide"
         transparent={true}
@@ -919,7 +922,7 @@ function RewardsScreen({ navigation }) {
         }}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>Win a set of MACH Stickers!</Text>
+            <Text style={styles.modalText}>You made it to the top! You have earned a FREE TEAM BUNDLE for LIFE from MACH Apparel!</Text>
             <Pressable
               style={[styles.backButton, styles.buttonClose]}
               onPress={() => setModalVisibleLife(!modalVisibleLife)}>
