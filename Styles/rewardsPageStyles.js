@@ -88,10 +88,10 @@ const rewardsPageStyles = StyleSheet.create({
     marginTop: 22,
   },
   modalView: {
-    margin: 20,
+    width: "75%",
     backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
+    borderRadius: 10,
+    padding: 20,
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
@@ -102,21 +102,33 @@ const rewardsPageStyles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
   },
-  button: {
+  backButton: {
     borderRadius: 20,
     padding: 10,
     elevation: 2,
   },
+  button:{
+      margin: 0,
+        height: 40,
+        backgroundColor: "#6ccff6",
+        color: "black",
+        fontStyle: "italic",
+        fontSize: 20,
+        width: "80%",
+        marginLeft: "20%",
+        marginBottom: 10,
+        display: "flex",
+  },
   buttonOpen: {
-    backgroundColor: '#F194FF',
+    backgroundColor: "#6ccff6",
   },
   buttonClose: {
     backgroundColor: '#2196F3',
   },
   textStyle: {
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold',
-    textAlign: 'center',
+    textAlign: 'left',
   },
   modalText: {
     marginBottom: 15,
