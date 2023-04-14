@@ -7,6 +7,7 @@ const settingsScreenStyles = StyleSheet.create({
         color: '#000000',
         fontWeight: 600,
         textAlign: "center",
+        marginTop: 10,
     },
     profilePicBox:{
         width: '100%',
@@ -14,9 +15,11 @@ const settingsScreenStyles = StyleSheet.create({
         flexDirection: 'column',
         alignContent: 'center',
         alignItems: 'center',
+        marginTop: 50,
     },
     profilePic:{
         padding: 50,
+        borderRadius: 50,
     },
     listBox: {
     width: '100%',
@@ -30,10 +33,8 @@ const settingsScreenStyles = StyleSheet.create({
         width: '100%',
         flex: 2,
         flexDirection: 'column',
-        marginVertical: 10,
         alignContent: 'center',
         alignItems: 'center',
-        marginTop: 40,
     },
 
     mainButtonText: {
