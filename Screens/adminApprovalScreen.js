@@ -65,8 +65,8 @@ function AdminApprovalScreen({ navigation }) {
             />
             <Text style={approvalStyles.person}>{tickets[ticketCounter]['firstName'] + " " + tickets[ticketCounter]['lastName']}</Text>
             {/*Deny*/}
-            <div style={approvalStyles.buttons}>
-                <div style={approvalStyles.redButton} onClick= {() => {
+            <View style={approvalStyles.buttons}>
+                <View style={approvalStyles.redButton} onClick= {() => {
                         if (ticketCounter + 1 < tickets.length) {
                             setTicketCounter(ticketCounter + 1)
                             resetInputText('');
@@ -74,9 +74,9 @@ function AdminApprovalScreen({ navigation }) {
                     }
                 }>
                     <Text style={approvalStyles.buttonText}>&#x2715;</Text>
-                </div>
+                </View>
                 {/*Approve*/}
-                <div style={approvalStyles.greenButton} onClick= {() => {
+                <View style={approvalStyles.greenButton} onClick= {() => {
                         if (ticketCounter + 1 < tickets.length) {
                             setTicketCounter(ticketCounter + 1)
                             resetInputText('');
@@ -84,8 +84,8 @@ function AdminApprovalScreen({ navigation }) {
                     }
                 }>
                     <Text style={approvalStyles.buttonText}>&#x2713;</Text>
-                </div>
-            </div>
+                </View>
+            </View>
             <Text>Reason:</Text>
             <TextInput style={approvalStyles.input} multiline editable numberOfLines={2}>
 
