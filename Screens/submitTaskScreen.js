@@ -6,7 +6,7 @@ import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
 import {initializeApp} from "firebase/app";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
-import {doc, getDoc, setDoc, addDoc, collection, getFirestore} from "firebase/firestore";
+import {doc, getDoc, setDoc, addDoc, collection, Timestamp, getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
@@ -38,10 +38,6 @@ signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
         const errorCode = error.code;
         const errorMessage = error.message;
     });
-
-
-
-
 
 function SubmitTaskScreen({ navigation }) {
     const [text, onChangeText] = React.useState('');
@@ -77,19 +73,22 @@ function SubmitTaskScreen({ navigation }) {
         const docSnap = await getDoc(docRef);
         let id = docSnap.id;
 
-        const ticketRef = await addDoc(collection(db, "tickets"), {
-            comment: com,
-            name: type,
-            state: "pending",
-            uid: id,
-        });
-        console.log("DOCUMENT ID: ", ticketRef.id);
+        if (com != '' && type != '') {
+            const ticketRef = await addDoc(collection(db, "tickets"), {
+                comment: com,
+                name: type,
+                time: Timestamp.now(),
+                state: "pending",
+                uid: id,
+            });
+            console.log("DOCUMENT ID: ", ticketRef.id);
+        }
 
         navigation.navigate("Home");
     }
 
     return (
-        //<ScrollView>
+        <ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
                 <View style={submitTaskScreenStyles.backButtonBox}>
                     <Pressable onPress={() => navigation.navigate("Home")}>
@@ -113,6 +112,7 @@ function SubmitTaskScreen({ navigation }) {
                 
                 <View style={submitTaskScreenStyles.dropDownTask}>
                     <DropDownPicker
+                        listMode="SCROLLVIEW"
                         style={submitTaskScreenStyles.selectTask}
                         open={open}
                         value={value}
@@ -130,8 +130,8 @@ function SubmitTaskScreen({ navigation }) {
                 </View>
                 <TextInput
                     style={submitTaskScreenStyles.insertText}
-                    onChangeText={(text) => this.comment = text}
                     value={this.comment}
+                    onChangeText={(text) => this.comment = text}
                     placeholder="Insert Link or Text..."
                     multiline={true}
                 />
@@ -142,7 +142,7 @@ function SubmitTaskScreen({ navigation }) {
                     </Pressable>
                 </View>
             </View>
-        //</ScrollView>
+        </ScrollView>
     );
 }
 
