@@ -39,10 +39,6 @@ signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
         const errorMessage = error.message;
     });
 
-
-
-
-
 function SubmitTaskScreen({ navigation }) {
     const [text, onChangeText] = React.useState('');
     const [number, onChangeNumber] = React.useState('');
@@ -87,12 +83,11 @@ function SubmitTaskScreen({ navigation }) {
             });
             console.log("DOCUMENT ID: ", ticketRef.id);
         }
-        
         navigation.navigate("Home");
     }
 
     return (
-        //<ScrollView>
+        <ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
                 <View style={submitTaskScreenStyles.backButtonBox}>
                     <Pressable onPress={() => navigation.navigate("Home")}>
@@ -116,6 +111,7 @@ function SubmitTaskScreen({ navigation }) {
                 
                 <View style={submitTaskScreenStyles.dropDownTask}>
                     <DropDownPicker
+                        listMode="SCROLLVIEW"
                         style={submitTaskScreenStyles.selectTask}
                         open={open}
                         value={value}
@@ -133,8 +129,8 @@ function SubmitTaskScreen({ navigation }) {
                 </View>
                 <TextInput
                     style={submitTaskScreenStyles.insertText}
-                    onChangeText={(text) => this.comment = text}
                     value={this.comment}
+                    onChangeText={(text) => this.comment = text}
                     placeholder="Insert Link or Text..."
                     multiline={true}
                 />
@@ -145,7 +141,7 @@ function SubmitTaskScreen({ navigation }) {
                     </Pressable>
                 </View>
             </View>
-        //</ScrollView>
+        </ScrollView>
     );
 }
 
