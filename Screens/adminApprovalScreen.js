@@ -1,4 +1,4 @@
-import {Pressable, Text, View} from "react-native";
+import {Image, Pressable, Text, View, TextInput} from "react-native";
 import approvalStyles from "../Styles/approvalStyles";
 import commonStyles from "../Styles/commonStyles";
 import {Ionicons} from "@expo/vector-icons";
@@ -8,6 +8,7 @@ import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {doc, getDoc, getFirestore, collection, getDocs} from "firebase/firestore";
 import refreshControl from "react-native-web/dist/exports/RefreshControl";
 import {useState} from "react";
+import leaderboardStyles from "../Styles/leaderboardStyle";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
@@ -47,6 +48,7 @@ signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
 
 function AdminApprovalScreen({ navigation }) {
     const [ticketCounter, setTicketCounter] = useState(0);
+    const [inputText, resetInputText] = useState('');
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <View style={commonStyles.backBox}>
@@ -55,15 +57,19 @@ function AdminApprovalScreen({ navigation }) {
                 </Pressable>
             </View>
             <Text style={approvalStyles.task}>{tickets[ticketCounter]['name']}</Text>
-            <div style={approvalStyles.photo}>
-                <Text>{tickets[ticketCounter]['comment']}</Text>
-            </div>
+            <Text>{tickets[ticketCounter]['comment']}</Text>
+            <Image
+                style={approvalStyles.photo}
+                source={{uri: 'https://www.williamjordan.net/INF.png'}}
+                resizeMode={'cover'} // cover or contain its upto you view look
+            />
             <Text style={approvalStyles.person}>{tickets[ticketCounter]['firstName'] + " " + tickets[ticketCounter]['lastName']}</Text>
             {/*Deny*/}
             <div style={approvalStyles.buttons}>
                 <div style={approvalStyles.redButton} onClick= {() => {
                         if (ticketCounter + 1 < tickets.length) {
                             setTicketCounter(ticketCounter + 1)
+                            resetInputText('');
                         }
                     }
                 }>
@@ -73,6 +79,7 @@ function AdminApprovalScreen({ navigation }) {
                 <div style={approvalStyles.greenButton} onClick= {() => {
                         if (ticketCounter + 1 < tickets.length) {
                             setTicketCounter(ticketCounter + 1)
+                            resetInputText('');
                         }
                     }
                 }>
@@ -80,9 +87,9 @@ function AdminApprovalScreen({ navigation }) {
                 </div>
             </div>
             <Text>Reason:</Text>
-            <textarea>
+            <TextInput style={approvalStyles.input} multiline editable numberOfLines={2}>
 
-            </textarea>
+            </TextInput >
         </View>
     );
 }

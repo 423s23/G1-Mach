@@ -35,8 +35,13 @@ const approvalStyles = StyleSheet.create({
         marginTop: "5vw",
         marginLeft: "-3.6vw"
     },
-    task: {
-
+    input: {
+        borderColor: "black",
+        borderWidth: 2,
+        borderStyle: "solid",
+        width: "50%",
+        padding: 1,
+        borderRadius: 7,
     },
     photo: {
         aspectRatio: "9/16",
