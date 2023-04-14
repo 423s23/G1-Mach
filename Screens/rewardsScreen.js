@@ -84,7 +84,6 @@ function RewardsScreen({ navigation }) {
         onPress={() => setModalVisibleWater(true)}>
         <Text style={styles.textStyle}>Water Bottle</Text>
       </Pressable>
-//<Text style={styles.pointVal> </Text>
                 
 <Modal
         animationType="slide"
