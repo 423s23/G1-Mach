@@ -2,7 +2,8 @@ import {StyleSheet} from "react-native";
 
 const submitTaskScreenStyles = StyleSheet.create({
     headerBox:{
-        marginVertical: 30,
+        marginTop: 70,
+        marginBottom: 30,
         justifyContent: 'center',
         alignItems: 'center',
         flex: .5,
@@ -91,14 +92,14 @@ const submitTaskScreenStyles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 10,
-        marginLeft: 25,     //TEMPORARY fix; item needs to be centered
+        marginLeft: 25,
         marginBottom: 10,
     },
     helpButtonBox:{
         position: 'absolute',
         right: 0,
         top: 0,
-        marginTop: 15,
+        marginTop: 35,
         marginRight: 5,
         backgroundColor: '#ffffff',
         borderWidth: 1,
@@ -114,7 +115,7 @@ const submitTaskScreenStyles = StyleSheet.create({
         position: 'absolute',
         left: 0,
         top: 0,
-        marginTop: 15,
+        marginTop: 35,
         marginLeft: 10,
         backgroundColor: '#ffffff',
         borderWidth: 1,
