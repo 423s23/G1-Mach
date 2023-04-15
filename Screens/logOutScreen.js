@@ -18,7 +18,11 @@ function LogOutScreen({ navigation }) {
                             />
                         </Pressable>
                     </View>
-<Text style={settingsScreenStyles.nameText}>Log Out</Text>
+                    <View style={settingsScreenStyles.logOutButtonBox}>
+                        <Pressable style={settingsScreenStyles.logOutButton} onPress={() => navigation.navigate("Settings")}>
+                            <Text style={settingsScreenStyles.logOutButtonText}>Log Out</Text>
+                    </Pressable>
+                </View>
         </View>
     );
 }

@@ -67,8 +67,8 @@ function SettingsScreen({ navigation }) {
                <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("Notifications")}>
                     <Text style={settingsScreenStyles.mainButtonText}>Notifications</Text>
                </Pressable>
-               <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("Languages")}>
-                    <Text style={settingsScreenStyles.mainButtonText}>Languages</Text>
+               <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("Help")}>
+                    <Text style={settingsScreenStyles.mainButtonText}>Help</Text>
                </Pressable>
                <Pressable style={settingsScreenStyles.mainButton} onPress={() => navigation.navigate("LogOut")}>
                     <Text style={settingsScreenStyles.mainButtonText}>Log Out</Text>

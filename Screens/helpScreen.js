@@ -7,7 +7,7 @@ import settingsScreenStyles from "../Styles/settingsScreenStyles";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles";
 import {Ionicons} from "@expo/vector-icons";
 
-function LanguagesScreen({ navigation }) {
+function HelpScreen({ navigation }) {
         const flagPic = 50;
         let country = "Dylan";
         let language = "English"
@@ -29,4 +29,4 @@ function LanguagesScreen({ navigation }) {
     );
 }
 
-export default LanguagesScreen;
+export default HelpScreen;

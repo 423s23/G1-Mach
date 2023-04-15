@@ -1,4 +1,4 @@
-import {Button, Pressable, ScrollView, StyleSheet} from "react-native";
+import {Image, Button, Pressable, ScrollView, StyleSheet} from "react-native";
 //import { NavigationContainer } from '@react-navigation/native';
 //import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Text, View} from "react-native";
@@ -9,16 +9,16 @@ import {initializeApp} from "firebase/app";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {doc, getDoc, getFirestore} from "firebase/firestore";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
-    authDomain: "machrewardsapp.firebaseapp.com",
-    databaseURL: "https://machrewardsapp-default-rtdb.firebaseio.com",
-    projectId: "machrewardsapp",
-    storageBucket: "machrewardsapp.appspot.com",
-    messagingSenderId: "311919315732",
-    appId: "1:311919315732:web:2004d4f538ef63f33b9001",
-    measurementId: "G-WVTXPNPTNR"
-};
+    const firebaseConfig = {
+        apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
+        authDomain: "machrewardsapp.firebaseapp.com",
+        databaseURL: "https://machrewardsapp-default-rtdb.firebaseio.com",
+        projectId: "machrewardsapp",
+        storageBucket: "machrewardsapp.appspot.com",
+        messagingSenderId: "311919315732",
+        appId: "1:311919315732:web:2004d4f538ef63f33b9001",
+        measurementId: "G-WVTXPNPTNR"
+    };
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
@@ -40,21 +40,18 @@ const firebaseConfig = {
             const errorMessage = error.message;
         });
 
-function ContactInfoScreen({ navigation }) {
-        const profilePic = 30;
-        let firstName = userData.firstName;
-        let lastName = userData.lastName;
-        let email = "dylan@gmail.com";
-        const birthday = "04/04/1994";
-        let userName = "machDylan";
-        let phoneNum = "444-444-4444";
-        //let email = userData.email;
-        //let phoneNum = userData.phoneNum;
-        //const birthday = userData.birthday;
-        //let userName = userData.userName;
+    function ContactInfoScreen({ navigation }) {
+            const profilePic = 30;
+            let firstName = userData.firstName;
+            let lastName = userData.lastName;
+            let email = userData.email;
+            let phoneNumber = userData.phoneNumber;
+            const birthday = userData.birthday;
+            let username = userData.username;
 
 
     return (
+
 <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <View style={settingsScreenStyles.backButtonBox}>
                         <Pressable style={settingsScreenStyles.backButton} onPress={() => navigation.navigate("Settings")}>
@@ -65,8 +62,32 @@ function ContactInfoScreen({ navigation }) {
                             />
                         </Pressable>
                     </View>
-    <Text style={settingsScreenStyles.nameText}>{[firstName]} {[lastName]}</Text>
-</View>
+                        <Text style={settingsScreenStyles.pageTitleText}>{"Contact Info"}</Text>
+
+                    <View style={settingsScreenStyles.profilePicBox}>
+                        <Image
+                            source={{uri: 'https://www.williamjordan.net/images/WillSki.jpg'}}
+                            style={settingsScreenStyles.contactProfilePic}
+                         />
+                     </View>
+                <View style={settingsScreenStyles.contactInfoBox}>
+                    <View style={settingsScreenStyles.mainButton}>
+                        <Text style={settingsScreenStyles.mainButtonText}>Name: {[firstName]} {[lastName]}</Text>
+                    </View>
+                    <View style={settingsScreenStyles.mainButton}>
+                        <Text style={settingsScreenStyles.mainButtonText}>Email Address: {[email]}</Text>
+                    </View>
+                    <View style={settingsScreenStyles.mainButton}>
+                        <Text style={settingsScreenStyles.mainButtonText}>Phone Number: {[phoneNumber]}</Text>
+                    </View>
+                    <View style={settingsScreenStyles.mainButton}>
+                        <Text style={settingsScreenStyles.mainButtonText}>Username: {[username]}</Text>
+                    </View>
+                 </View>
+
+        </View>
+
+
     );
 }
 
