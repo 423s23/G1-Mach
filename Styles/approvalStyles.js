@@ -18,22 +18,22 @@ const approvalStyles = StyleSheet.create({
         aspectRatio: 1,
         borderRadius: "50%",
         textAlign: "center",
-        width: "25vw",
+        width: "25%",
     },
     greenButton: {
         backgroundColor: "green",
         aspectRatio: 1,
         borderRadius: "50%",
         textAlign: "center",
-        width: "25vw",
-        marginLeft: "25vw",
+        width: "25%",
+        marginLeft: "25%",
     },
     buttonText: {
         position: "absolute",
-        fontSize: "10vw",
+        fontSize: "10%",
         fontWeight: "bold",
-        marginTop: "5vw",
-        marginLeft: "-3.6vw"
+        marginTop: "5%",
+        marginLeft: "-3.6%"
     },
     input: {
         borderColor: "black",
