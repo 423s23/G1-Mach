@@ -16,7 +16,7 @@ import SubmitTaskScreen from './Screens/submitTaskScreen';
 import UserInfoScreen from './Screens/userInfoScreen';
 import ContactInfoScreen from './Screens/contactInfoScreen';
 import NotificationsScreen from './Screens/notificationsScreen';
-import LanguagesScreen from './Screens/languagesScreen';
+import HelpScreen from './Screens/helpScreen';
 import LogOutScreen from './Screens/logOutScreen';
 import SubmitTaskHelpScreen from './Screens/submitTaskHelpScreen';
 import styles from "./Styles/styles"
@@ -141,7 +141,7 @@ export default function App() {
               <Stack.Screen name="ContactInfo" component={ContactInfoScreen} />
               <Stack.Screen name="Notifications" component={NotificationsScreen} />
               <Stack.Screen name="LogOut" component={LogOutScreen} />
-              <Stack.Screen name="Languages" component={LanguagesScreen} />
+              <Stack.Screen name="Help" component={HelpScreen} />
               <Stack.Screen name="SubmitTaskHelp" component={SubmitTaskHelpScreen} />
 
           </Stack.Navigator>

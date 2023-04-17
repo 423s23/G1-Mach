@@ -5,24 +5,67 @@ import styles from "../Styles/styles";
 import userInfoScreenStyles from "../Styles/userInfoScreenStyles";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
+import {initializeApp} from "firebase/app";
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
+import {doc, getDoc, getFirestore} from "firebase/firestore";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
+    authDomain: "machrewardsapp.firebaseapp.com",
+    databaseURL: "https://machrewardsapp-default-rtdb.firebaseio.com",
+    projectId: "machrewardsapp",
+    storageBucket: "machrewardsapp.appspot.com",
+    messagingSenderId: "311919315732",
+    appId: "1:311919315732:web:2004d4f538ef63f33b9001",
+    measurementId: "G-WVTXPNPTNR"
+};
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    let userCred = null;
+    let userData = null;
+    signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
+        .then(async (userCredential) => {
+            // Signed in
+            userCred = userCredential.user;
+            const docRef = doc(db, "users", userCred.uid);
+            console.log(docRef);
+            const docSnap = await getDoc(docRef);
+            console.log(docSnap);
+            userData = docSnap.data();
+            console.log(userData);
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+        });
+
+function getProgressPercent() {
+    let previousPoints = userData.previousPoints;
+    let currentPoints = userData.currentPoints;
+    let progressPoints = userData.progressPoints;
+    let progressPercentInt = (((currentPoints - previousPoints) / (progressPoints - previousPoints)) * 100);
+    var progressPercent = progressPercentInt.toString() + "%";
+    return progressPercent
+}
 
 function UserInfoScreen({ navigation }) {
-    const starSize = 30;
-    let firstName = "Dylan";
-    let lastName = "lastName";
-    let Level = 13;
-    let CurrentPoints = 2300;
-    let ProgressPoints = 3000;
-    let Rank = 1;
-    let taskTotal = 10;
-    let registerYear = 2023;
-    let Titles = [
-        "Not Yet Verified",
-        "Mach Badass",
-        "Mach Star",
-        "Mach Icon",
-        "Mach Hero",
-        "Mach Legend"]
+     const starSize = 30;
+        let firstName = userData.firstName;
+        let Level = userData.level;
+        let CurrentPoints = userData.currentPoints;
+        let ProgressPoints = userData.progressPoints;
+        let Rank = userData.rank;
+        let registerYear = 2023;
+        let taskTotal = 4;
+        let Titles = [
+            "Not Yet Verified",
+            "Mach Badass",
+            "Mach Star",
+            "Mach Icon",
+            "Mach Hero",
+            "Mach Legend"]
+
     return (
         <ScrollView>
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 20}}>
