@@ -65,7 +65,7 @@ function LeaderboardScreen({ navigation }) {
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
                     <Text>{users[1][0]}</Text>
-                    <br/>
+                    <Text>{"\n"}</Text>
                     <Text>{users[1][1]}</Text>
                 </View>
                 <View style={leaderboardStyles.person}>
@@ -76,7 +76,7 @@ function LeaderboardScreen({ navigation }) {
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
                     <Text>{users[0][0]}</Text>
-                    <br/>
+                    <Text>{"\n"}</Text>
                     <Text>{users[0][1]}</Text>
                 </View>
                 <View style={leaderboardStyles.outerPerson}>
@@ -87,11 +87,10 @@ function LeaderboardScreen({ navigation }) {
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
                     <Text>{users[2][0]}</Text>
-                    <br/>
+                    <Text>{"\n"}</Text>
                     <Text>{users[2][1]}</Text>
                 </View>
             </View>
-            <hr style={leaderboardStyles.line}/>
 
             {/*<View style={leaderboardStyles.tabs}>*/}
             {/*    <View style={leaderboardStyles.tab}>*/}
@@ -104,8 +103,8 @@ function LeaderboardScreen({ navigation }) {
             {/*        <Text style={leaderboardStyles.tabText}>Your Tier</Text>*/}
             {/*    </View>*/}
             {/*</View>*/}
-            <br/>
-            <br/>
+            <Text>{"\n"}</Text>
+            <Text>{"\n"}</Text>
             <View style={leaderboardStyles.myTable}>
                 {lower}
                 {/*<View style={leaderboardStyles.myRow}>*/}
