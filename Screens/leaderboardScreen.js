@@ -7,6 +7,7 @@ import commonStyles from "../Styles/commonStyles";
 import {initializeApp} from "firebase/app";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {doc, getDoc, getFirestore, collection, getDocs} from "firebase/firestore";
+import {render} from "react-dom";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
@@ -22,13 +23,28 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
+let users = [];
+let lower = [];
 signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
     .then(async () => {
         //get all users
         const querySnapshot = await getDocs(collection(db, "users"));
         querySnapshot.forEach((doc) => {
-            console.log(doc.data());
+            users.push([doc.data()['firstName'], doc.data()['currentPoints']])
         });
+        users.push(['test', 200]);
+        users = users.sort((a, b) => b[1] - a[1]);
+        console.log(users);
+
+        for (let i = 3; i < Math.min(10, users.length); i++) {
+            lower.push(
+                <View style={leaderboardStyles.myRow}>
+                    <Text style={leaderboardStyles.rowText}>{i+1}</Text>
+                    <Text style={leaderboardStyles.rowText}>{users[i][0]}</Text>
+                    <Text style={leaderboardStyles.rowText}>{users[i][1]}</Text>
+                </View>
+            );
+        }
     });
 
 function LeaderboardScreen({ navigation }) {
@@ -48,9 +64,9 @@ function LeaderboardScreen({ navigation }) {
                         source={{uri: 'https://www.williamjordan.net/images/WillSki.jpg'}}
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
-                    <Text>Bella</Text>
-                    <Text>{"\n"}</Text>
-                    <Text>2600</Text>
+                    <Text>{users[1][0]}</Text>
+                    <br/>
+                    <Text>{users[1][1]}</Text>
                 </View>
                 <View style={leaderboardStyles.person}>
                     <Text style={leaderboardStyles.one}>1</Text>
@@ -59,9 +75,9 @@ function LeaderboardScreen({ navigation }) {
                         source={{uri: 'https://www.williamjordan.net/images/WillSki.jpg'}}
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
-                    <Text>Adam</Text>
-                    <Text>{"\n"}</Text>
-                    <Text>2600</Text>
+                    <Text>{users[0][0]}</Text>
+                    <br/>
+                    <Text>{users[0][1]}</Text>
                 </View>
                 <View style={leaderboardStyles.outerPerson}>
                     <Text style={leaderboardStyles.noMargin}>3</Text>
@@ -70,80 +86,48 @@ function LeaderboardScreen({ navigation }) {
                         source={{uri: 'https://www.williamjordan.net/images/WillSki.jpg'}}
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
-                    <Text>Courtney</Text>
-                    <Text>{"\n"}</Text>
-                    <Text>2600</Text>
+                    <Text>{users[2][0]}</Text>
+                    <br/>
+                    <Text>{users[2][1]}</Text>
                 </View>
             </View>
-            <View style={leaderboardStyles.tabs}>
-                <View style={leaderboardStyles.tab}>
-                    <Text style={leaderboardStyles.tabText}>Top</Text>
-                </View>
-                <View style={leaderboardStyles.tab}>
-                    <Text style={leaderboardStyles.tabText}>Local</Text>
-                </View>
-                <View style={leaderboardStyles.tab}>
-                    <Text style={leaderboardStyles.tabText}>Your Tier</Text>
-                </View>
-            </View>
-            <Text>{"\n"}</Text>
-            <Text>{"\n"}</Text>
+            <hr style={leaderboardStyles.line}/>
+
+            {/*<View style={leaderboardStyles.tabs}>*/}
+            {/*    <View style={leaderboardStyles.tab}>*/}
+            {/*        <Text style={leaderboardStyles.tabText}>Top</Text>*/}
+            {/*    </View>*/}
+            {/*    <View style={leaderboardStyles.tab}>*/}
+            {/*        <Text style={leaderboardStyles.tabText}>Local</Text>*/}
+            {/*    </View>*/}
+            {/*    <View style={leaderboardStyles.tab}>*/}
+            {/*        <Text style={leaderboardStyles.tabText}>Your Tier</Text>*/}
+            {/*    </View>*/}
+            {/*</View>*/}
+            <br/>
+            <br/>
             <View style={leaderboardStyles.myTable}>
-                <View style={leaderboardStyles.myRow}>
-                    <Text style={leaderboardStyles.rowText}>4</Text>
-                    <Text style={leaderboardStyles.rowText}>Dan</Text>
-                    <Text style={leaderboardStyles.rowText}>2600</Text>
-                </View>
-                <View style={leaderboardStyles.myRow}>
-                    <Text style={leaderboardStyles.rowText}>5</Text>
-                    <Text style={leaderboardStyles.rowText}> Eli</Text>
-                    <Text style={leaderboardStyles.rowText}>2600</Text>
-                </View>
-                <View style={leaderboardStyles.myRow}>
-                    <Text style={leaderboardStyles.rowText}>6</Text>
-                    <Text style={leaderboardStyles.rowText}>Frank</Text>
-                    <Text style={leaderboardStyles.rowText}>2600</Text>
-                </View>
-                <View style={leaderboardStyles.myRow}>
-                    <Text style={leaderboardStyles.rowText}>7</Text>
-                    <Text style={leaderboardStyles.rowText}>Grace</Text>
-                    <Text style={leaderboardStyles.rowText}>2600</Text>
-                </View>
-                <View style={leaderboardStyles.myRow}>
-                    <Text style={leaderboardStyles.rowText}>8</Text>
-                    <Text style={leaderboardStyles.rowText}>Hank</Text>
-                    <Text style={leaderboardStyles.rowText}>2600</Text>
-                </View>
-                <View style={leaderboardStyles.myRow}>
-                    <Text style={leaderboardStyles.rowText}>9</Text>
-                    <Text style={leaderboardStyles.rowText}>Isaac</Text>
-                    <Text style={leaderboardStyles.rowText}>2600</Text>
-                </View>
-                <View style={leaderboardStyles.myRow}>
-                    <Text style={leaderboardStyles.rowText}>10</Text>
-                    <Text style={leaderboardStyles.rowText}>Julia</Text>
-                    <Text style={leaderboardStyles.rowText}>2600</Text>
-                </View>
-                <View style={leaderboardStyles.myRow}>
-                    <Text style={leaderboardStyles.rowText}>. . .</Text>
-                    <Text style={leaderboardStyles.rowText}></Text>
-                    <Text style={leaderboardStyles.rowText}></Text>
-                </View>
-                <View style={leaderboardStyles.myRow}>
-                    <Text style={leaderboardStyles.rowText}>246</Text>
-                    <Text style={leaderboardStyles.rowText}>Kevin</Text>
-                    <Text style={leaderboardStyles.rowText}>205</Text>
-                </View>
-                <View style={leaderboardStyles.myRow}>
-                    <Text style={leaderboardStyles.rowTextBold}>246</Text>
-                    <Text style={leaderboardStyles.rowTextBold}>Will</Text>
-                    <Text style={leaderboardStyles.rowTextBold}>200</Text>
-                </View>
-                <View style={leaderboardStyles.myRow}>
-                    <Text style={leaderboardStyles.rowText}>247</Text>
-                    <Text style={leaderboardStyles.rowText}>Leigh</Text>
-                    <Text style={leaderboardStyles.rowText}>190</Text>
-                </View>
+                {lower}
+                {/*<View style={leaderboardStyles.myRow}>*/}
+                {/*    <Text style={leaderboardStyles.rowText}>. . .</Text>*/}
+                {/*    <Text style={leaderboardStyles.rowText}></Text>*/}
+                {/*    <Text style={leaderboardStyles.rowText}></Text>*/}
+                {/*</View>*/}
+                {/*<View style={leaderboardStyles.myRow}>*/}
+                {/*    <Text style={leaderboardStyles.rowText}>246</Text>*/}
+                {/*    <Text style={leaderboardStyles.rowText}>Kevin</Text>*/}
+                {/*    <Text style={leaderboardStyles.rowText}>205</Text>*/}
+                {/*</View>*/}
+                {/*<View style={leaderboardStyles.myRow}>*/}
+                {/*    <Text style={leaderboardStyles.rowTextBold}>246</Text>*/}
+                {/*    <Text style={leaderboardStyles.rowTextBold}>Will</Text>*/}
+                {/*    <Text style={leaderboardStyles.rowTextBold}>200</Text>*/}
+                {/*</View>*/}
+                {/*<View style={leaderboardStyles.myRow}>*/}
+                {/*    <Text style={leaderboardStyles.rowText}>247</Text>*/}
+                {/*    <Text style={leaderboardStyles.rowText}>Leigh</Text>*/}
+                {/*    <Text style={leaderboardStyles.rowText}>190</Text>*/}
+                {/*</View>*/}
             </View>
         </View>
     );
