@@ -9,8 +9,18 @@ const leaderboardStyles = StyleSheet.create({
         letterSpacing: 4,
     },
     podium: {
-        display: 'inline-flex',
-        width: '100%',
+        width: "100%",
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "row",
+    },
+    outerPerson: {
+        marginRight: 0,
+        marginLeft: '7%',
+        width: '24%',
+        display: 'block',
+        textAlign: "center",
+        paddingTop: 30,
     },
     person: {
         marginLeft: '7%',
@@ -22,13 +32,6 @@ const leaderboardStyles = StyleSheet.create({
         width: '100%',
         aspectRatio: 1,
         //borderRadius: '50%',
-    },
-    outerPerson: {
-        marginLeft: '7%',
-        width: '24%',
-        display: 'block',
-        textAlign: "center",
-        paddingTop: 30,
     },
     line: {
         width: '90%'
@@ -62,12 +65,11 @@ const leaderboardStyles = StyleSheet.create({
         width: "70%",
     },
     myRow: {
-        display: "flex",
-        justifyContent: "space-around",
+        display: "inline",
         width: "100%",
     },
     rowText: {
-      width: '20%'
+      marginLeft: "5%",
     },
     rowTextBold: {
         width: '20%',
