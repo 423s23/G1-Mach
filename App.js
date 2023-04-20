@@ -6,7 +6,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './Screens/homeScreen';
 import SettingsScreen from "./Screens/settingsScreen";
-import TrackingScreen from "./Screens/trackingScreen";
 import LoginScreen from "./Screens/loginScreen";
 import AboutScreen from './Screens/aboutScreen';
 import AdminApprovalScreen from './Screens/adminApprovalScreen';
@@ -72,14 +71,6 @@ function HomeTabs(){
                                     color={color}
                                 />
                             );
-                        } else if (route.name === 'Tracking') {
-                            return (
-                                <Ionicons
-                                    name={focused ? 'ios-bar-chart' : 'ios-bar-chart-outline'}
-                                    size={size}
-                                    color={color}
-                                />
-                            );
                         } else if (route.name === 'Settings') {
                             return (
                                 <Ionicons
@@ -111,7 +102,6 @@ function HomeTabs(){
                 })}
             >
                 <Tab.Screen name="Home" component={HomeScreen}/>
-                <Tab.Screen name="Tracking" component={TrackingScreen}/>
                 <Tab.Screen name="UserInfo" component={UserInfoScreen} />
                 <Tab.Screen name="About" component={AboutScreen} />
                 <Tab.Screen name="Settings" component={SettingsScreen} />
@@ -134,7 +124,6 @@ export default function App() {
               <Stack.Screen name="UserInfo" component={UserInfoScreen} />
               <Stack.Screen name="About" component={AboutScreen} />
               <Stack.Screen name="SubmitTask" component={SubmitTaskScreen} />
-              <Stack.Screen name="Tracking" component={TrackingScreen} />
               <Stack.Screen name="Leaderboard" component={LeaderboardScreen} />
               <Stack.Screen name="AdminApproval" component={AdminApprovalScreen} />
               <Stack.Screen name="Rewards" component={RewardsScreen} />
