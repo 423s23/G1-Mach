@@ -132,7 +132,6 @@ export default function App() {
               <Stack.Screen name="LogOut" component={LogOutScreen} />
               <Stack.Screen name="Help" component={HelpScreen} />
               <Stack.Screen name="SubmitTaskHelp" component={SubmitTaskHelpScreen} />
-
           </Stack.Navigator>
       </NavigationContainer>
   );
