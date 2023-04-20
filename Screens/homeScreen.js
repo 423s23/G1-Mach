@@ -211,7 +211,7 @@ function calcAllPoints(currentPoints) {
         }
         // LEVEL 36
         if (currentPoints >= 50000) {
-            dataArray[1] = 36; dataArray[2] = 50000; dataArray[3] = 50000;
+            dataArray[1] = 36; dataArray[2] = (currentPoints - 5000); dataArray[3] = currentPoints;
         }
     }
 
@@ -221,7 +221,8 @@ function calcAllPoints(currentPoints) {
 function HomeScreen({ navigation }) {
     const starSize = 30;
     let Name = userData.firstName + " " + userData.lastName;
-    let CurrentPoints = userData.currentPoints;
+    //let CurrentPoints = userData.currentPoints;
+    let CurrentPoints = 69696900;
     var dataArray = calcAllPoints(CurrentPoints);
     let Rank = dataArray[0];
     let Level = dataArray[1];
