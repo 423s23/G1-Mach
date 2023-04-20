@@ -73,7 +73,7 @@ function SubmitTaskScreen({ navigation }) {
         const docSnap = await getDoc(docRef);
         let id = docSnap.id;
 
-        if (com != '' && type != '') {
+        if (com != undefined && type != undefined) {
             const ticketRef = await addDoc(collection(db, "tickets"), {
                 comment: com,
                 name: type,
@@ -82,8 +82,8 @@ function SubmitTaskScreen({ navigation }) {
                 uid: id,
             });
             console.log("DOCUMENT ID: ", ticketRef.id);
+            navigation.navigate("Home");
         }
-        navigation.navigate("Home");
     }
 
     return (

@@ -221,14 +221,12 @@ function calcAllPoints(currentPoints) {
 function HomeScreen({ navigation }) {
     const starSize = 30;
     let Name = userData.firstName + " " + userData.lastName;
-    //let CurrentPoints = userData.currentPoints;
-    let CurrentPoints = 69696900;
+    let CurrentPoints = userData.currentPoints;
     var dataArray = calcAllPoints(CurrentPoints);
     let Rank = dataArray[0];
     let Level = dataArray[1];
     let PreviousPoints = dataArray[2];
     let ProgressPoints = dataArray[3];
-    console.log(dataArray);
     let Titles = [
         "Not Yet Verified",
         "Mach Badass",
