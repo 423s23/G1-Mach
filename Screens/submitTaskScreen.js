@@ -44,23 +44,60 @@ function SubmitTaskScreen({ navigation }) {
     const [number, onChangeNumber] = React.useState('');
     const [open, setOpen] = React.useState(false);
     const [value, setValue] = React.useState(null);
-    const [tasks, setTasks] = React.useState([
-        {label: 'Order Team Apparel', value: 'teamApparel'},
-        {label: 'Order Team Bundle', value: 'teamBundle'},
-        {label: 'Write a Blog', value: 'blog'},
-        {label: 'Place Mach in Zwift', value: 'zwift'},
-        {label: 'Birthday', value: 'birthday'},
-        {label: 'Place Mach in IG', value: 'ig'},
-        {label: 'Write a Review', value: 'review'},
-        {label: 'Race in Mach Kit', value: 'raceMach'},
-        {label: 'Send Photo', value: 'photo'},
-        {label: 'Create Social Media Post', value: 'socialPost'},
-        {label: 'Refer a Friend', value: 'referFriend'},
-        {label: 'Sold Unit via Commission Code', value: 'commission'},
-        {label: 'Mach Highlighted in Magazine', value: 'magazine'},
-        {label: 'Create a UGC Video', value: 'ugcVideo'},
-        {label: 'Custom Request', value: 'customRequest'},
-    ]);
+    const [tasks, setTasks] = React.useState([]);
+
+    let CurrentPoints = userData.currentPoints;
+    // AvailableTasks[bool teamBundle, int blog, Timestamp zwift, Timestamp ig, bool birthday]
+    let AvailableTasks = userData.availableTasks;
+    let CurrentTime = Timestamp.now().toDate();
+    console.log(AvailableTasks);
+    
+    function checkTeamApparel() {
+        // Checking teamApparel
+        if (CurrentPoints == 0) {
+            setTasks(tasks => ([...tasks, {label: 'Order Team Apparel', value: 'teamApparel'}]));
+            return;
+        }
+        // Checking teamBundle
+        if (AvailableTasks[0]) {
+            setTasks(tasks => ([...tasks, {label: 'Order Team Bundle', value: 'teamBundle'}]));
+        }
+        // Checking blog
+        if (AvailableTasks[1] > 0) {
+            setTasks(tasks => ([...tasks, {label: 'Write a Blog', value: 'blog'}]));
+        }
+        // Checking zwift
+        const zwiftTime = AvailableTasks[2].toDate();
+        zwiftTime.setFullYear(zwiftTime.getFullYear() + 1);
+        if (CurrentTime > zwiftTime) {
+            setTasks(tasks => ([...tasks, {label: 'Place Mach in Zwift', value: 'zwift'}]));
+        }
+        // Checking ig
+        const igTime = AvailableTasks[3].toDate();
+        igTime.setFullYear(igTime.getFullYear() + 1);
+        if (CurrentTime > igTime) {
+            setTasks(tasks => ([...tasks, {label: 'Place Mach in IG', value: 'ig'}]));
+        }
+        // Checking birthday
+        if (AvailableTasks[4]) {
+            setTasks(tasks => ([...tasks, {label: 'Birthday', value: 'birthday'}]));
+        }
+
+        // Adding defaults
+        setTasks(tasks => ([...tasks, {label: 'Write a Review', value: 'review'}]));
+        setTasks(tasks => ([...tasks, {label: 'Race in Mach Kit', value: 'raceMach'}]));
+        setTasks(tasks => ([...tasks, {label: 'Send Photo', value: 'photo'}]));
+        setTasks(tasks => ([...tasks, {label: 'Create Social Media Post', value: 'socialPost'}]));
+        setTasks(tasks => ([...tasks, {label: 'Refer a Friend', value: 'referFriend'}]));
+        setTasks(tasks => ([...tasks, {label: 'Sold Unit via Commission Code', value: 'commission'}]));
+        setTasks(tasks => ([...tasks, {label: 'Mach Highlighted in Magazine', value: 'magazine'}]));
+        setTasks(tasks => ([...tasks, {label: 'Create a UGC Video', value: 'ugcVideo'}]));
+        setTasks(tasks => ([...tasks, {label: 'Custom Request', value: 'customRequest'}]));
+    }
+
+    React.useEffect(() => {
+        checkTeamApparel();
+    }, []);
 
     ticket = {
         comment: '',
