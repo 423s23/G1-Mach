@@ -227,13 +227,24 @@ function HomeScreen({ navigation }) {
     let Level = dataArray[1];
     let PreviousPoints = dataArray[2];
     let ProgressPoints = dataArray[3];
+    let Admin = userData.admin;
     let Titles = [
         "Not Yet Verified",
         "Mach Badass",
         "Mach Star",
         "Mach Icon",
         "Mach Hero",
-        "Mach Legend"]
+        "Mach Legend"];
+
+    function IsAdmin({adminCheck}) {
+        if (adminCheck) {
+            return (
+                <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("AdminApproval")}>
+                    <Text style={homeScreenStyles.mainButtonText}>Admin Approval</Text>
+                </Pressable>
+            );
+        }
+    }
     
     return (
         <ScrollView>
@@ -287,9 +298,9 @@ function HomeScreen({ navigation }) {
                     <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("Leaderboard")}>
                         <Text style={homeScreenStyles.mainButtonText}>Team Leaderboard</Text>
                     </Pressable>
-                    <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("AdminApproval")}>
-                        <Text style={homeScreenStyles.mainButtonText}>Admin Approval</Text>
-                    </Pressable>
+                    <IsAdmin
+                        adminCheck = {Admin}
+                    />
                 </View>   
             </View>
         </ScrollView>
