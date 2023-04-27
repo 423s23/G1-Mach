@@ -247,7 +247,7 @@ function HomeScreen({ navigation }) {
     }
     
     return (
-        <ScrollView>
+        <ScrollView style={{backgroundColor: '#ffffff'}}>
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 20}}>
                 <Text style={homeScreenStyles.nameText}>Hello {[Name]},</Text>
                 <View style={homeScreenStyles.levelBox}>

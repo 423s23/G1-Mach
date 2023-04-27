@@ -87,7 +87,7 @@ function SubmitTaskScreen({ navigation }) {
     }
 
     return (
-        <ScrollView>
+        <ScrollView style={{backgroundColor: '#ffffff'}}>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
                 <View style={submitTaskScreenStyles.backButtonBox}>
                     <Pressable onPress={() => navigation.navigate("Home")}>
@@ -133,6 +133,7 @@ function SubmitTaskScreen({ navigation }) {
                     onChangeText={(text) => this.comment = text}
                     placeholder="Insert Link or Text..."
                     multiline={true}
+                    maxLength={500}
                 />
                 
                 <View style={submitTaskScreenStyles.submitButtonBox}>

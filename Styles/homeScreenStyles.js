@@ -7,7 +7,7 @@ const homeScreenStyles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     levelBox:{
         padding: 8,
@@ -16,7 +16,7 @@ const homeScreenStyles = StyleSheet.create({
         borderWidth: 2,
         borderRadius:5,
         borderColor: "gray",
-        backgroundColor: "#eeeeee",
+        backgroundColor: "#ffffff",
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
