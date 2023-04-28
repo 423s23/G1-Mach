@@ -62,7 +62,7 @@ import {doc, getDoc, getFirestore} from "firebase/firestore";
                             />
                         </Pressable>
                     </View>
-                        <Text style={settingsScreenStyles.pageTitleText}>{"Contact Info"}</Text>
+
 
                     <View style={settingsScreenStyles.profilePicBox}>
                         <Image

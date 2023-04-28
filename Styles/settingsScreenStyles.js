@@ -47,6 +47,7 @@ const settingsScreenStyles = StyleSheet.create({
     contactProfilePic:{
         borderRadius: 50,
         padding: 50,
+        marginTop: 25,
     },
 
     listBox: {
@@ -63,6 +64,7 @@ const settingsScreenStyles = StyleSheet.create({
         flexDirection: 'column',
         alignContent: 'center',
         alignItems: 'center',
+        marginTop: 20,
     },
 
     contactInfoBox: {
@@ -96,7 +98,7 @@ const settingsScreenStyles = StyleSheet.create({
         position: 'absolute',
         left: 0,
         top: 0,
-        marginTop: 5,
+        marginTop: 45,
         marginLeft: 5,
         backgroundColor: '#ffffff',
         borderWidth: 1,

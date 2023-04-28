@@ -102,9 +102,9 @@ function UserInfoScreen({ navigation }) {
                     </View>
                 </View>
                 <View style={userInfoScreenStyles.levelingBox}>
-                                    <Text style={userInfoScreenStyles.levelText}>Total Progress</Text>
-                                    <Text style={userInfoScreenStyles.pointText}>{[CurrentPoints]}/50,000</Text>
-                                </View>
+                    <Text style={userInfoScreenStyles.levelText}>Total Progress</Text>
+                    <Text style={userInfoScreenStyles.pointText}>{[CurrentPoints]}/50,000</Text>
+                </View>
                 <View style={userInfoScreenStyles.progressBox}>
                     <View style={userInfoScreenStyles.progressBarBackground}></View>
                     <View style={userInfoScreenStyles.progressBar}></View>
