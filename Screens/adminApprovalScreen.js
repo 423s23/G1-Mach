@@ -5,7 +5,7 @@ import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
 import {initializeApp} from "firebase/app";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
-import {doc, getDoc, getFirestore, collection, getDocs} from "firebase/firestore";
+import {doc, getDoc, getFirestore, collection, getDocs, updateDoc, Timestamp} from "firebase/firestore";
 import refreshControl from "react-native-web/dist/exports/RefreshControl";
 import {useState} from "react";
 import leaderboardStyles from "../Styles/leaderboardStyle";
@@ -30,14 +30,18 @@ signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
         const querySnapshot = await getDocs(collection(db, "tickets"));
         querySnapshot.forEach((doc) => {
             let temp = [];
+            temp['ticketID'] = doc.id;
             temp['uid'] = doc.data()['uid'];
             temp['name'] = doc.data()['name'];
             temp['comment'] = doc.data()['comment'];
-            tickets.push(temp)
+            if(doc.data()['state'] === "pending"){
+                tickets.push(temp)
+            }
         });
 
         //get first and last name of ticket submitters
         for (const t of tickets) {
+            console.log(t);
             const docRef = doc(db, "users", t['uid']);
             const docSnap = await getDoc(docRef);
             t['firstName'] = docSnap.data()['firstName'];
@@ -46,9 +50,56 @@ signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
         console.log(tickets);
     });
 
+async function updateTicket(ticketID, userId, task, approved) {
+    const docRef = doc(db, "tickets", ticketID);
+    if (approved) {
+        console.log("approved");
+        await updateDoc(docRef, {
+            state: 'approved'
+        });
+
+        const userRef = doc(db, "users", userId)
+        const userSnap = await getDoc(userRef);
+        let points = userSnap.data()['currentPoints'];
+
+        const taskRef = doc(db, "tasks", task)
+        const pointSnap = await getDoc(taskRef);
+        points += pointSnap.data()['points'];
+
+        let available = userSnap.data()['availableTasks'];
+        console.log(available);
+        switch (task) {
+            case "teamBundle":
+                available[0] = false;
+                break;
+            case "blog":
+                available[1]--;
+                break;
+            case "zwift":
+                available[2] = Timestamp.now();
+                break;
+            case "ig":
+                available[3] = Timestamp.now();
+                break;
+        }
+
+        console.log(available);
+
+        await updateDoc(userRef, {
+            currentPoints: points,
+            availableTasks: available
+        });
+
+    } else {
+        console.log("denied");
+        await updateDoc(docRef, {
+            state: 'denied'
+        });
+    }
+}
+
 function AdminApprovalScreen({ navigation }) {
     const [ticketCounter, setTicketCounter] = useState(0);
-    const [inputText, resetInputText] = useState('');
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <View style={commonStyles.backBox}>
@@ -58,18 +109,14 @@ function AdminApprovalScreen({ navigation }) {
             </View>
             <Text style={approvalStyles.task}>{tickets[ticketCounter]['name']}</Text>
             <Text>{tickets[ticketCounter]['comment']}</Text>
-            <Image
-                style={approvalStyles.photo}
-                source={{uri: 'https://www.williamjordan.net/INF.png'}}
-                resizeMode={'cover'} // cover or contain its upto you view look
-            />
+
             <Text style={approvalStyles.person}>{tickets[ticketCounter]['firstName'] + " " + tickets[ticketCounter]['lastName']}</Text>
             {/*Deny*/}
             <View style={approvalStyles.buttons}>
                 <View style={approvalStyles.redButton} onClick= {() => {
                         if (ticketCounter + 1 < tickets.length) {
                             setTicketCounter(ticketCounter + 1)
-                            resetInputText('');
+                            updateTicket(tickets[ticketCounter]['ticketID'], tickets[ticketCounter]['uid'], tickets[ticketCounter]['name'],false)
                         }
                     }
                 }>
@@ -79,17 +126,13 @@ function AdminApprovalScreen({ navigation }) {
                 <View style={approvalStyles.greenButton} onClick= {() => {
                         if (ticketCounter + 1 < tickets.length) {
                             setTicketCounter(ticketCounter + 1)
-                            resetInputText('');
+                            updateTicket(tickets[ticketCounter]['ticketID'], tickets[ticketCounter]['uid'], tickets[ticketCounter]['name'], true)
                         }
                     }
                 }>
                     <Text style={approvalStyles.buttonText}>&#x2713;</Text>
                 </View>
             </View>
-            <Text>Reason:</Text>
-            <TextInput style={approvalStyles.input} multiline editable numberOfLines={2}>
-
-            </TextInput >
         </View>
     );
 }
