@@ -307,7 +307,7 @@ function HomeScreen({ navigation }) {
                 </View>
                 <View style={homeScreenStyles.levelingBox}>
                     <Text style={homeScreenStyles.levelText}>Level {[Level]}</Text>
-                    <Text style={homeScreenStyles.pointText}>{[CurrentPoints - PreviousPoints]}/{[ProgressPoints - PreviousPoints]}</Text>
+                    <Text style={homeScreenStyles.pointText}>{[CurrentPoints - PreviousPoints]}pts/{[ProgressPoints - PreviousPoints]}pts</Text>
                 </View>
                 <View style={homeScreenStyles.progressBox}>
                     <View style={homeScreenStyles.progressBarBackground}></View>
