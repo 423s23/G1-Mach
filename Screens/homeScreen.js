@@ -1,8 +1,7 @@
-import {Button, Pressable, ScrollView, Text, View, StlyeSheet, Modal} from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {Pressable, ScrollView, Text, View, StyleSheet, Modal} from "react-native";
+//import { NavigationContainer } from '@react-navigation/native';
+//import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import homeScreenStyles from "../Styles/homeScreenStyles";
-import rewardstyles from "../Styles/rewardsPageStyles";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
 import {initializeApp} from "firebase/app";
