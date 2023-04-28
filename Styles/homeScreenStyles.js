@@ -35,6 +35,12 @@ const homeScreenStyles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
+    headerText: {
+        margin: 12,
+        fontSize: 32,
+        fontWeight: "600",
+        textAlign: 'center',
+    },
     levelText:{
         fontSize: 24,
         width: '50%',
@@ -103,6 +109,43 @@ const homeScreenStyles = StyleSheet.create({
     },
     star:{
         margin: 10
+    },
+    centeredView: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 22,
+    },
+    modalView: {
+        width: "75%",
+        backgroundColor: 'white',
+        borderRadius: 10,
+        padding: 20,
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5,
+    },
+    popupButton: {
+        borderRadius: 20,
+        padding: 10,
+        elevation: 2,
+    },
+    buttonClose: {
+        backgroundColor: '#2196F3',
+    },
+    popupTextStyle: {
+        color: 'black',
+        fontWeight: 'bold',
+        fontSize: 25,
+        fontStyle: "italic",
+        textAlign: 'left',
+        marginLeft: 10,
     },
 });
 
