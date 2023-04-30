@@ -1,5 +1,5 @@
 import {Button, Pressable, ScrollView, StyleSheet} from "react-native";
-import ToggleSwitch from 'toggle-switch-react-native'
+//import ToggleSwitch from 'toggle-switch-react-native'
 //import { NavigationContainer } from '@react-navigation/native';
 //import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Text, View} from "react-native";

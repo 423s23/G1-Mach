@@ -19,6 +19,19 @@ const firebaseConfig = {
     appId: "1:311919315732:web:2004d4f538ef63f33b9001",
     measurementId: "G-WVTXPNPTNR"
 };
+
+    const [imageUrl, setImageUrl] = useState(undefined);
+
+    useEffect(() => {
+        storage()
+        .ref('/' + 'WillSki.jpg') //name in storage in firebase console
+        .getDownloadURL()
+        .then((url) => {
+         setImageUrl(url);
+         })
+        .catch((e) => console.log('Errors while downloading => ', e));
+    }, []);
+
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
