@@ -102,11 +102,15 @@ function AdminApprovalScreen({ navigation }) {
     const [ticketCounter, setTicketCounter] = useState(0);
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <View style={commonStyles.backBox}>
-                <Pressable onPress={() => navigation.navigate("Home")}>
-                   <Text style={commonStyles.back}>{'❮'}</Text>
-                </Pressable>
-            </View>
+            <View style={commonStyles.backButtonBox}>
+                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("Home")}>
+                            <Ionicons
+                                name={'ios-arrow-back-circle-outline'}
+                                size={40}
+                                style={commonStyles.backArrow}
+                            />
+                        </Pressable>
+                    </View>
             <Text style={approvalStyles.task}>{tickets[ticketCounter]['name']}</Text>
             <Text>{tickets[ticketCounter]['comment']}</Text>
 
