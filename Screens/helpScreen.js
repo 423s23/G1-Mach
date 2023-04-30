@@ -28,13 +28,12 @@ function HelpScreen({ navigation }) {
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>Mach Home Page</Text>
-                    <Text style={submitTaskScreenStyles.infoText}>If you navigate to the Mach Home page you will see your Mach Status and Mach Progress bar at the top of the screen. Your Mach Status is the specific Mach Stage you currently are. There is Mach ________________________. Your progress bar shows the amount of Mach points you’ve achieved and Mach level reached. Below all of this, you have the option to select ____________.</Text>
+                    <Text style={submitTaskScreenStyles.infoText}>If you navigate to the Mach Home page you will see your Mach Status and Mach Progress bar at the top of the screen. Your Mach Status is the specific Mach Stage you currently are. Your progress bar shows the amount of Mach points you’ve achieved and Mach level reached. Below all of this, you have the option to select some of the apps other features.</Text>
                 </View>
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>Submitting Tasks</Text>
-                    <Text style={submitTaskScreenStyles.infoText}>To submit tasks, navigate to the Home page and then select the Submit Task Button. Select the ‘Select Task’ Dropdown menu and choose the desired task. Fill out the text field with whatever is required of the task or use the upload button to upload media. To see the specific requirements of each task, see the submit task help button or click here.
-                </Text>
+                    <Text style={submitTaskScreenStyles.infoText}>To submit tasks, navigate to the Home page and then select the Submit Task Button. Select the ‘Select Task’ Dropdown menu and choose the desired task. Fill out the text field with whatever is required of the task or use the upload button to upload media. To see the specific requirements of each task, see the submit task help button or click here.</Text>
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>Task Approval</Text>
@@ -50,22 +49,22 @@ function HelpScreen({ navigation }) {
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>Mach Rewards</Text>
-                    <Text style={submitTaskScreenStyles.infoText}></Text>
+                    <Text style={submitTaskScreenStyles.infoText}>The Rewards page displays all the possible rewards for completing the Mach tasks.</Text>
                 </View>
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>User Info</Text>
-                    <Text style={submitTaskScreenStyles.infoText}></Text>
+                    <Text style={submitTaskScreenStyles.infoText}>The user info page shows the users progress in Mach Rewards. You will find two progress bars. One that shows overall progress towards the Mach total points of 50,000 and a personal progress bar that shows your point progress within your own level. Below this, there are other statistics about your Mach Rewards account, such as, number of tasks completed. </Text>
                 </View>
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>Settings</Text>
-                    <Text style={submitTaskScreenStyles.infoText}></Text>
+                    <Text style={submitTaskScreenStyles.infoText}>In the settings page, you can find four options: Contact Info, Notifications, Help, and LogOut. If you select the Contact Info option you will find your personal contact information organised in a table. This page shows where Mach might send your rewards or how they might contact you about your team status. The notifications page is a simple display that allows you to select whether or not you would like to receive notifications from Mach. The help page is what you have selected here. Finally, the LogOut option allows you to LogOut of your Mach app. </Text>
                 </View>
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>Contacting Mach</Text>
-                    <Text style={submitTaskScreenStyles.infoText}></Text>
+                    <Text style={submitTaskScreenStyles.infoText}>Questions or concerns? Do not be afraid to contact the Mach team directly! Email: Phone:</Text>
                 </View>
             </View>
         </ScrollView>
