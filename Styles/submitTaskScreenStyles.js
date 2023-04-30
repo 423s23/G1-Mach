@@ -111,25 +111,6 @@ const submitTaskScreenStyles = StyleSheet.create({
     helpCircle:{
         color: '#000000',
     },
-    backButtonBox:{
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        marginTop: 35,
-        marginLeft: 10,
-        backgroundColor: '#ffffff',
-        borderWidth: 1,
-        borderRadius: 10,
-        borderColor: '#ffffff',
-    },
-    backButton:{
-        color: '#6ccff6',
-        fontSize: 25,
-
-    },
-    backArrow:{
-        color: '#000000',
-    },
     infoBox:{
         marginVertical: 5,
         justifyContent: 'center',

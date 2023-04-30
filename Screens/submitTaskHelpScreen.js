@@ -7,6 +7,7 @@ import {Button,
         Picker, 
         TextInput} from "react-native";
 import styles from "../Styles/styles";
+import commonStyles from "../Styles/commonStyles"
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
@@ -16,11 +17,15 @@ function SubmitTaskHelpScreen({ navigation }) {
     return (
         <ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
-            <View style={submitTaskScreenStyles.backButtonBox}>
-                    <Pressable onPress={() => navigation.navigate("SubmitTask")}>
-                        <Text style={submitTaskScreenStyles.backButton}>{'❮'}</Text>
-                    </Pressable>
-                </View>
+            <View style={commonStyles.backButtonBox}>
+                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("SubmitTask")}>
+                            <Ionicons
+                                name={'ios-arrow-back-circle-outline'}
+                                size={40}
+                                style={commonStyles.backArrow}
+                            />
+                        </Pressable>
+                    </View>
 
                 <View style={submitTaskScreenStyles.headerBox}>
                     <Text style={submitTaskScreenStyles.headerText}>Submit Task Help</Text>
