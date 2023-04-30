@@ -1,7 +1,6 @@
-import {Button, Pressable, ScrollView, Text, View, StlyeSheet} from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import styles from "../Styles/styles";
+import {Pressable, ScrollView, Text, View, StyleSheet, Modal} from "react-native";
+//import { NavigationContainer } from '@react-navigation/native';
+//import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import homeScreenStyles from "../Styles/homeScreenStyles";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
@@ -235,6 +234,7 @@ function HomeScreen({ navigation }) {
         "Mach Icon",
         "Mach Hero",
         "Mach Legend"];
+    const [modalVisibleRanks, setModalVisibleRanks] = React.useState(false);
 
     function IsAdmin({adminCheck}) {
         if (adminCheck) {
@@ -250,43 +250,68 @@ function HomeScreen({ navigation }) {
         <ScrollView style={{backgroundColor: '#ffffff'}}>
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 20}}>
                 <Text style={homeScreenStyles.nameText}>Hello {[Name]},</Text>
-                <View style={homeScreenStyles.levelBox}>
-                    <Text style={styles.headerText}>{Titles[Rank]}</Text>
-                    <View style={homeScreenStyles.starBox}>
-                        <Ionicons
-                            name={Rank>=1 ? 'ios-star' : 'ios-star-outline'}
-                            size={starSize}
-                            style={homeScreenStyles.star}
-                        />
-                        <Ionicons
-                            name={Rank>=2 ? 'ios-star' : 'ios-star-outline'}
-                            size={starSize}
-                            style={homeScreenStyles.star}
-                        />
-                        <Ionicons
-                            name={Rank>=3 ? 'ios-star' : 'ios-star-outline'}
-                            size={starSize}
-                            style={homeScreenStyles.star}
-                        />
-                        <Ionicons
-                            name={Rank>=4 ? 'ios-star' : 'ios-star-outline'}
-                            size={starSize}
-                            style={homeScreenStyles.star}
-                        />
-                        <Ionicons
-                            name={Rank>=5 ? 'ios-star' : 'ios-star-outline'}
-                            size={starSize}
-                            style={homeScreenStyles.star}
-                        />
+                <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={modalVisibleRanks}
+                    onRequestClose={() => {
+                    Alert.alert('Modal has been close.');
+                    setModalVisibleRanks(!modalVisibleRanks)
+                }}>
+                <View style={homeScreenStyles.centeredView}>
+                    <View style={homeScreenStyles.modalView}>
+                        <Text style={homeScreenStyles.modalText}>Rank 1: Mach Badass</Text>
+                        <Text style={homeScreenStyles.modalText}>Rank 2: Mach Star</Text>
+                        <Text style={homeScreenStyles.modalText}>Rank 3: Mach Icon</Text>
+                        <Text style={homeScreenStyles.modalText}>Rank 4: Mach Hero</Text>
+                        <Text style={homeScreenStyles.modalText}>Rank 5: Mach Legend</Text>
+                        <Pressable
+                            style={[homeScreenStyles.popupButton, homeScreenStyles.buttonClose]}
+                            onPress={() => setModalVisibleRanks(!modalVisibleRanks)}>
+                        <Text style={homeScreenStyles.popupTextStyle}>Hide Pop-up</Text>
+                        </Pressable>
                     </View>
+                </View>
+                </Modal>
+                <View style={homeScreenStyles.levelBox}>
+                    <Pressable onPress={() => setModalVisibleRanks(true)}>
+                        <Text style={homeScreenStyles.headerText}>{Titles[Rank]}</Text>
+                        <View style={homeScreenStyles.starBox}>
+                            <Ionicons
+                                name={Rank>=1 ? 'ios-star' : 'ios-star-outline'}
+                                size={starSize}
+                                style={homeScreenStyles.star}
+                            />
+                            <Ionicons
+                                name={Rank>=2 ? 'ios-star' : 'ios-star-outline'}
+                                size={starSize}
+                                style={homeScreenStyles.star}
+                            />
+                            <Ionicons
+                                name={Rank>=3 ? 'ios-star' : 'ios-star-outline'}
+                                size={starSize}
+                                style={homeScreenStyles.star}
+                            />
+                            <Ionicons
+                                name={Rank>=4 ? 'ios-star' : 'ios-star-outline'}
+                                size={starSize}
+                                style={homeScreenStyles.star}
+                            />
+                            <Ionicons
+                                name={Rank>=5 ? 'ios-star' : 'ios-star-outline'}
+                                size={starSize}
+                                style={homeScreenStyles.star}
+                            />
+                        </View>
+                    </Pressable>
                 </View>
                 <View style={homeScreenStyles.levelingBox}>
                     <Text style={homeScreenStyles.levelText}>Level {[Level]}</Text>
-                    <Text style={homeScreenStyles.pointText}>{[CurrentPoints - PreviousPoints]}/{[ProgressPoints - PreviousPoints]}</Text>
+                    <Text style={homeScreenStyles.pointText}>{[CurrentPoints - PreviousPoints]}pts/{[ProgressPoints - PreviousPoints]}pts</Text>
                 </View>
                 <View style={homeScreenStyles.progressBox}>
                     <View style={homeScreenStyles.progressBarBackground}></View>
-                    <View style={{position: 'absolute', height: 20, width: getProgressPercent(CurrentPoints, PreviousPoints, ProgressPoints), backgroundColor: '#6ccff6', borderColor: '#000000', borderWidth: 2, borderRadius: 5,}}></View>
+                    <View style={{position: 'absolute', height: 20, width: getProgressPercent(CurrentPoints, PreviousPoints, ProgressPoints), backgroundColor: '#ee2f53', borderColor: '#000000', borderWidth: 2, borderRadius: 5,}}></View>
                 </View>
                 <View style={homeScreenStyles.mainButtonBox}>
                     <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("SubmitTask")}>

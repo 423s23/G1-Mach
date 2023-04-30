@@ -8,32 +8,31 @@ const approvalStyles = StyleSheet.create({
     p: {
         width: "80%",
     },
-    buttons: {
-        display: "flex",
-
-        // justifyContent: "space-between",
+    buttons: { display: "flex",
+        width: "80%",
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
     },
     redButton: {
         backgroundColor: "red",
         aspectRatio: 1,
         borderRadius: "50%",
-        textAlign: "center",
+        alignItems: 'center',
+        justifyContent: 'center',
         width: "25%",
     },
     greenButton: {
         backgroundColor: "green",
         aspectRatio: 1,
         borderRadius: "50%",
-        textAlign: "center",
+        alignItems: 'center',
+        justifyContent: 'center',
         width: "25%",
-        marginLeft: "25%",
     },
     buttonText: {
-        position: "absolute",
-        fontSize: "10%",
         fontWeight: "bold",
-        marginTop: "5%",
-        marginLeft: "-3.6%"
+        fontSize: 25,
     },
     input: {
         borderColor: "black",

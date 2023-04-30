@@ -1,4 +1,11 @@
-import {Button, Pressable, ScrollView, Text, View, StyleSheet, Picker, TextInput} from "react-native";
+import {Button, 
+        Pressable, 
+        ScrollView, 
+        Text, 
+        View, 
+        StyleSheet, 
+        Picker, 
+        TextInput} from "react-native";
 import styles from "../Styles/styles";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
 import {Ionicons} from "@expo/vector-icons";
@@ -21,12 +28,12 @@ function SubmitTaskHelpScreen({ navigation }) {
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>Order Team Apparel (100 points)</Text>
-                    <Text style={submitTaskScreenStyles.infoText}>In order to be eligible for the Incentive Program you must oder a team suit. Include a picture of the receipt</Text>
+                    <Text style={submitTaskScreenStyles.infoText}>In order to be eligible for the Incentive Program you must order a team suit. Include a picture of the receipt (MAX 1)</Text>
                 </View>
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>Order Team Bundle (200 points)</Text>
-                    <Text style={submitTaskScreenStyles.infoText}>The team bundle includes ordering team tri-suit, t-shirt, socks, and hat. Include a picture of the receipt</Text>
+                    <Text style={submitTaskScreenStyles.infoText}>The team bundle includes ordering team tri-suit, t-shirt, socks, and hat. Include a picture of the receipt (MAX 1)</Text>
                 </View>
 
                 <View style={submitTaskScreenStyles.infoBox}>
@@ -41,7 +48,7 @@ function SubmitTaskHelpScreen({ navigation }) {
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>Place Mach in IG (10 points)</Text>
-                    <Text style={submitTaskScreenStyles.infoText}>By placing @machappareltri in your Instagram handle, you'll earn 10 points every new calendar year. Include a link to your IG page</Text>
+                    <Text style={submitTaskScreenStyles.infoText}>By placing @machappareltri in your Instagram bio, you'll earn 10 points every new calendar year. Include a link to your IG page</Text>
                 </View>
 
                 <View style={submitTaskScreenStyles.infoBox}>

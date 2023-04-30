@@ -1,12 +1,11 @@
-import {Button, Pressable, ScrollView, Text, View, StyleSheet, Picker, TextInput} from "react-native";
+import {Pressable, ScrollView, Text, View, StyleSheet, TextInput} from "react-native";
 import DropDownPicker from "react-native-dropdown-picker";
-import styles from "../Styles/styles";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
 import {initializeApp} from "firebase/app";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
-import {doc, getDoc, setDoc, addDoc, collection, Timestamp, getFirestore} from "firebase/firestore";
+import {doc, getDoc, addDoc, collection, Timestamp, getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
@@ -131,7 +130,6 @@ function SubmitTaskScreen({ navigation }) {
                         <Text style={submitTaskScreenStyles.backButton}>{'❮'}</Text>
                     </Pressable>
                 </View>
-                
                 <View style={submitTaskScreenStyles.helpButtonBox}>
                     <Pressable style={submitTaskScreenStyles.helpButton} onPress={() => navigation.navigate("SubmitTaskHelp")}>
                         <Ionicons
@@ -141,11 +139,9 @@ function SubmitTaskScreen({ navigation }) {
                         />
                     </Pressable>
                 </View>
-                
                 <View style={submitTaskScreenStyles.headerBox}>
                     <Text style={submitTaskScreenStyles.headerText}>Submit Task Completion</Text>
                 </View>
-                
                 <View style={submitTaskScreenStyles.dropDownTask}>
                     <DropDownPicker
                         listMode="SCROLLVIEW"
@@ -172,7 +168,6 @@ function SubmitTaskScreen({ navigation }) {
                     multiline={true}
                     maxLength={500}
                 />
-                
                 <View style={submitTaskScreenStyles.submitButtonBox}>
                     <Pressable style={submitTaskScreenStyles.submitButton} onPress={() => createNewTicket(this.comment, this.type)}>
                         <Text style={submitTaskScreenStyles.submitButtonText}>Submit</Text>

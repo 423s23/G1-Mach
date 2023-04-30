@@ -110,8 +110,6 @@ function HomeTabs(){
     );
 }
 
-// FOR DEVELOPING: change the initialRoutName to the screen you are working on
-// BUT put it back to "Login" before pushing
 export default function App() {
   return (
       <NavigationContainer>
