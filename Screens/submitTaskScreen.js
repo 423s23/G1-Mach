@@ -1,6 +1,7 @@
 import {Pressable, ScrollView, Text, View, StyleSheet, TextInput} from "react-native";
 import DropDownPicker from "react-native-dropdown-picker";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
+import commonStyles from "../Styles/commonStyles"
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
 import {initializeApp} from "firebase/app";
@@ -125,11 +126,15 @@ function SubmitTaskScreen({ navigation }) {
     return (
         <ScrollView style={{backgroundColor: '#ffffff'}}>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
-                <View style={submitTaskScreenStyles.backButtonBox}>
-                    <Pressable onPress={() => navigation.navigate("Home")}>
-                        <Text style={submitTaskScreenStyles.backButton}>{'❮'}</Text>
-                    </Pressable>
-                </View>
+                <View style={commonStyles.backButtonBox}>
+                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("Home")}>
+                            <Ionicons
+                                name={'ios-arrow-back-circle-outline'}
+                                size={40}
+                                style={commonStyles.backArrow}
+                            />
+                        </Pressable>
+                    </View>
                 <View style={submitTaskScreenStyles.helpButtonBox}>
                     <Pressable style={submitTaskScreenStyles.helpButton} onPress={() => navigation.navigate("SubmitTaskHelp")}>
                         <Ionicons

@@ -50,11 +50,15 @@ signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
 function LeaderboardScreen({ navigation }) {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <View style={commonStyles.backBox}>
-                <Pressable onPress={() => navigation.navigate("Home")}>
-                    <Text style={commonStyles.back}>{'❮'}</Text>
-                </Pressable>
-            </View>
+            <View style={commonStyles.backButtonBox}>
+                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("Home")}>
+                            <Ionicons
+                                name={'ios-arrow-back-circle-outline'}
+                                size={40}
+                                style={commonStyles.backArrow}
+                            />
+                        </Pressable>
+                    </View>
             <Text style={leaderboardStyles.header}>LEADERBOARD</Text>
             <View style={leaderboardStyles.podium}>
                 <View style={leaderboardStyles.outerPerson}>
