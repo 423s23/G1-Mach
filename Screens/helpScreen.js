@@ -8,6 +8,7 @@ import {Button,
         TextInput} from "react-native";
 import styles from "../Styles/styles";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
+import settingsScreenStyles from "../Styles/settingsScreenStyles.js";
 import commonStyles from "../Styles/commonStyles";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
@@ -37,8 +38,8 @@ function HelpScreen({ navigation }) {
                     </View>
 
                     <View style={submitTaskScreenStyles.infoBox}>
-                        <Text style={submitTaskScreenStyles.infoHeader}>Submitting Tasks</Text>
-                        <Text style={submitTaskScreenStyles.infoText}>To submit tasks, navigate to the Home page and then select the Submit Task Button. Select the ‘Select Task’ Dropdown menu and choose the desired task. Fill out the text field with whatever is required of the task or use the upload button to upload media. To see the specific requirements of each task, see the submit task help button or click here.</Text>
+                        <Text style={submitTaskScreenStyles.infoHeader}>    Submitting Tasks</Text>
+                        <Text style={settingsScreenStyles.infoTextST}>To submit tasks, navigate to the Home page and then select the Submit Task Button. Select the ‘Select Task’ Dropdown menu and choose the desired task. Fill out the text field with whatever is required of the task or use the upload button to upload media. To see the specific requirements of each task, see the submit task help button or click here.</Text>
 
                     <View style={submitTaskScreenStyles.infoBox}>
                         <Text style={submitTaskScreenStyles.infoHeader}>Task Approval</Text>
