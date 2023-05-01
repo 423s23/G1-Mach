@@ -41,11 +41,13 @@ const leaderboardStyles = StyleSheet.create({
     noMargin: {
         margin: 0,
         fontWeight: "bold",
+        textAlign: "center",
     },
     one: {
         margin: 0,
         fontSize: 20,
-        fontWeight: "bold"
+        fontWeight: "bold",
+        textAlign: "center",
     },
     tabs: {
         display: "flex",
@@ -82,6 +84,9 @@ const leaderboardStyles = StyleSheet.create({
     },
     bold: {
         fontWeight: 'bold',
+    },
+    center: {
+        textAlign: "center",
     },
 });
 
