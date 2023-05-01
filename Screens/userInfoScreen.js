@@ -9,7 +9,6 @@ import * as React from "react";
 import {initializeApp} from "firebase/app";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {doc, getDoc, getFirestore} from "firebase/firestore";
-import homeScreenStyles from "../Styles/homeScreenStyles";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
