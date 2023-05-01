@@ -17,7 +17,7 @@ const approvalStyles = StyleSheet.create({
     redButton: {
         backgroundColor: "red",
         aspectRatio: 1,
-        borderRadius: "50%",
+        borderRadius: 50,
         alignItems: 'center',
         justifyContent: 'center',
         width: "25%",
@@ -25,7 +25,7 @@ const approvalStyles = StyleSheet.create({
     greenButton: {
         backgroundColor: "green",
         aspectRatio: 1,
-        borderRadius: "50%",
+        borderRadius: 50,
         alignItems: 'center',
         justifyContent: 'center',
         width: "25%",
@@ -47,6 +47,9 @@ const approvalStyles = StyleSheet.create({
         width: "50%",
         backgroundColor: "teal",
     },
+    bold: {
+        fontWeight: "bold",
+    }
 });
 
 export default approvalStyles;

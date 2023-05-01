@@ -31,10 +31,12 @@ const leaderboardStyles = StyleSheet.create({
     personImg: {
         width: '100%',
         aspectRatio: 1,
-        //borderRadius: '50%',
+        borderRadius: 50,
     },
     line: {
-        width: '90%'
+        width: '90%',
+        borderBottomWidth: 2,
+        borderColor: 'black',
     },
     noMargin: {
         margin: 0,
@@ -65,11 +67,11 @@ const leaderboardStyles = StyleSheet.create({
         width: "70%",
     },
     myRow: {
-        display: "inline",
-        width: "100%",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
     rowText: {
-      marginLeft: "5%",
+
     },
     rowTextBold: {
         width: '20%',

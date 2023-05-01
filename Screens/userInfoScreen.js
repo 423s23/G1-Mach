@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from "../Styles/styles";
 import userInfoScreenStyles from "../Styles/userInfoScreenStyles";
+import homeScreenStyles from "../Styles/homeScreenStyles";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
 import {initializeApp} from "firebase/app";
@@ -46,6 +47,18 @@ function getProgressPercent(currentPoints, previousPoints, progressPoints) {
     let progressPercentInt = (((currentPoints - previousPoints) / (progressPoints - previousPoints)) * 100);
     var progressPercent = progressPercentInt.toString() + "%";
     return progressPercent
+}
+
+function getFullProgressPercent(currentPoints) {
+    if (currentPoints < 50000) {
+        let fullProgressPercentInt = ((currentPoints / 50000) * 100);
+        var fullProgressPercent = fullProgressPercentInt.toString() + "%";
+    }
+    else if (currentPoints >= 50000) {
+        let fullProgressPercentInt = 100;
+        var fullProgressPercent = fullProgressPercentInt.toString() + "%";
+    }
+    return fullProgressPercent
 }
 
 function calcAllPoints(currentPoints) {
@@ -230,6 +243,7 @@ function UserInfoScreen({ navigation }) {
     let PreviousPoints = dataArray[2];
     let ProgressPoints = dataArray[3];
     let Admin = userData.admin;
+    let taskTotal = 0;
     let Titles = [
         "Not Yet Verified",
         "Mach Badass",
@@ -316,23 +330,16 @@ function UserInfoScreen({ navigation }) {
                     <View style={homeScreenStyles.progressBarBackground}></View>
                     <View style={{position: 'absolute', height: 20, width: getProgressPercent(CurrentPoints, PreviousPoints, ProgressPoints), backgroundColor: '#ee2f53', borderColor: '#000000', borderWidth: 2, borderRadius: 5,}}></View>
                 </View>
-                <View style={homeScreenStyles.mainButtonBox}>
-                    <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("SubmitTask")}>
-                        <Text style={homeScreenStyles.mainButtonText}>Submit Task Completion</Text>
-                    </Pressable>
-                    <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("Rewards")}>
-                        <Text style={homeScreenStyles.mainButtonText}>Rewards</Text>
-                    </Pressable>
-                    <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("Leaderboard")}>
-                        <Text style={homeScreenStyles.mainButtonText}>Team Leaderboard</Text>
-                    </Pressable>
-                    <IsAdmin
-                        adminCheck = {Admin}
-                    />
+                <View style={homeScreenStyles.levelingBox}>
+                    <Text style={homeScreenStyles.levelText}>Level {[Level]}</Text>
+                    <Text style={homeScreenStyles.pointText}>{CurrentPoints}pts/50000pts</Text>
+                </View>
+                <View style={homeScreenStyles.progressBox}>
+                    <View style={homeScreenStyles.progressBarBackground}></View>
+                    <View style={{position: 'absolute', height: 20, width: getFullProgressPercent(CurrentPoints), backgroundColor: '#ee2f53', borderColor: '#000000', borderWidth: 2, borderRadius: 5,}}></View>
                 </View>
                 <Text style={userInfoScreenStyles.statsText}>Current Level:   {[Level]}</Text>
                 <Text style={userInfoScreenStyles.statsText}>Tasks Completed:   {[taskTotal]}</Text>
-                <Text style={userInfoScreenStyles.statsText}>Rewards Received:  {[taskTotal]}</Text>
             </View>
         </ScrollView>
     );
