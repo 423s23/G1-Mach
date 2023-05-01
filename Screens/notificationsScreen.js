@@ -1,10 +1,11 @@
 import {Button, Pressable, ScrollView, StyleSheet} from "react-native";
-//import ToggleSwitch from 'toggle-switch-react-native'
+import ToggleSwitch from 'toggle-switch-react-native'
 //import { NavigationContainer } from '@react-navigation/native';
 //import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Text, View} from "react-native";
 //import styles from "../Styles/styles";
 import settingsScreenStyles from "../Styles/settingsScreenStyles";
+import commonStyles from "../Styles/commonStyles";
 import {Ionicons} from "@expo/vector-icons";
 import {initializeApp} from "firebase/app";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
@@ -55,7 +56,7 @@ import {doc, getDoc, getFirestore} from "firebase/firestore";
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
             <View style={commonStyles.backButtonBox}>
-                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("SubmitTask")}>
+                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("Settings")}>
                             <Ionicons
                                 name={'ios-arrow-back-circle-outline'}
                                 size={40}

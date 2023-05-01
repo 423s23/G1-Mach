@@ -4,6 +4,7 @@ import {Image, Button, Pressable, ScrollView, StyleSheet} from "react-native";
 import {Text, View} from "react-native";
 //import styles from "../Styles/styles";
 import settingsScreenStyles from "../Styles/settingsScreenStyles";
+import commonStyles from "../Styles/commonStyles"
 import {Ionicons} from "@expo/vector-icons";
 import {initializeApp} from "firebase/app";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";

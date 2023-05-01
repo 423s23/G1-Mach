@@ -1,4 +1,4 @@
-import {Button, Pressable, ScrollView, Text, View, StyleSheet} from "react-native";
+import {Button, Pressable, ScrollView, Text, View, StyleSheet, Modal} from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from "../Styles/styles";
@@ -8,6 +8,7 @@ import * as React from "react";
 import {initializeApp} from "firebase/app";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {doc, getDoc, getFirestore} from "firebase/firestore";
+import homeScreenStyles from "../Styles/homeScreenStyles";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
@@ -24,6 +25,7 @@ const firebaseConfig = {
     const db = getFirestore(app);
     let userCred = null;
     let userData = null;
+    let taskTotal = 4;
     signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
         .then(async (userCredential) => {
             // Signed in
@@ -218,7 +220,7 @@ function calcAllPoints(currentPoints) {
     return dataArray;
 }
 
-function HomeScreen({ navigation }) {
+function UserInfoScreen({ navigation }) {
     const starSize = 30;
     let Name = userData.firstName + " " + userData.lastName;
     let CurrentPoints = userData.currentPoints;
