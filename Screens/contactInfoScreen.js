@@ -53,12 +53,12 @@ import {doc, getDoc, getFirestore} from "firebase/firestore";
     return (
 
 <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <View style={settingsScreenStyles.backButtonBox}>
-                        <Pressable style={settingsScreenStyles.backButton} onPress={() => navigation.navigate("Settings")}>
+            <View style={commonStyles.backButtonBox}>
+                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("SubmitTask")}>
                             <Ionicons
                                 name={'ios-arrow-back-circle-outline'}
                                 size={40}
-                                style={settingsScreenStyles.backArrow}
+                                style={commonStyles.backArrow}
                             />
                         </Pressable>
                     </View>

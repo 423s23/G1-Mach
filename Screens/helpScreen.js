@@ -16,11 +16,15 @@ function HelpScreen({ navigation }) {
     return (
         <ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
-            <View style={submitTaskScreenStyles.backButtonBox}>
-                    <Pressable onPress={() => navigation.navigate("Settings")}>
-                        <Text style={submitTaskScreenStyles.backButton}>{'❮'}</Text>
-                    </Pressable>
-                </View>
+            <View style={commonStyles.backButtonBox}>
+                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("SubmitTask")}>
+                            <Ionicons
+                                name={'ios-arrow-back-circle-outline'}
+                                size={40}
+                                style={commonStyles.backArrow}
+                            />
+                        </Pressable>
+                    </View>
 
                 <View style={submitTaskScreenStyles.headerBox}>
                     <Text style={submitTaskScreenStyles.headerText}>Help</Text>
@@ -37,8 +41,7 @@ function HelpScreen({ navigation }) {
 
                 <View style={submitTaskScreenStyles.infoBox}>
                     <Text style={submitTaskScreenStyles.infoHeader}>Task Approval</Text>
-                    <Text style={submitTaskScreenStyles.infoText}>Submissions will be approved or denied by company leaders within an appropriate amount of time. They will be approved as long as they meet the task criteria and are deemed appropriate. Some tasks will be available to submit more than once while others can only be completed once.
-                   </Text>
+                    <Text style={submitTaskScreenStyles.infoText}>Submissions will be approved or denied by company leaders within an appropriate amount of time. They will be approved as long as they meet the task criteria and are deemed appropriate. Some tasks will be available to submit more than once while others can only be completed once.</Text>
                 </View>
 
                 <View style={submitTaskScreenStyles.infoBox}>
