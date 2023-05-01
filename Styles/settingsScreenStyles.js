@@ -143,7 +143,7 @@ const settingsScreenStyles = StyleSheet.create({
             color: "#ffffff",
         },
         toggleBox:{
-            marginTop: 100,
+            marginTop: 75,
         }
 
 });
