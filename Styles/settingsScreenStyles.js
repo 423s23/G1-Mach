@@ -36,7 +36,7 @@ const settingsScreenStyles = StyleSheet.create({
         flexDirection: 'column',
         alignContent: 'center',
         alignItems: 'center',
-        marginTop: 50,
+        marginTop: 75,
     },
 
     profilePic:{
@@ -67,6 +67,15 @@ const settingsScreenStyles = StyleSheet.create({
         marginTop: 20,
     },
 
+    infoTextST: {
+        width: '100%',
+        marginLeft: 36,
+        textAlign: 'left',
+        fontSize: 16,
+        fontWeight: 500,
+        color: '#000000',
+    },
+
     contactInfoBox: {
         width: '100%',
         flex: 3.5,
@@ -95,15 +104,9 @@ const settingsScreenStyles = StyleSheet.create({
         justifyContent: "center"
     },
     backButtonBox:{
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        marginTop: 45,
-        marginLeft: 5,
-        backgroundColor: '#ffffff',
-        borderWidth: 1,
-        borderRadius: 10,
-        borderColor: '#ffffff',
+         position: "absolute",
+            left: 15,
+            top: 35,
     },
     backButton:{
 

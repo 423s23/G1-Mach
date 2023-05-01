@@ -122,7 +122,7 @@ function AdminApprovalScreen({ navigation }) {
             <Text>{"\n"}</Text>
             {/*Deny*/}
             <View style={approvalStyles.buttons}>
-                <View style={approvalStyles.redButton} onClick= {() => {
+                <Pressable style={approvalStyles.redButton} onPress= {() => {
                     if (ticketCounter + 1 < tickets.length) {
                         setTicketCounter(ticketCounter + 1)
                         updateTicket(tickets[ticketCounter]['ticketID'], tickets[ticketCounter]['uid'], tickets[ticketCounter]['name'],false)
@@ -130,9 +130,9 @@ function AdminApprovalScreen({ navigation }) {
                 }
                 }>
                     <Text style={approvalStyles.buttonText}>&#x2715;</Text>
-                </View>
+                </Pressable>
                 {/*Approve*/}
-                <View style={approvalStyles.greenButton} onClick= {() => {
+                <Pressable style={approvalStyles.greenButton} onPress= {() => {
                     if (ticketCounter + 1 < tickets.length) {
                         setTicketCounter(ticketCounter + 1)
                         updateTicket(tickets[ticketCounter]['ticketID'], tickets[ticketCounter]['uid'], tickets[ticketCounter]['name'], true)
@@ -140,7 +140,7 @@ function AdminApprovalScreen({ navigation }) {
                 }
                 }>
                     <Text style={approvalStyles.buttonText}>&#x2713;</Text>
-                </View>
+                </Pressable>
             </View>
         </View>
     );

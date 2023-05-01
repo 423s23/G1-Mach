@@ -44,8 +44,17 @@ const userInfoScreenStyles = StyleSheet.create({
         color: '#000000',
         fontWeight: 400,
         textAlign: "left",
-        marginVertical: 14,
+        marginVertical: 15,
     },
+     statsTextBox:{
+         width: '80%',
+         fontSize: 20,
+         color: '#000000',
+         fontWeight: 400,
+         textAlign: "left",
+         marginVertical: 15,
+     },
+
     levelingBox:{
         flex: .1,
         width: '80%',
@@ -60,6 +69,7 @@ const userInfoScreenStyles = StyleSheet.create({
         textAlign: 'left',
         paddingVertical: 5,
     },
+
     pointText:{
         fontSize: 18,
         width: '50%',

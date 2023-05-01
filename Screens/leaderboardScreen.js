@@ -38,7 +38,7 @@ signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
         console.log(users);
 
         for (let i = 3; i < Math.min(10, users.length); i++) {
-            lower[i]=(
+            lower.push(
                 <View key={i} style={leaderboardStyles.myRow}>
                     <Text style={leaderboardStyles.rowText}>{i+1}</Text>
                     <Text style={leaderboardStyles.rowText}>{users[i][0]}</Text>

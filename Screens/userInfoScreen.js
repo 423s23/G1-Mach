@@ -25,6 +25,7 @@ const firebaseConfig = {
     const db = getFirestore(app);
     let userCred = null;
     let userData = null;
+    let taskTotal = 4;
     signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
         .then(async (userCredential) => {
             // Signed in
@@ -251,15 +252,7 @@ function UserInfoScreen({ navigation }) {
         "Mach Legend"];
     const [modalVisibleRanks, setModalVisibleRanks] = React.useState(false);
 
-    function IsAdmin({adminCheck}) {
-        if (adminCheck) {
-            return (
-                <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("AdminApproval")}>
-                    <Text style={homeScreenStyles.mainButtonText}>Admin Approval</Text>
-                </Pressable>
-            );
-        }
-    }
+
 
     return (
         <ScrollView style={{backgroundColor: '#ffffff'}}>
@@ -328,16 +321,18 @@ function UserInfoScreen({ navigation }) {
                     <View style={homeScreenStyles.progressBarBackground}></View>
                     <View style={{position: 'absolute', height: 20, width: getProgressPercent(CurrentPoints, PreviousPoints, ProgressPoints), backgroundColor: '#ee2f53', borderColor: '#000000', borderWidth: 2, borderRadius: 5,}}></View>
                 </View>
-                <View style={homeScreenStyles.levelingBox}>
-                    <Text style={homeScreenStyles.levelText}>Level {[Level]}</Text>
-                    <Text style={homeScreenStyles.pointText}>{CurrentPoints}pts/50000pts</Text>
-                </View>
+                    <View style={homeScreenStyles.levelingBox}>
+                        <Text style={homeScreenStyles.levelText}>Total Progress</Text>
+                        <Text style={homeScreenStyles.pointText}>{CurrentPoints}pts/50000pts</Text>
+                     </View>
                 <View style={homeScreenStyles.progressBox}>
                     <View style={homeScreenStyles.progressBarBackground}></View>
                     <View style={{position: 'absolute', height: 20, width: getFullProgressPercent(CurrentPoints), backgroundColor: '#ee2f53', borderColor: '#000000', borderWidth: 2, borderRadius: 5,}}></View>
                 </View>
-                <Text style={userInfoScreenStyles.statsText}>Current Level:   {[Level]}</Text>
-                <Text style={userInfoScreenStyles.statsText}>Tasks Completed:   {[taskTotal]}</Text>
+                <View style={userInfoScreenStyles.statsTextBox}>
+                    <Text style={userInfoScreenStyles.statsText}>Current Level:   {[Level]}</Text>
+                    <Text style={userInfoScreenStyles.statsText}>Tasks Completed:   {[taskTotal]}</Text>
+                </View>
             </View>
         </ScrollView>
     );
