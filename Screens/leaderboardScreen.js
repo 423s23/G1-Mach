@@ -69,9 +69,9 @@ function LeaderboardScreen({ navigation }) {
                         source={{uri: 'https://www.williamjordan.net/PFP.png'}}
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
-                    <Text>{users[1][0]}</Text>
+                    <Text style={leaderboardStyles.center}>{users[1][0]}</Text>
                     <Text>{"\n"}</Text>
-                    <Text>{users[1][1]}</Text>
+                    <Text style={leaderboardStyles.center}>{users[1][1]}</Text>
                 </View>
                 <View style={leaderboardStyles.person}>
                     <Text style={leaderboardStyles.one}>1</Text>
@@ -80,9 +80,9 @@ function LeaderboardScreen({ navigation }) {
                         source={{uri: 'https://www.williamjordan.net/PFP.png'}}
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
-                    <Text>{users[0][0]}</Text>
+                    <Text style={leaderboardStyles.center}>{users[0][0]}</Text>
                     <Text>{"\n"}</Text>
-                    <Text>{users[0][1]}</Text>
+                    <Text style={leaderboardStyles.center}>{users[0][1]}</Text>
                 </View>
                 <View style={leaderboardStyles.outerPerson}>
                     <Text style={leaderboardStyles.noMargin}>3</Text>
@@ -91,9 +91,9 @@ function LeaderboardScreen({ navigation }) {
                         source={{uri: 'https://www.williamjordan.net/PFP.png'}}
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
-                    <Text>{users[2][0]}</Text>
+                    <Text style={leaderboardStyles.center}>{users[2][0]}</Text>
                     <Text>{"\n"}</Text>
-                    <Text>{users[2][1]}</Text>
+                    <Text style={leaderboardStyles.center}>{users[2][1]}</Text>
                 </View>
             </View>
             <Text>{"\n"}</Text>
