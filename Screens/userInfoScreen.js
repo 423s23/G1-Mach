@@ -253,15 +253,7 @@ function UserInfoScreen({ navigation }) {
         "Mach Legend"];
     const [modalVisibleRanks, setModalVisibleRanks] = React.useState(false);
 
-    function IsAdmin({adminCheck}) {
-        if (adminCheck) {
-            return (
-                <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("AdminApproval")}>
-                    <Text style={homeScreenStyles.mainButtonText}>Admin Approval</Text>
-                </Pressable>
-            );
-        }
-    }
+
 
     return (
         <ScrollView style={{backgroundColor: '#ffffff'}}>

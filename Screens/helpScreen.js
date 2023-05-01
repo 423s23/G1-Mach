@@ -17,16 +17,6 @@ function HelpScreen({ navigation }) {
     return (
         <ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
-<<<<<<< HEAD
-            <View style={commonStyles.backButtonBox}>
-                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("Settings")}>
-                            <Ionicons
-                                name={'ios-arrow-back-circle-outline'}
-                                size={40}
-                                style={commonStyles.backArrow}
-                            />
-                        </Pressable>
-=======
                 <View style={commonStyles.backButtonBox}>
                             <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("Settings")}>
                                 <Ionicons
@@ -39,7 +29,6 @@ function HelpScreen({ navigation }) {
 
                     <View style={submitTaskScreenStyles.headerBox}>
                         <Text style={submitTaskScreenStyles.headerText}>Help</Text>
->>>>>>> 8d8e3bbcb7de91d3e791dac3b3afa43f10bfa505
                     </View>
 
                     <View style={submitTaskScreenStyles.infoBox}>
