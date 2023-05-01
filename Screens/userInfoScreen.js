@@ -47,6 +47,18 @@ function getProgressPercent(currentPoints, previousPoints, progressPoints) {
     return progressPercent
 }
 
+function getFullProgressPercent(currentPoints) {
+    if (currentPoints < 50000) {
+        let fullProgressPercentInt = ((currentPoints / 50000) * 100);
+        var fullProgressPercent = fullProgressPercentInt.toString() + "%";
+    }
+    else if (currentPoints >= 50000) {
+        let fullProgressPercentInt = 100;
+        var fullProgressPercent = fullProgressPercentInt.toString() + "%";
+    }
+    return fullProgressPercent
+}
+
 function calcAllPoints(currentPoints) {
     // rank, level, previousPoints, progressPoints
     var dataArray = [0, 0, 0, 0];
@@ -315,6 +327,14 @@ function UserInfoScreen({ navigation }) {
                 <View style={homeScreenStyles.progressBox}>
                     <View style={homeScreenStyles.progressBarBackground}></View>
                     <View style={{position: 'absolute', height: 20, width: getProgressPercent(CurrentPoints, PreviousPoints, ProgressPoints), backgroundColor: '#ee2f53', borderColor: '#000000', borderWidth: 2, borderRadius: 5,}}></View>
+                </View>
+                <View style={homeScreenStyles.levelingBox}>
+                    <Text style={homeScreenStyles.levelText}>Level {[Level]}</Text>
+                    <Text style={homeScreenStyles.pointText}>{CurrentPoints}pts/50000pts</Text>
+                </View>
+                <View style={homeScreenStyles.progressBox}>
+                    <View style={homeScreenStyles.progressBarBackground}></View>
+                    <View style={{position: 'absolute', height: 20, width: getFullProgressPercent(CurrentPoints), backgroundColor: '#ee2f53', borderColor: '#000000', borderWidth: 2, borderRadius: 5,}}></View>
                 </View>
                 <Text style={userInfoScreenStyles.statsText}>Current Level:   {[Level]}</Text>
                 <Text style={userInfoScreenStyles.statsText}>Tasks Completed:   {[taskTotal]}</Text>
