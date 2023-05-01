@@ -4,13 +4,14 @@ import {Button, Pressable, ScrollView, StyleSheet} from "react-native";
 import {Text, View} from "react-native";
 //import styles from "../Styles/styles";
 import settingsScreenStyles from "../Styles/settingsScreenStyles";
+import commonStyles from "../Styles/commonStyles";
 import {Ionicons} from "@expo/vector-icons";
 
 function LogOutScreen({ navigation }) {
     return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
             <View style={commonStyles.backButtonBox}>
-                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("SubmitTask")}>
+                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("Settings")}>
                             <Ionicons
                                 name={'ios-arrow-back-circle-outline'}
                                 size={40}

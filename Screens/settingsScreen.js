@@ -1,7 +1,7 @@
-import {Image, Button, Pressable, ScrollView, StyleSheet} from "react-native";
+import {Image, Button, Pressable, ScrollView, StyleSheet, Text, View} from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {Text, View} from "react-native";
+import * as React from "react";
 //import styles from "../Styles/styles";
 import settingsScreenStyles from "../Styles/settingsScreenStyles";
 import {Ionicons} from "@expo/vector-icons";
@@ -20,17 +20,7 @@ const firebaseConfig = {
     measurementId: "G-WVTXPNPTNR"
 };
 
-    const [imageUrl, setImageUrl] = useState(undefined);
-
-    useEffect(() => {
-        storage()
-        .ref('/' + 'WillSki.jpg') //name in storage in firebase console
-        .getDownloadURL()
-        .then((url) => {
-         setImageUrl(url);
-         })
-        .catch((e) => console.log('Errors while downloading => ', e));
-    }, []);
+    //const [imageUrl, setImageUrl] = React.useState(undefined);
 
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
@@ -56,6 +46,17 @@ const firebaseConfig = {
 function SettingsScreen({ navigation }) {
         const profilePic = 75;
         let Name = userData.firstName + " " + userData.lastName;
+
+        /*
+        React.useEffect(() => {
+            storage()
+            .ref('/' + 'WillSki.jpg') //name in storage in firebase console
+            .getDownloadURL()
+            .then((url) => {
+             setImageUrl(url);
+             })
+            .catch((e) => console.log('Errors while downloading => ', e));
+        }, []);*/
 
     return (
     <ScrollView>

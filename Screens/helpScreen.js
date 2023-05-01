@@ -8,6 +8,7 @@ import {Button,
         TextInput} from "react-native";
 import styles from "../Styles/styles";
 import submitTaskScreenStyles from "../Styles/submitTaskScreenStyles.js";
+import commonStyles from "../Styles/commonStyles";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
 
@@ -17,7 +18,7 @@ function HelpScreen({ navigation }) {
         <ScrollView>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#ffffff' }}>
                 <View style={commonStyles.backButtonBox}>
-                            <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("SubmitTask")}>
+                            <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("Settings")}>
                                 <Ionicons
                                     name={'ios-arrow-back-circle-outline'}
                                     size={40}

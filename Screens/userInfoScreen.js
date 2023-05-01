@@ -1,8 +1,9 @@
-import {Button, Pressable, ScrollView, Text, View, StyleSheet} from "react-native";
+import {Button, Pressable, ScrollView, Text, View, StyleSheet, Modal} from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import styles from "../Styles/styles";
 import userInfoScreenStyles from "../Styles/userInfoScreenStyles";
+import homeScreenStyles from "../Styles/homeScreenStyles";
 import {Ionicons} from "@expo/vector-icons";
 import * as React from "react";
 import {initializeApp} from "firebase/app";
@@ -218,7 +219,7 @@ function calcAllPoints(currentPoints) {
     return dataArray;
 }
 
-function HomeScreen({ navigation }) {
+function UserInfoScreen({ navigation }) {
     const starSize = 30;
     let Name = userData.firstName + " " + userData.lastName;
     let CurrentPoints = userData.currentPoints;
@@ -228,6 +229,7 @@ function HomeScreen({ navigation }) {
     let PreviousPoints = dataArray[2];
     let ProgressPoints = dataArray[3];
     let Admin = userData.admin;
+    let taskTotal = 0;
     let Titles = [
         "Not Yet Verified",
         "Mach Badass",
@@ -313,20 +315,6 @@ function HomeScreen({ navigation }) {
                 <View style={homeScreenStyles.progressBox}>
                     <View style={homeScreenStyles.progressBarBackground}></View>
                     <View style={{position: 'absolute', height: 20, width: getProgressPercent(CurrentPoints, PreviousPoints, ProgressPoints), backgroundColor: '#ee2f53', borderColor: '#000000', borderWidth: 2, borderRadius: 5,}}></View>
-                </View>
-                <View style={homeScreenStyles.mainButtonBox}>
-                    <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("SubmitTask")}>
-                        <Text style={homeScreenStyles.mainButtonText}>Submit Task Completion</Text>
-                    </Pressable>
-                    <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("Rewards")}>
-                        <Text style={homeScreenStyles.mainButtonText}>Rewards</Text>
-                    </Pressable>
-                    <Pressable style={homeScreenStyles.mainButton} onPress={() => navigation.navigate("Leaderboard")}>
-                        <Text style={homeScreenStyles.mainButtonText}>Team Leaderboard</Text>
-                    </Pressable>
-                    <IsAdmin
-                        adminCheck = {Admin}
-                    />
                 </View>
                 <Text style={userInfoScreenStyles.statsText}>Current Level:   {[Level]}</Text>
                 <Text style={userInfoScreenStyles.statsText}>Tasks Completed:   {[taskTotal]}</Text>
