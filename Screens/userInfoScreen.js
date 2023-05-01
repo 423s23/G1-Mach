@@ -318,7 +318,6 @@ function UserInfoScreen({ navigation }) {
                 </View>
                 <Text style={userInfoScreenStyles.statsText}>Current Level:   {[Level]}</Text>
                 <Text style={userInfoScreenStyles.statsText}>Tasks Completed:   {[taskTotal]}</Text>
-                <Text style={userInfoScreenStyles.statsText}>Rewards Received:  {[taskTotal]}</Text>
             </View>
         </ScrollView>
     );
