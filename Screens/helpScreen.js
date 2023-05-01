@@ -65,25 +65,11 @@ function HelpScreen({ navigation }) {
                         <Text style={submitTaskScreenStyles.infoHeader}>Settings</Text>
                         <Text style={submitTaskScreenStyles.infoText}>In the settings page, you can find four options: Contact Info, Notifications, Help, and LogOut. If you select the Contact Info option you will find your personal contact information organised in a table. This page shows where Mach might send your rewards or how they might contact you about your team status. The notifications page is a simple display that allows you to select whether or not you would like to receive notifications from Mach. The help page is what you have selected here. Finally, the LogOut option allows you to LogOut of your Mach app. </Text>
                     </View>
-
-<<<<<<< HEAD
-                <View style={submitTaskScreenStyles.infoBox}>
-                    <Text style={submitTaskScreenStyles.infoHeader}>Settings</Text>
-                    <Text style={submitTaskScreenStyles.infoText}>In the settings page, you can find four options: Contact Info, Notifications, Help, and LogOut. If you select the Contact Info option you will find your personal contact information organised in a table. This page shows where Mach might send your rewards or how they might contact you about your team status. The notifications page is a simple display that allows you to select whether or not you would like to receive notifications from Mach. The help page is what you have selected here. Finally, the LogOut option allows you to LogOut of your Mach app. </Text>
-                </View>
-
-                <View style={submitTaskScreenStyles.infoBox}>
-                    <Text style={submitTaskScreenStyles.infoHeader}>Contacting Mach</Text>
-                    <Text style={submitTaskScreenStyles.infoText}>Questions or concerns? Do not be afraid to contact the Mach team directly!</Text>
-                    <Text style={submitTaskScreenStyles.infoText}>Email: Phone:</Text>
-=======
                     <View style={submitTaskScreenStyles.infoBox}>
                         <Text style={submitTaskScreenStyles.infoHeader}>Contacting Mach</Text>
                         <Text style={submitTaskScreenStyles.infoText}>Questions or concerns? Do not be afraid to contact the Mach team directly! Email: Phone:</Text>
                     </View>
->>>>>>> 8d8e3bbcb7de91d3e791dac3b3afa43f10bfa505
                 </View>
-            </View>
             </View>
         </ScrollView>
     );
