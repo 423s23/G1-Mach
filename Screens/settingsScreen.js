@@ -20,8 +20,6 @@ const firebaseConfig = {
     measurementId: "G-WVTXPNPTNR"
 };
 
-    //const [imageUrl, setImageUrl] = React.useState(undefined);
-
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);

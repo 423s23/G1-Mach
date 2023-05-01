@@ -9,6 +9,7 @@ import * as React from "react";
 import {initializeApp} from "firebase/app";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {doc, getDoc, getFirestore} from "firebase/firestore";
+import homeScreenStyles from "../Styles/homeScreenStyles";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBbEsCWfDuNABFe9E44lBS1OimB-pkBQeU",
@@ -25,6 +26,7 @@ const firebaseConfig = {
     const db = getFirestore(app);
     let userCred = null;
     let userData = null;
+    let taskTotal = 4;
     signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
         .then(async (userCredential) => {
             // Signed in
