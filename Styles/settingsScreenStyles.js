@@ -69,7 +69,7 @@ const settingsScreenStyles = StyleSheet.create({
 
     infoTextST: {
         width: '100%',
-        marginLeft: 36,
+        marginLeft: 40,
         textAlign: 'left',
         fontSize: 16,
         fontWeight: 500,

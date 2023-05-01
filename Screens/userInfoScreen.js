@@ -321,6 +321,7 @@ function UserInfoScreen({ navigation }) {
                     <View style={homeScreenStyles.progressBarBackground}></View>
                     <View style={{position: 'absolute', height: 20, width: getProgressPercent(CurrentPoints, PreviousPoints, ProgressPoints), backgroundColor: '#ee2f53', borderColor: '#000000', borderWidth: 2, borderRadius: 5,}}></View>
                 </View>
+                <Text style={homeScreenStyles.levelText}>       </Text>
                     <View style={homeScreenStyles.levelingBox}>
                         <Text style={homeScreenStyles.levelText}>Total Progress</Text>
                         <Text style={homeScreenStyles.pointText}>{CurrentPoints}pts/50000pts</Text>
