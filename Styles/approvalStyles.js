@@ -47,6 +47,9 @@ const approvalStyles = StyleSheet.create({
         width: "50%",
         backgroundColor: "teal",
     },
+    bold: {
+        fontWeight: "bold",
+    }
 });
 
 export default approvalStyles;

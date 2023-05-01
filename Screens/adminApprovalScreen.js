@@ -103,39 +103,44 @@ function AdminApprovalScreen({ navigation }) {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <View style={commonStyles.backButtonBox}>
-                        <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("Home")}>
-                            <Ionicons
-                                name={'ios-arrow-back-circle-outline'}
-                                size={40}
-                                style={commonStyles.backArrow}
-                            />
-                        </Pressable>
-                    </View>
-            <Text style={approvalStyles.task}>{tickets[ticketCounter]['name']}</Text>
-            <Text>{tickets[ticketCounter]['comment']}</Text>
+                <Pressable style={commonStyles.backButton} onPress={() => navigation.navigate("Home")}>
+                    <Ionicons
+                        name={'ios-arrow-back-circle-outline'}
+                        size={40}
+                        style={commonStyles.backArrow}
+                    />
+                </Pressable>
+            </View>
 
-            <Text style={approvalStyles.person}>{tickets[ticketCounter]['firstName'] + " " + tickets[ticketCounter]['lastName']}</Text>
+
+            <View>
+                <Text><Text style={approvalStyles.bold}>Task: </Text>{tickets[ticketCounter]['name']}</Text>
+                <Text><Text style={approvalStyles.bold}>Comment: </Text>{tickets[ticketCounter]['comment']}</Text>
+                <Text><Text style={approvalStyles.bold}>Member: </Text>{tickets[ticketCounter]['firstName'] + " " + tickets[ticketCounter]['lastName']}</Text>
+            </View>
+            <Text>{"\n"}</Text>
+            <Text>{"\n"}</Text>
             {/*Deny*/}
             <View style={approvalStyles.buttons}>
-                <Pressable style={approvalStyles.redButton} onPress= {() => {
-                        if (ticketCounter + 1 < tickets.length) {
-                            setTicketCounter(ticketCounter + 1)
-                            updateTicket(tickets[ticketCounter]['ticketID'], tickets[ticketCounter]['uid'], tickets[ticketCounter]['name'],false)
-                        }
+                <View style={approvalStyles.redButton} onClick= {() => {
+                    if (ticketCounter + 1 < tickets.length) {
+                        setTicketCounter(ticketCounter + 1)
+                        updateTicket(tickets[ticketCounter]['ticketID'], tickets[ticketCounter]['uid'], tickets[ticketCounter]['name'],false)
                     }
+                }
                 }>
                     <Text style={approvalStyles.buttonText}>&#x2715;</Text>
-                </Pressable>
+                </View>
                 {/*Approve*/}
-                <Pressable style={approvalStyles.greenButton} onPress= {() => {
-                        if (ticketCounter + 1 < tickets.length) {
-                            setTicketCounter(ticketCounter + 1)
-                            updateTicket(tickets[ticketCounter]['ticketID'], tickets[ticketCounter]['uid'], tickets[ticketCounter]['name'], true)
-                        }
+                <View style={approvalStyles.greenButton} onClick= {() => {
+                    if (ticketCounter + 1 < tickets.length) {
+                        setTicketCounter(ticketCounter + 1)
+                        updateTicket(tickets[ticketCounter]['ticketID'], tickets[ticketCounter]['uid'], tickets[ticketCounter]['name'], true)
                     }
+                }
                 }>
                     <Text style={approvalStyles.buttonText}>&#x2713;</Text>
-                </Pressable>
+                </View>
             </View>
         </View>
     );
