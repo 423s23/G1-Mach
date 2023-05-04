@@ -1,4 +1,4 @@
-import {Pressable, ScrollView, Text, View, StyleSheet, Modal} from "react-native";
+import {Pressable, ScrollView, Text, View, StyleSheet, Modal, RefreshControl} from "react-native";
 //import { NavigationContainer } from '@react-navigation/native';
 //import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import homeScreenStyles from "../Styles/homeScreenStyles";
@@ -23,6 +23,7 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 let userCred = null;
 let userData = null;
+let newUserData = null;
 signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
     .then(async (userCredential) => {
         // Signed in
@@ -218,15 +219,62 @@ function calcAllPoints(currentPoints) {
 }
 
 function HomeScreen({ navigation }) {
+    const [Firstname, setFirstname] = React.useState(userData.firstName);
+    const [Lastname, setLastname] = React.useState(userData.lastName);
+    const [Name, setName] = React.useState(Firstname + " " + Lastname);
+    const [CurrentPoints, setCurrentPoints] = React.useState(userData.currentPoints);
+    const [dataArray, setDataArray] = React.useState(calcAllPoints(CurrentPoints));
+    const [Rank, setRank] = React.useState(dataArray[0]);
+    const [Level, setLevel] = React.useState(dataArray[1]);
+    const [PreviousPoints, setPreviousPoints] = React.useState(dataArray[2]);
+    const [ProgressPoints, setProgressPoints] = React.useState(dataArray[3]);
+    const [Admin, setAdmin] = React.useState(userData.admin);
+
+    const updatePage = () => {
+        
+        signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
+            .then(async (userCredential) => {
+                // Signed in
+                userCred = userCredential.user;
+                const docRef = doc(db, "users", userCred.uid);
+                console.log(docRef);
+                const docSnap = await getDoc(docRef);
+                console.log(docSnap);
+                newUserData = docSnap.data();
+                console.log("REFRESHED: ");
+                console.log(newUserData);
+
+                setFirstname(newUserData.firstName);
+                setLastname(newUserData.lastName);
+                setName(newUserData.firstName + " " + newUserData.lastName);
+                setCurrentPoints(newUserData.currentPoints);
+                setDataArray(calcAllPoints(newUserData.currentPoints));
+                setRank(dataArray[0]);
+                setLevel(dataArray[1]);
+                setPreviousPoints(dataArray[2]);
+                setProgressPoints(dataArray[3]);
+                setAdmin(newUserData.admin);
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+            });
+    }
+
+    React.useEffect(() => {
+        updatePage();
+    }, []);
+
+    const [refreshing, setRefreshing] = React.useState(false);
+    const onRefresh = React.useCallback(async () => {
+        setRefreshing(true);
+        setTimeout(() => {
+            updatePage();
+            setRefreshing(false);
+        }, 2000)
+    }, [refreshing]);
+
     const starSize = 30;
-    let Name = userData.firstName + " " + userData.lastName;
-    let CurrentPoints = userData.currentPoints;
-    var dataArray = calcAllPoints(CurrentPoints);
-    let Rank = dataArray[0];
-    let Level = dataArray[1];
-    let PreviousPoints = dataArray[2];
-    let ProgressPoints = dataArray[3];
-    let Admin = userData.admin;
     let Titles = [
         "Not Yet Verified",
         "Mach Badass",
@@ -247,7 +295,12 @@ function HomeScreen({ navigation }) {
     }
     
     return (
-        <ScrollView style={{backgroundColor: '#ffffff'}}>
+        <ScrollView 
+            style={{backgroundColor: '#ffffff'}}
+            refreshControl={
+                <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+            }
+        >
             <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginVertical: 20}}>
                 <Text style={homeScreenStyles.nameText}>Hello {[Name]},</Text>
                 <Modal
