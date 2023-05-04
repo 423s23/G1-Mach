@@ -51,6 +51,11 @@ function SubmitTaskScreen({ navigation }) {
     let AvailableTasks = userData.availableTasks;
     let CurrentTime = Timestamp.now().toDate();
     console.log(AvailableTasks);
+    class ticket {
+        comment = ''
+        type = ''
+    };
+    console.log(ticket.comment + " - " + ticket.type);
     
     function checkTeamApparel() {
         // Checking teamApparel
@@ -99,11 +104,6 @@ function SubmitTaskScreen({ navigation }) {
         checkTeamApparel();
     }, []);
 
-    ticket = {
-        comment: '',
-        type: '',
-    };
-
     async function createNewTicket(com, type) {
         const docRef = doc(db, "users", userCred.uid);
         console.log(docRef);
@@ -119,6 +119,7 @@ function SubmitTaskScreen({ navigation }) {
                 uid: id,
             });
             console.log("DOCUMENT ID: ", ticketRef.id);
+            console.log(com + " - " + type);
             navigation.navigate("Home");
         }
     }
@@ -167,7 +168,6 @@ function SubmitTaskScreen({ navigation }) {
                 </View>
                 <TextInput
                     style={submitTaskScreenStyles.insertText}
-                    value={this.comment}
                     onChangeText={(text) => this.comment = text}
                     placeholder="Insert Link or Text..."
                     multiline={true}
