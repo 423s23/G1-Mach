@@ -76,6 +76,14 @@ const settingsScreenStyles = StyleSheet.create({
         color: '#000000',
     },
 
+    infoHeader: {
+        width: '100%',
+        textAlign: 'left',
+        fontSize: 22,
+        fontWeight: 600,
+        color: 'black'
+    },
+
     contactInfoBox: {
         width: '100%',
         flex: 3.5,

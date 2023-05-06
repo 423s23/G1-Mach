@@ -25,7 +25,7 @@ const firebaseConfig = {
     const db = getFirestore(app);
     let userCred = null;
     let userData = null;
-    let taskTotal = 4;
+    let tickets = [];
     signInWithEmailAndPassword(auth, "joey.knappenberger@gmail.com", "Joey2001*")
         .then(async (userCredential) => {
             // Signed in
@@ -36,6 +36,24 @@ const firebaseConfig = {
             console.log(docSnap);
             userData = docSnap.data();
             console.log(userData);
+            const querySnapshot = await getDocs(collection(db, "tickets"));
+                    querySnapshot.forEach((doc) => {
+                        let temp = [];
+                        temp['ticketID'] = doc.id;
+                        temp['uid'] = doc.data()['uid'];
+                        temp['name'] = doc.data()['name'];
+                        temp['comment'] = doc.data()['comment'];
+                        if(doc.data()['state'] === "pending"){
+                            tickets.push(temp)
+                        }
+                     });
+                     for (const t of tickets) {
+                                 console.log(t);
+                                 const docRef = doc(db, "users", t['uid']);
+                                 const docSnap = await getDoc(docRef);
+                                 t['firstName'] = docSnap.data()['firstName'];
+                                 t['lastName'] = docSnap.data()['lastName'];
+                     }
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -58,6 +76,10 @@ function getFullProgressPercent(currentPoints) {
         var fullProgressPercent = fullProgressPercentInt.toString() + "%";
     }
     return fullProgressPercent
+}
+
+function calcCompTasks(tickets){
+
 }
 
 function calcAllPoints(currentPoints) {
@@ -242,7 +264,8 @@ function UserInfoScreen({ navigation }) {
     let PreviousPoints = dataArray[2];
     let ProgressPoints = dataArray[3];
     let Admin = userData.admin;
-    let taskTotal = 0;
+    let allTasks = tickets;
+    let taskTotal = tickets["firstName"];
     let Titles = [
         "Not Yet Verified",
         "Mach Badass",

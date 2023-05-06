@@ -70,7 +70,7 @@ import {doc, getDoc, getFirestore} from "firebase/firestore";
               isOn={userData.notificationStatus}
               onColor="green"
               offColor="red"
-              label="Send Push Notifications"
+              label="Receive Push Notifications"
               labelStyle={{ color: "black", fontWeight: "900" }}
               size="large"
               onToggle={isOn => console.log("changed to : ", isOn)}
