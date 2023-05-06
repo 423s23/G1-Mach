@@ -70,7 +70,7 @@ function LeaderboardScreen({ navigation }) {
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
                     <Text style={leaderboardStyles.center}>{users[1][0]}</Text>
-                    <Text>{"\n"}</Text>
+                    {/*<Text>{"\n"}</Text>*/}
                     <Text style={leaderboardStyles.center}>{users[1][1]}</Text>
                 </View>
                 <View style={leaderboardStyles.person}>
@@ -81,7 +81,7 @@ function LeaderboardScreen({ navigation }) {
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
                     <Text style={leaderboardStyles.center}>{users[0][0]}</Text>
-                    <Text>{"\n"}</Text>
+                    {/*<Text>{"\n"}</Text>*/}
                     <Text style={leaderboardStyles.center}>{users[0][1]}</Text>
                 </View>
                 <View style={leaderboardStyles.outerPerson}>
@@ -92,7 +92,7 @@ function LeaderboardScreen({ navigation }) {
                         resizeMode={'cover'} // cover or contain its upto you view look
                     />
                     <Text style={leaderboardStyles.center}>{users[2][0]}</Text>
-                    <Text>{"\n"}</Text>
+                    {/*<Text>{"\n"}</Text>*/}
                     <Text style={leaderboardStyles.center}>{users[2][1]}</Text>
                 </View>
             </View>
